@@ -32,10 +32,10 @@ const differenceCards = [
 
 function EmaDifference() {
   return (
-    <section className="flex flex-col px-4 mx-auto space-y-8 xl:px-32 2xl:px-64">
+    <section className="flex flex-col px-4 mx-auto space-y-8 xl:px-32 ">
       <div className="text-center">
         <h2 className="text-2xl md:text-4xl">The eMalyami Difference</h2>
-        <p className="text-lg leading-none md:text-2xl text-muted-foreground">
+        <p className="text-lg leading-none text-muted-foreground">
           Driving Africa's economic transformation through digital innovation
         </p>
       </div>
@@ -45,7 +45,7 @@ function EmaDifference() {
           <img src={ManWoman} />
         </div>
 
-        <div className="grid flex-1 grid-cols-1 gap-4 px-24 xl:p-16 sm:grid-cols-2 [@media(min-width:2200px)]:grid-cols-4">
+        <div className="grid flex-1 grid-cols-1 gap-4  sm:px-24 xl:p-16 sm:grid-cols-2 [@media(min-width:2200px)]:grid-cols-4">
           {differenceCards.map((card) => {
             return (
               <Card className={"bg-[#E7D0CB] border-stone-400 gap-1 xl:gap-4"}>
