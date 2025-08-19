@@ -3,15 +3,7 @@ import MoneyBag from "../../../assets/ema-difference/money_bag-emoji.svg";
 import MoneyFlies from "../../../assets/ema-difference/money_flies-emoji.svg";
 import PeopleHugging from "../../../assets/ema-difference/people_hugging_emoji.svg";
 import TippingHand from "../../../assets/ema-difference/tipping_hand-emoji.svg";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const differenceCards = [
   {
@@ -20,7 +12,7 @@ const differenceCards = [
     description: "Transaction through our platform",
   },
   {
-    emoji: MoneyFlies,
+    emoji: TippingHand,
     value: "58%",
     description: "Reduction in payment’s cost achieved",
   },
@@ -31,6 +23,8 @@ const differenceCards = [
   },
   {
     emoji: TippingHand,
+    emoji: MoneyFlies,
+
     value: "125M",
     description: "SMME potential beneficiaries market",
   },
@@ -38,33 +32,37 @@ const differenceCards = [
 
 function EmaDifference() {
   return (
-    <section className="container flex flex-col px-16 mx-auto space-y-8">
+    <section className="flex flex-col px-4 mx-auto space-y-8 xl:px-32 2xl:px-64">
       <div className="text-center">
-        <h2 className="text-4xl">The eMalyami Difference</h2>
-        <p className="text-2xl text-muted-foreground">
+        <h2 className="text-2xl md:text-4xl">The eMalyami Difference</h2>
+        <p className="text-lg leading-none md:text-2xl text-muted-foreground">
           Driving Africa's economic transformation through digital innovation
         </p>
       </div>
 
-      <div className="flex">
-        <div className="">
+      <div className="flex flex-col items-center gap-6 lg:flex lg:flex-row">
+        <div className=" lg:w-max w-55">
           <img src={ManWoman} />
         </div>
 
-        <div className="grid flex-1 grid-cols-2 grid-rows-2 gap-4 p-16">
+        <div className="grid flex-1 grid-cols-1 gap-4 px-24 xl:p-16 sm:grid-cols-2 [@media(min-width:2200px)]:grid-cols-4">
           {differenceCards.map((card) => {
             return (
-              <Card className={"bg-[#E7D0CB] border-stone-400 gap-4"}>
+              <Card className={"bg-[#E7D0CB] border-stone-400 gap-1 xl:gap-4"}>
                 <CardHeader>
-                  <CardTitle className={"flex items-end gap-2"}>
-                    <div>
+                  <CardTitle
+                    className={"flex  justify-center sm:justify-start gap-2"}
+                  >
+                    <div className="w-8 md:w-max sm:w-14">
                       <img src={card.emoji} />
                     </div>
-                    <p className="text-6xl text-accent">{card.value}</p>
+                    <p className="text-4xl sm:text-5xl md:text-6xl text-accent">
+                      {card.value}
+                    </p>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-xl text-muted-foreground">
+                  <p className="text-center sm:text-start text-md sm:text-lg md:text-xl text-muted-foreground">
                     {card.description}
                   </p>
                 </CardContent>
