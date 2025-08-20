@@ -1,5 +1,6 @@
 import EmaDifference from "@/components/sections/ema-difference/EmaDifference";
 import Hero from "@/components/sections/hero/Hero";
+import OurComponents from "@/components/sections/our-components/OurComponents";
 import WhoAreWe from "@/components/sections/who-are-we/WhoAreWe";
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
       <Hero />
       <EmaDifference />
       <WhoAreWe />
+      <OurComponents />
     </div>
   );
 }
