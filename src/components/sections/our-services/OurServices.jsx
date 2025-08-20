@@ -30,7 +30,7 @@ const services = [
 
 function OurServices() {
   return (
-    <section className="flex flex-col items-center px-16 mx-auto space-y-8 xl:px-32">
+    <section className="flex flex-col items-center px-16 mx-auto space-y-8 xl:px-32 sm:px-24">
       <SectionHeader
         subtitle={
           "From onboarding to real-time analytics, we manage the entire digital-finance lifecycle for you."
@@ -84,7 +84,7 @@ function OurServices() {
         </div> */}
       </div>
 
-      <div className="items-start justify-between hidden w-full xl:justify-center xl:gap-32 lg:flex ">
+      <div className="items-start justify-between hidden w-full 2xl:justify-center 2xl:gap-32 lg:flex ">
         <div className="flex flex-col h-full gap-8 ">
           {services.map((service) => {
             return (
@@ -103,13 +103,13 @@ function OurServices() {
           <img
             src={Mobile1}
             alt="mobile-1"
-            className="relative rotate-3 w-30 top-10"
+            className="relative w-42 rotate-3 top-10"
           />
-          <img src={Mobile2Large} alt="mobile-2-large" className="w-40" />
+          <img src={Mobile2Large} alt="mobile-2-large" className="w-50" />
           <img
             src={Mobile3}
             alt="mobile-3"
-            className="relative -rotate-3 w-30 bottom-10"
+            className="relative w-42 -rotate-3 bottom-10"
           />
         </div>
       </div>

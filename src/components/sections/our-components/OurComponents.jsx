@@ -1,3 +1,4 @@
+import ComponentContainer from "@/components/shared/ComponentContainer";
 import MobilePrototype from "../../../assets/our-components/components-mobile-prototype.svg";
 
 const components = [
@@ -58,24 +59,7 @@ function OurComponents() {
             />
           </div>
           {components.map((component, index) => {
-            return (
-              <div className={`${component.style} `}>
-                <div className="w-8 h-8 rounded-[16px] bg-accent grid place-items-center text-white mb-3">
-                  {index + 1}
-                </div>
-                <div className="mb-2">
-                  <h3 className="text-2xl font-bold leading-none md:text-4xl">
-                    {component.title}
-                  </h3>
-                  <p className="text-lg leading-none md:text-2xl">
-                    {component.subtitle}
-                  </p>
-                </div>
-                <p className="text-sm text-accent md:text-base">
-                  {component.description}
-                </p>
-              </div>
-            );
+            return <ComponentContainer component={component} index={index} />;
           })}
         </>
       </div>
