@@ -10,7 +10,7 @@ function WhoAreWe() {
   return (
     <section className="relative min-h-screen ">
       <div className="absolute inset-0 bg-top-right bg-[url('/who-bg.svg')] bg-contain bg-no-repeat "></div>
-      <div className="relative z-10 flex flex-col items-center gap-8 px-4 sm:px-24 xl:px-32 ">
+      <div className="relative z-10 flex flex-col items-center gap-8 px-12 sm:px-24 xl:px-32 ">
         <div className="flex flex-col items-center ">
           <h2 className="relative text-2xl sm:text-4xl w-fit">
             Who are we?

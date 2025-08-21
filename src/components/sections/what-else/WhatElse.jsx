@@ -48,7 +48,7 @@ const components_2 = [
 
 function WhatElse() {
   return (
-    <section className="relative bg-gradient-to-t to-[#D88F4A] from-[#B06926] lg:px-32 py-16 lg:pt-32 sm:px-24 px-16">
+    <section className="relative bg-gradient-to-t to-[#D88F4A] from-[#B06926] lg:px-32 py-16 lg:pt-32 sm:px-24 px-12">
       <h2 className="absolute   top-0 left-0 font-bold text-7xl lg:text-9xl leading-[0.6] ">
         What Else?
       </h2>

@@ -10,13 +10,13 @@ import Underline from "../../../assets/who-are-we/needle-underline.svg";
 
 function BeOurPartner() {
   return (
-    <section className="flex flex-col items-center px-16 xl:px-32 space-y-8">
+    <section className="flex flex-col items-center px-12 space-y-8 xl:px-32">
       <SectionHeader
         title={"Be Our Partner"}
         subtitle={"Transform Your Economy Through Partnership"}
       />
       <div className="flex flex-col xl:flex-row gap-9">
-        <div className="flex flex-col sm:flex-row flex-1 gap-2 xl:gap-5 lg:gap-3 xl:flex-col ">
+        <div className="flex flex-col flex-1 gap-2 sm:flex-row xl:gap-5 lg:gap-3 xl:flex-col ">
           <PartnerCard
             icon={Wallet}
             title={"For Financial Institutions"}
@@ -43,7 +43,7 @@ function BeOurPartner() {
             className="sm:w-100 w-70"
           />
           <div className="flex flex-col gap-4">
-            <h2 className="text-4xl sm:text-6xl font-medium">
+            <h2 className="text-4xl font-medium sm:text-6xl">
               Partner with{" "}
               <span className="relative">
                 eMa
@@ -71,7 +71,7 @@ function BeOurPartner() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row flex-1 gap-2 xl:gap-5 lg:gap-3 xl:flex-col ">
+        <div className="flex flex-col flex-1 gap-2 sm:flex-row xl:gap-5 lg:gap-3 xl:flex-col ">
           <PartnerCard
             icon={FaRegBuilding}
             title={"For Government Agencies"}
