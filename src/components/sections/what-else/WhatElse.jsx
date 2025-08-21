@@ -52,7 +52,7 @@ function WhatElse() {
       <h2 className="absolute   top-0 left-0 font-bold text-7xl lg:text-9xl leading-[0.6] ">
         What Else?
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 lg:grid-cols-3 lg:grid-rows-3 lg:gap-y-8 sm:gap-8">
+      <div className="grid grid-cols-2 gap-x-2 sm:grid-cols-2 gap-y-10 lg:grid-cols-3 lg:grid-rows-3 lg:gap-y-8 sm:gap-8">
         <>
           {components_2.map((component, index) => {
             return (
