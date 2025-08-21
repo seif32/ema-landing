@@ -25,29 +25,37 @@ const steps = [
 
 function QuickSteps() {
   return (
-    <section className="flex items-center justify-between gap-0 px-12 space-y-8 lg:justify-center lg:gap-32 2xl:gap-32 xl:px-32">
-      <div className="relative w-30 top-10 lg:w-80 ">
+    <section className="flex items-center justify-between gap-0 pr-12 space-y-8 lg:justify-center lg:gap-4 2xl:justify-center xl:px-32">
+      <div className="relative flex-1 w-32 md:w-50 top-10 sm:-left-6 -left-2 lg:left-0 lg:w-80">
         <AnimatedPhone />
       </div>
-      <div className="flex flex-col gap-6">
-        <h2 className="text-3xl lg:tracking-tight lg:leading-14 lg:text-7xl">
+      <div className="flex flex-col gap-4 flex-2">
+        <h2 className="text-2xl leading-5 sm:leading-none sm:text-4xl md:text-5xl lg:tracking-normal lg:text-6xl">
           4 Quick Steps to be <br className="hidden lg:block" /> our Partner
         </h2>
-        <div className="grid grid-cols-[auto_1fr] gap-4 lg:gap-y-16 relative">
-          <div className="absolute left-1.5 top-3 bottom-22 lg:bottom-8 w-0.5 bg-accent z-0"></div>
-          {steps.map((step) => {
+
+        <div className="space-y-2 lg:space-y-8">
+          {steps.map((step, index) => {
             return (
-              <>
-                <div className="relative w-4 h-4 rounded-full bg-accent"></div>
-                <div>
-                  <h3 className="font-bold leading-none lg:text-3xl text-accent">
+              <div
+                key={index}
+                className="relative flex gap-4 sm:gap-6 lg:gap-8"
+              >
+                <div className="flex flex-col items-center">
+                  <div className="z-10 flex-shrink-0 w-2 h-2 rounded-full sm:w-4 sm:h-4 lg:w-4 lg:h-4 bg-accent"></div>
+                  <div className="w-0.5 bg-accent mt-2 sm:mt-3 lg:mt-4 h-4 sm:h-5 lg:h-8 flex-shrink-0"></div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 pb-2 sm:pb-3 lg:pb-4">
+                  <h3 className="mb-1 font-bold leading-none sm:text-2xl lg:text-4xl text-accent sm:mb-2 ">
                     {step.title}
                   </h3>
-                  <p className="text-xs leading-none lg:font-semibold lg:text-lg">
+                  <p className="text-xs leading-tight sm:text-lg lg:font-semibold lg:text-2xl sm:leading-tight lg:leading-relaxed">
                     {step.subtitle}
                   </p>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

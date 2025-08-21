@@ -75,7 +75,7 @@ function AnimatedPhone() {
   return (
     <motion.div
       ref={sectionRef}
-      className="flex items-center justify-center "
+      className="flex items-center justify-center w-full h-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -89,7 +89,7 @@ function AnimatedPhone() {
         variants={phoneVariants}
         initial="hidden"
         animate={isInView ? ["visible", "floating"] : "hidden"}
-        className="drop-shadow-2xl "
+        className="w-full h-auto max-w-sm drop-shadow-2xl" // Add responsive sizing
       >
         {/* Shadow/Blur Effect */}
         <g filter="url(#filter0_f_311_105)">

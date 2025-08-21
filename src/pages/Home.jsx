@@ -16,7 +16,7 @@ function Home() {
       <OurComponents />
       <OurServices />
       <WhatElse />
-      <div>
+      <div className="space-y-8">
         <BeOurPartner />
         <QuickSteps />
       </div>

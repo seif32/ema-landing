@@ -3,7 +3,7 @@ import { BiLogoPlayStore } from "react-icons/bi";
 
 function Hero() {
   return (
-    <section className="relative min-h-screen pl-10 pt-[12%] pr-[40%] ">
+    <section className="relative  pl-10 pt-[12%] pr-[40%] ">
       <div className="absolute inset-0 bg-top-right bg-[url('/hero_bg.svg')] bg-contain bg-no-repeat "></div>
       <div className="relative z-10 space-y-4 lg:space-y-16 sm:space-y-4">
         <div>
