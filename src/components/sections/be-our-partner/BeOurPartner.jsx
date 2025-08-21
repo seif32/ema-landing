@@ -5,7 +5,7 @@ import { BriefcaseBusiness, Users, Wallet } from "lucide-react";
 
 import EmployeesTable from "../../../assets/be-our-partner/employees-table.svg";
 import FaceEmoji from "../../../assets/be-our-partner/face.svg";
-import HandshakeEmoji from "../../../assets/be-our-partner/handshake.svg";
+import HandshakeEmoji from "../../../assets/be-our-partner/Handshake.svg";
 import Underline from "../../../assets/who-are-we/needle-underline.svg";
 
 function BeOurPartner() {
