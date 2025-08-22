@@ -10,10 +10,10 @@ function BeforeAfter() {
           <img src={Before} alt="before-white-label" />
         </div>
 
-        <h2 className="text-xl font-bold md:text-4xl sm:text-3xl lg:text-5xl">
+        <h2 className="text-xl font-bold leading-none md:text-4xl sm:text-3xl lg:text-5xl">
           Generic Platform
         </h2>
-        <p className="text-xs md:text-md sm:text-sm lg:text-lg">
+        <p className="text-xs leading-none md:text-md sm:text-sm lg:text-lg">
           Standard eMalyami interface with our branding and corporate design
         </p>
       </div>
@@ -24,10 +24,10 @@ function BeforeAfter() {
         <div className=" w-30 sm:w-50 md:w-70 lg:w-90">
           <img src={After} alt="after-white-label" />
         </div>
-        <h2 className="text-xl font-bold leading-none sm:leading-normal md:text-4xl sm:text-3xl lg:text-5xl">
+        <h2 className="text-xl font-bold leading-none md:text-4xl sm:text-3xl lg:text-5xl">
           Your Brand Solution
         </h2>
-        <p className="text-xs md:text-md sm:text-sm lg:text-lg">
+        <p className="text-xs leading-none md:text-md sm:text-sm lg:text-lg">
           Same powerful technology with your logo, colors, and industry-specific
           design
         </p>
