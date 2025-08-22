@@ -20,7 +20,7 @@ function BeforeAfter() {
               Generic Platform
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-600 sm:text-base md:text-lg lg:text-xl">
-              Standard eMalyami interface with our branding and corporate design
+              Standard eMa interface with our branding and corporate design
             </p>
           </div>
         </div>

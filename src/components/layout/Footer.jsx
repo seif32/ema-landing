@@ -35,7 +35,7 @@ function Footer() {
                 />
               </div>
               <h3 className="text-2xl font-bold" style={{ color: "#c38b7d" }}>
-                eMalyami
+                eMa
               </h3>
             </div>
             <p className="mb-6 leading-relaxed text-gray-300">
@@ -150,10 +150,10 @@ function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-[#AF6553] flex-shrink-0" />
                 <a
-                  href="mailto:contact@emalyami.com"
+                  href="mailto:contact@ema.com"
                   className="text-gray-300 hover:text-[#c38b7d] transition-colors duration-200"
                 >
-                  contact@emalyami.com
+                  contact@ema.com
                 </a>
               </div>
             </div>
@@ -186,7 +186,7 @@ function Footer() {
         <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <div className="flex flex-col items-center space-y-2 text-sm text-gray-400 sm:flex-row sm:space-y-0 sm:space-x-6">
-              <p>&copy; 2025 eMalyami. All rights reserved.</p>
+              <p>&copy; 2025 eMa. All rights reserved.</p>
               <div className="flex space-x-6">
                 <a
                   href="#"
