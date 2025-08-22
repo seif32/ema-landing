@@ -10,6 +10,7 @@ import BeforeAfter from "@/components/sections/white-label-solutions/BeforeAfter
 import CtaBanner from "@/components/sections/white-label-solutions/CtaBanner";
 import WhiteLabelSolutions from "@/components/sections/white-label-solutions/WhiteLabelSolutions";
 import WhoAreWe from "@/components/sections/who-are-we/WhoAreWe";
+import AnimatedLogo from "@/components/shared/AnimatedLogo";
 
 function Home() {
   return (

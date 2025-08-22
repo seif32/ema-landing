@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 function AnimatedLogo() {
   return (
-    <div className="relative flex flex-col items-center justify-center py-4 sm:py-6">
+    <div className="fixed z-50 flex flex-col items-center justify-center py-4 bottom-2 right-2 sm:py-6">
       <div style={{ perspective: "800px" }}>
         <motion.div
-          className="relative w-32 h-32"
+          className="relative w-18 h-18 lg:w-32 lg:h-32"
           animate={{ rotateY: 360 }}
           transition={{
             duration: 4,
@@ -47,14 +47,14 @@ function AnimatedLogo() {
 
       {/* Dynamic Slogan with Custom Palette */}
       <motion.div
-        className="mt-4 text-center"
+        className="hidden mt-4 text-center sm:flex"
         key="slogan"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <motion.p
-          className="text-sm font-medium tracking-wide sm:text-base"
+          className="flex flex-col gap-0 text-sm font-medium tracking-wide sm:text-base"
           style={{ color: "#583228" }}
           animate={{
             scale: [1, 1.02, 1],
@@ -78,7 +78,6 @@ function AnimatedLogo() {
           >
             EMA • EMALYAMI
           </motion.span>
-          <br />
           <span className="text-xs italic" style={{ color: "#c38b7d" }}>
             Same vision, evolved experience
           </span>
