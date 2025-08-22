@@ -3,6 +3,7 @@ import QuickSteps from "@/components/sections/be-our-partner/QuickSteps";
 import EmaDifference from "@/components/sections/ema-difference/EmaDifference";
 import Hero from "@/components/sections/hero/Hero";
 import OurComponents from "@/components/sections/our-components/OurComponents";
+import OurPlans from "@/components/sections/our-plans/OurPlans";
 import OurServices from "@/components/sections/our-services/OurServices";
 import WhatElse from "@/components/sections/what-else/WhatElse";
 import BeforeAfter from "@/components/sections/white-label-solutions/BeforeAfter";
@@ -28,6 +29,7 @@ function Home() {
         <BeforeAfter />
         <CtaBanner />
       </div>
+      <OurPlans />
     </div>
   );
 }
