@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import NewLogo from "../../assets/shared/new_logo.svg";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentText, setCurrentText] = useState(0);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -16,12 +18,21 @@ function Header() {
     { id: "partner", label: "Partner" },
   ];
 
+  const textOptions = ["eMa", "eMalyami"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentText((prev) => (prev + 1) % textOptions.length);
+    }, 1500); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <header className="fixed left-0 right-0 z-50 border-b shadow-sm lg:rounded-full top-2 backdrop-blur-sm border-gray-200/50">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-14">
-          {/* Logo */}
-          {/* Logo */}
+          {/* Logo with Animated Text */}
           <div
             className="flex items-center transition-colors duration-200 cursor-pointer"
             onClick={() => scroll.scrollToTop()}
@@ -33,9 +44,38 @@ function Header() {
                 className="object-contain w-full h-full"
               />
             </div>
-            <span className="ml-2 text-2xl font-bold tracking-tight text-black lg:text-3xl">
-              eMa
-            </span>
+
+            {/* Animated Text with Flip Effect */}
+            <div className="ml-2 text-2xl font-bold tracking-tight text-black lg:text-3xl relative h-8 flex items-center min-w-[120px]">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={currentText}
+                  initial={{
+                    rotateX: 90,
+                    opacity: 0,
+                  }}
+                  animate={{
+                    rotateX: 0,
+                    opacity: 1,
+                  }}
+                  exit={{
+                    rotateX: -90,
+                    opacity: 0,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeInOut",
+                  }}
+                  className="absolute top-0 left-0"
+                  style={{
+                    transformOrigin: "center center",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  {textOptions[currentText]}
+                </motion.span>
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
