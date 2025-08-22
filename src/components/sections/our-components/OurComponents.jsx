@@ -42,7 +42,10 @@ const components = [
 
 function OurComponents() {
   return (
-    <section className="flex flex-col items-center px-12 space-y-32 sm:px-24 lg:px-32">
+    <section
+      id="components"
+      className="flex flex-col items-center px-12 space-y-32 sm:px-24 lg:px-32"
+    >
       <div className="flex flex-col items-center">
         <h2 className="text-2lg md:text-4xl ">Our Components</h2>
         <p className="text-sm leading-none text-center sm:text-lg text-muted-foreground ">

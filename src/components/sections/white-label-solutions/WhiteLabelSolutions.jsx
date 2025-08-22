@@ -3,7 +3,10 @@ import ManOnLaptop from "../../../assets/white-label-solutions/man-on-laptop.svg
 
 function WhiteLabelSolutions() {
   return (
-    <section className="flex flex-col gap-8 px-12 mx-auto md:px-24 sm:px-24 xl:px-32">
+    <section
+      id="white-label"
+      className="flex flex-col gap-8 px-12 mx-auto md:px-24 sm:px-24 xl:px-32"
+    >
       <SectionHeader
         title={"White Label Solutions"}
         subtitle={

@@ -49,7 +49,7 @@ function EmaDifference() {
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h2 className="text-2xl md:text-4xl">The eMalyami Difference</h2>
+        <h2 className="text-2xl md:text-4xl">The eMa Difference</h2>
         <p className="text-lg leading-none text-muted-foreground">
           Driving Africa's economic transformation through digital innovation
         </p>

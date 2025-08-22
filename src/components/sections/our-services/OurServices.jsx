@@ -30,7 +30,10 @@ const services = [
 
 function OurServices() {
   return (
-    <section className="flex flex-col items-center px-12 mx-auto space-y-8 xl:px-32 sm:px-24">
+    <section
+      id="services"
+      className="flex flex-col items-center px-12 mx-auto space-y-8 xl:px-32 sm:px-24"
+    >
       <SectionHeader
         subtitle={
           "From onboarding to real-time analytics, we manage the entire digital-finance lifecycle for you."

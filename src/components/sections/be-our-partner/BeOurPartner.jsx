@@ -10,7 +10,10 @@ import Underline from "../../../assets/who-are-we/needle-underline.svg";
 
 function BeOurPartner() {
   return (
-    <section className="flex flex-col items-center px-12 space-y-8 xl:px-32">
+    <section
+      id="partner"
+      className="flex flex-col items-center px-12 space-y-8 xl:px-32"
+    >
       <SectionHeader
         title={"Be Our Partner"}
         subtitle={"Transform Your Economy Through Partnership"}

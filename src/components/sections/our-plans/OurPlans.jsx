@@ -91,7 +91,10 @@ const plansCard = [
 
 function OurPlans() {
   return (
-    <section className="grid grid-cols-1 gap-10 px-4 py-16 mx-auto sm:px-8 md:px-16 xl:px-32 md:grid-cols-2 lg:grid-cols-3 max-w-7xl">
+    <section
+      id="pricing"
+      className="grid grid-cols-1 gap-10 px-4 py-16 mx-auto sm:px-8 md:px-16 xl:px-32 md:grid-cols-2 lg:grid-cols-3 max-w-7xl"
+    >
       {plansCard.map((plan, idx) => (
         <Card
           key={plan.planTitle || idx}
