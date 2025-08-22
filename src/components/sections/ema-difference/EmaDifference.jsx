@@ -85,7 +85,7 @@ function EmaDifference() {
                 stiffness: 150,
               }}
             >
-              <Card className="bg-[#E7D0CB] border-stone-400 gap-1 xl:gap-4 h-full">
+              <Card className="  gap-1 xl:gap-4 h-full">
                 <CardHeader>
                   <CardTitle className="flex justify-center gap-2 sm:justify-start">
                     <motion.div

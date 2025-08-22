@@ -18,9 +18,7 @@ function PartnerCard({
 }) {
   return (
     <Card
-      className={
-        "flex gap-2  md:justify-start bg-[#EBD2CC] flex-1 border-stone-500 md:min-h-70 md:gap-6"
-      }
+      className={"flex gap-2  md:justify-start flex-1  md:min-h-70 md:gap-6"}
     >
       <CardHeader>
         <CardTitle className={"flex items-center gap-2"}>

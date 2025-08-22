@@ -31,7 +31,7 @@ function Header() {
   return (
     <header className="fixed z-50 left-4 right-4 sm:left-6 sm:right-6 lg:left-8 lg:right-8 xl:left-12 xl:right-12 top-4 sm:top-6">
       <div className="border rounded-full shadow-lg backdrop-blur-sm border-gray-200/50">
-        <div className="px-6 mx-auto max-w-7xl sm:px-8 lg:px-12">
+        <div className="px-6  mx-auto max-w-7xl sm:px-8 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-16">
             {/* Logo with Animated Text */}
             <div
@@ -126,7 +126,7 @@ function Header() {
           {/* Mobile Navigation */}
           <div
             className={`lg:hidden transition-all duration-300 ease-in-out ${
-              isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              isOpen ? "max-h-96 opacity-100 " : "max-h-0 opacity-0"
             } overflow-hidden`}
           >
             <nav className="py-4 space-y-2">
