@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import NewLogo from "../../assets/shared/new_logo.svg";
+import AnimatedLogo from "../shared/AnimatedLogo";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ function Header() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentText((prev) => (prev + 1) % textOptions.length);
-    }, 1500); // Change every 3 seconds
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);
@@ -38,10 +38,11 @@ function Header() {
             onClick={() => scroll.scrollToTop()}
           >
             <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12">
-              <img
-                src={NewLogo}
-                alt="Logo"
-                className="object-contain w-full h-full"
+              <AnimatedLogo
+                containerClassName="block" // Remove fixed positioning
+                showSlogan={false} // Hide slogan in header
+                logoSize="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" // Match header size
+                className="" // Any additional classes for the rotating container
               />
             </div>
 
@@ -78,7 +79,7 @@ function Header() {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Rest of your navigation code stays the same */}
           <nav className="items-center hidden space-x-8 lg:flex">
             {navItems.map((item) => (
               <ScrollLink
@@ -94,7 +95,6 @@ function Header() {
               </ScrollLink>
             ))}
 
-            {/* CTA Button */}
             <ScrollLink
               to="partner"
               smooth={true}
@@ -106,7 +106,6 @@ function Header() {
             </ScrollLink>
           </nav>
 
-          {/* Mobile Menu Button */}
           <button
             className="p-2 transition-colors duration-200 rounded-md lg:hidden"
             style={{ color: "#AF6553" }}
