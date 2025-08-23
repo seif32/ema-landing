@@ -128,7 +128,16 @@ function OurPlans() {
           </CardContent>
           <CardFooter className="pt-6 mt-auto">
             <CardAction asChild>
-              <Button className={`${plan.ctaStyle} w-full`} size="lg">
+              <Button
+                className={`${plan.ctaStyle} w-full`}
+                size="lg"
+                onClick={() =>
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.emalyami.mobile&hl=en",
+                    "_blank"
+                  )
+                }
+              >
                 {plan.ctaBtn}
               </Button>
             </CardAction>

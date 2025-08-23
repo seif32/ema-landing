@@ -3,6 +3,7 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedLogo from "../shared/AnimatedLogo";
+import { Button } from "../ui/button";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -102,15 +103,17 @@ function Header() {
                 </ScrollLink>
               ))}
 
-              <ScrollLink
-                to="partner"
-                smooth={true}
-                duration={500}
-                offset={-80}
+              <Button
                 className="bg-[#AF6553] text-white px-6 py-2 rounded-full hover:bg-[#844b3d] transition-colors duration-200 cursor-pointer font-medium"
+                onClick={() =>
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.emalyami.mobile&hl=en",
+                    "_blank"
+                  )
+                }
               >
                 Get Started
-              </ScrollLink>
+              </Button>
             </nav>
 
             <button

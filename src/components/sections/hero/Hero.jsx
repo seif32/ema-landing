@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Underline from "../../../assets/who-are-we/needle-underline.svg";
+import { Link } from "react-scroll";
 
 function Hero() {
   const ref = useRef(null);
@@ -90,6 +91,13 @@ function Hero() {
     },
   };
 
+  const handleDownload = () => {
+    window.open(
+      "https://play.google.com/store/apps/details?id=com.emalyami.mobile&hl=en",
+      "_blank"
+    );
+  };
+
   return (
     <section
       ref={ref}
@@ -162,12 +170,15 @@ function Hero() {
         </motion.div>
 
         <motion.div
-          className="flex flex-col gap-4 lg:items-start lg:flex-row"
+          className="flex flex-col gap-4 lg:items-start lg:flex-row "
           variants={itemVariants}
           transition={{ delay: 1.2 }}
         >
           <motion.div variants={buttonVariants} whileTap="tap">
-            <Button className="px-6 py-3 text-sm font-medium tracking-wide transition-shadow duration-300 rounded-full shadow-lg bg-accent lg:text-xl lg:px-10 lg:py-4 hover:bg-accent/90 w-fit hover:shadow-xl">
+            <Button
+              className="px-6 py-3 text-sm font-medium tracking-wide transition-shadow duration-300 rounded-full shadow-lg bg-accent lg:text-xl lg:px-10 lg:py-6 hover:bg-accent/90 w-fit hover:shadow-xl"
+              onClick={handleDownload}
+            >
               <motion.div
                 initial={{ rotate: 0 }}
                 transition={{ duration: 0.2 }}
@@ -183,9 +194,11 @@ function Hero() {
             whileHover="hover"
             whileTap="tap"
           >
-            <Button className="px-6 py-3 text-sm font-medium tracking-wide transition-all duration-300 bg-transparent border-2 rounded-full border-accent text-accent lg:text-xl lg:px-10 lg:py-4 hover:bg-accent hover:text-white w-fit hover:shadow-lg">
-              View Our Services
-            </Button>
+            <Link to={"services"} smooth={true} duration={500} offset={-80}>
+              <Button className="px-6 py-3 text-sm font-medium tracking-wide transition-all duration-300 bg-transparent border-2 rounded-full border-accent text-accent lg:text-xl lg:px-10 lg:py-6 hover:bg-accent hover:text-white w-fit hover:shadow-lg">
+                View Our Services
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
 
