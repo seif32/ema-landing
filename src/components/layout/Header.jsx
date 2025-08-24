@@ -17,6 +17,7 @@ function Header() {
     { id: "white-label", label: "White Label" },
     { id: "pricing", label: "Pricing" },
     { id: "partner", label: "Partner" },
+    { id: "https://emalyami.wordpress.com/", label: "Blog", type: "external" }, // 👈 Your blog URL here
   ];
 
   const textOptions = ["eMa", "eMalyami"];
@@ -89,19 +90,32 @@ function Header() {
 
             {/* Desktop Navigation */}
             <nav className="items-center hidden space-x-8 lg:flex">
-              {navItems.map((item) => (
-                <ScrollLink
-                  key={item.id}
-                  to={item.id}
-                  smooth={true}
-                  duration={500}
-                  offset={-80}
-                  className="text-gray-700 hover:text-[#AF6553] font-medium transition-colors duration-200 cursor-pointer relative group"
-                >
-                  {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#AF6553] transition-all duration-300 group-hover:w-full"></span>
-                </ScrollLink>
-              ))}
+              {navItems.map((item) =>
+                item.type === "external" ? (
+                  <a
+                    key={item.id}
+                    href={item.id}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-[#AF6553] font-medium transition-colors duration-200 cursor-pointer relative group"
+                  >
+                    {item.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#AF6553] transition-all duration-300 group-hover:w-full"></span>
+                  </a>
+                ) : (
+                  <ScrollLink
+                    key={item.id}
+                    to={item.id}
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="text-gray-700 hover:text-[#AF6553] font-medium transition-colors duration-200 cursor-pointer relative group"
+                  >
+                    {item.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#AF6553] transition-all duration-300 group-hover:w-full"></span>
+                  </ScrollLink>
+                )
+              )}
 
               <Button
                 className="bg-[#AF6553] text-white px-6 py-2 rounded-full hover:bg-[#844b3d] transition-colors duration-200 cursor-pointer font-medium"
@@ -114,6 +128,8 @@ function Header() {
               >
                 Get Started
               </Button>
+
+              {/* Your existing Get Started button... */}
             </nav>
 
             <button
@@ -133,29 +149,46 @@ function Header() {
             } overflow-hidden`}
           >
             <nav className="py-4 space-y-2">
-              {navItems.map((item) => (
-                <ScrollLink
-                  key={item.id}
-                  to={item.id}
-                  smooth={true}
-                  duration={500}
-                  offset={-80}
-                  className="block px-4 py-3 text-gray-700 hover:text-[#AF6553] hover:bg-gray-50 rounded-md transition-colors duration-200 cursor-pointer"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </ScrollLink>
-              ))}
-              <ScrollLink
-                to="partner"
-                smooth={true}
-                duration={500}
-                offset={-80}
+              {navItems.map((item) =>
+                item.type === "external" ? (
+                  <a
+                    key={item.id}
+                    href={item.id}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-3 text-gray-700 hover:text-[#AF6553] hover:bg-gray-50 rounded-md transition-colors duration-200 cursor-pointer"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <ScrollLink
+                    key={item.id}
+                    to={item.id}
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="block px-4 py-3 text-gray-700 hover:text-[#AF6553] hover:bg-gray-50 rounded-md transition-colors duration-200 cursor-pointer"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </ScrollLink>
+                )
+              )}
+
+              <Button
                 className="block mx-4 mt-4 bg-[#AF6553] text-white px-6 py-3 rounded-full hover:bg-[#844b3d] transition-colors duration-200 cursor-pointer font-medium text-center"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.emalyami.mobile&hl=en",
+                    "_blank"
+                  );
+                  setIsOpen(false);
+                }}
               >
                 Get Started
-              </ScrollLink>
+              </Button>
+              {/* Your existing mobile Get Started button... */}
             </nav>
           </div>
         </div>
