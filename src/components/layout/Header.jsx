@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedLogo from "../shared/AnimatedLogo";
 import { Button } from "../ui/button";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "../ui/drawer"; // 👈 Import drawer components
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
   const [currentText, setCurrentText] = useState(0);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false); // 👈 Drawer state
 
   const navItems = [
     { id: "components", label: "Components" },
@@ -17,7 +23,7 @@ function Header() {
     { id: "white-label", label: "White Label" },
     { id: "pricing", label: "Pricing" },
     { id: "partner", label: "Partner" },
-    { id: "https://emalyami.wordpress.com/", label: "Blog", type: "external" }, // 👈 Your blog URL here
+    { id: "https://emalyami.wordpress.com/", label: "Blog", type: "external" },
   ];
 
   const textOptions = ["eMa", "eMalyami"];
@@ -25,7 +31,7 @@ function Header() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentText((prev) => (prev + 1) % textOptions.length);
-    }, 2000); // Increased to 2 seconds for better visibility
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -33,14 +39,13 @@ function Header() {
   return (
     <header className="fixed z-50 left-4 right-4 sm:left-6 sm:right-6 lg:left-8 lg:right-8 xl:left-12 xl:right-12 top-4 sm:top-6">
       <div className="border rounded-full shadow-lg backdrop-blur-sm border-gray-200/50">
-        <div className="px-6  mx-auto max-w-7xl sm:px-8 lg:px-12">
+        <div className="px-6 mx-auto max-w-7xl sm:px-8 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-16">
             {/* Logo with Animated Text */}
             <div
               className="flex items-center transition-colors duration-200 cursor-pointer"
               onClick={() => scroll.scrollToTop()}
             >
-              {/* Logo Container with Proper Sizing */}
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14">
                 <AnimatedLogo
                   containerClassName="block w-full h-full"
@@ -50,35 +55,22 @@ function Header() {
                 />
               </div>
 
-              {/* Animated Text with Fixed Container */}
               <div className="relative flex items-center ml-3">
                 <div
                   className="relative overflow-hidden"
                   style={{
-                    width: "140px", // Fixed width to prevent layout shifts
-                    height: "40px", // Fixed height
+                    width: "140px",
+                    height: "40px",
                     perspective: "1000px",
                   }}
                 >
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={currentText}
-                      initial={{
-                        opacity: 0,
-                        y: 20,
-                      }}
-                      animate={{
-                        opacity: 1,
-                        y: 0,
-                      }}
-                      exit={{
-                        opacity: 0,
-                        y: -20,
-                      }}
-                      transition={{
-                        duration: 0.4,
-                        ease: "easeInOut",
-                      }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
                       className="absolute left-0 text-2xl font-bold tracking-tight text-black transform -translate-y-1/2 top-1/2 lg:text-3xl whitespace-nowrap"
                     >
                       {textOptions[currentText]}
@@ -128,68 +120,91 @@ function Header() {
               >
                 Get Started
               </Button>
-
-              {/* Your existing Get Started button... */}
             </nav>
 
-            <button
-              className="p-2 transition-colors duration-200 rounded-md lg:hidden"
-              style={{ color: "#AF6553" }}
-              onClick={toggleMenu}
-              aria-label="Toggle menu"
+            {/* Mobile Drawer Trigger */}
+            <Drawer
+              open={isDrawerOpen}
+              onOpenChange={setIsDrawerOpen}
+              direction="right"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+              <DrawerTrigger asChild>
+                <button
+                  className="p-2 transition-colors duration-200 rounded-md lg:hidden"
+                  style={{ color: "#AF6553" }}
+                  aria-label="Toggle menu"
+                >
+                  <Menu size={24} />
+                </button>
+              </DrawerTrigger>
 
-          {/* Mobile Navigation */}
-          <div
-            className={`lg:hidden transition-all duration-300 ease-in-out ${
-              isOpen ? "max-h-96 opacity-100 " : "max-h-0 opacity-0"
-            } overflow-hidden`}
-          >
-            <nav className="py-4 space-y-2">
-              {navItems.map((item) =>
-                item.type === "external" ? (
-                  <a
-                    key={item.id}
-                    href={item.id}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-3 text-gray-700 hover:text-[#AF6553] hover:bg-gray-50 rounded-md transition-colors duration-200 cursor-pointer"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  <ScrollLink
-                    key={item.id}
-                    to={item.id}
-                    smooth={true}
-                    duration={500}
-                    offset={-80}
-                    className="block px-4 py-3 text-gray-700 hover:text-[#AF6553] hover:bg-gray-50 rounded-md transition-colors duration-200 cursor-pointer"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </ScrollLink>
-                )
-              )}
+              <DrawerContent className="h-[100vh] w-[320px] right-0 left-auto">
+                <div className="mx-auto w-full max-w-sm">
+                  <DrawerHeader>
+                    <DrawerTitle className="text-center text-[#AF6553]">
+                      Navigation Menu
+                    </DrawerTitle>
+                  </DrawerHeader>
 
-              <Button
-                className="block mx-4 mt-4 bg-[#AF6553] text-white px-6 py-3 rounded-full hover:bg-[#844b3d] transition-colors duration-200 cursor-pointer font-medium text-center"
-                onClick={() => {
-                  window.open(
-                    "https://play.google.com/store/apps/details?id=com.emalyami.mobile&hl=en",
-                    "_blank"
-                  );
-                  setIsOpen(false);
-                }}
-              >
-                Get Started
-              </Button>
-              {/* Your existing mobile Get Started button... */}
-            </nav>
+                  {/* Navigation Items */}
+                  <div className="p-4 pb-0">
+                    <div className="space-y-3">
+                      {navItems.map((item) =>
+                        item.type === "external" ? (
+                          <a
+                            key={item.id}
+                            href={item.id}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center px-4 py-3 text-gray-700 hover:text-[#AF6553] hover:bg-gray-50 rounded-lg transition-all duration-200 cursor-pointer font-medium border border-gray-100"
+                            onClick={() => setIsDrawerOpen(false)}
+                          >
+                            {item.label}
+                          </a>
+                        ) : (
+                          <ScrollLink
+                            key={item.id}
+                            to={item.id}
+                            smooth={true}
+                            duration={500}
+                            offset={-80}
+                            className="flex items-center justify-center px-4 py-3 text-gray-700 hover:text-[#AF6553] hover:bg-gray-50 rounded-lg transition-all duration-200 cursor-pointer font-medium border border-gray-100"
+                            onClick={() => setIsDrawerOpen(false)}
+                          >
+                            {item.label}
+                          </ScrollLink>
+                        )
+                      )}
+                    </div>
+
+                    {/* Get Started Button */}
+                    <div className="mt-6 pt-4 border-t border-gray-100">
+                      <Button
+                        className="w-full bg-[#AF6553] text-white px-6 py-3 rounded-full hover:bg-[#844b3d] transition-colors duration-200 cursor-pointer font-medium"
+                        onClick={() => {
+                          window.open(
+                            "https://play.google.com/store/apps/details?id=com.emalyami.mobile&hl=en",
+                            "_blank"
+                          );
+                          setIsDrawerOpen(false);
+                        }}
+                      >
+                        Get Started 🚀
+                      </Button>
+                    </div>
+
+                    {/* Close Button */}
+                    <div className="mt-4">
+                      <DrawerClose asChild>
+                        <Button variant="outline" className="w-full">
+                          Close Menu
+                        </Button>
+                      </DrawerClose>
+                    </div>
+                  </div>
+                </div>
+              </DrawerContent>
+            </Drawer>
           </div>
         </div>
       </div>
