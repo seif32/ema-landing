@@ -81,28 +81,28 @@ const NewsPage = () => {
     }
   }, [posts]);
 
-  const handleLike = (postId) => {
-    const isLiked = likedPosts.has(postId);
-    const newLikedPosts = new Set(likedPosts);
+  // const handleLike = (postId) => {
+  //   const isLiked = likedPosts.has(postId);
+  //   const newLikedPosts = new Set(likedPosts);
 
-    if (isLiked) {
-      newLikedPosts.delete(postId);
-      setPostLikes((prev) => ({ ...prev, [postId]: prev[postId] - 1 }));
-      toast.success("Like removed! 💔");
-    } else {
-      newLikedPosts.add(postId);
-      setPostLikes((prev) => ({ ...prev, [postId]: prev[postId] + 1 }));
-      toast.success("Post liked! ❤️");
-    }
+  //   if (isLiked) {
+  //     newLikedPosts.delete(postId);
+  //     setPostLikes((prev) => ({ ...prev, [postId]: prev[postId] - 1 }));
+  //     toast.success("Like removed! 💔");
+  //   } else {
+  //     newLikedPosts.add(postId);
+  //     setPostLikes((prev) => ({ ...prev, [postId]: prev[postId] + 1 }));
+  //     toast.success("Post liked! ❤️");
+  //   }
 
-    setLikedPosts(newLikedPosts);
-  };
+  //   setLikedPosts(newLikedPosts);
+  // };
 
-  const handleShare = (postId) => {
-    const shareUrl = `${window.location.origin}/news?id=${postId}`;
-    navigator.clipboard.writeText(shareUrl);
-    toast.success("🔗 Link copied to clipboard!");
-  };
+  // const handleShare = (postId) => {
+  //   const shareUrl = `${window.location.origin}/news?id=${postId}`;
+  //   navigator.clipboard.writeText(shareUrl);
+  //   toast.success("🔗 Link copied to clipboard!");
+  // };
 
   // 🔄 Loading state
   if (isLoadingPosts) {
