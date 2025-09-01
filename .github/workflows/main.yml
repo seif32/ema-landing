@@ -32,6 +32,11 @@ jobs:
         tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
         cache-from: type=gha
         cache-to: type=gha,mode=max
+        # -- ADDED SECRETS HERE --
+        secrets: |
+          VITE_GEMINI_KEY_1=${{ secrets.VITE_GEMINI_KEY_1 }}
+          VITE_GEMINI_KEY_2=${{ secrets.VITE_GEMINI_KEY_2 }}
+          VITE_GEMINI_KEY_3=${{ secrets.VITE_GEMINI_KEY_3 }}
     
     - name: Deploy to server
       uses: appleboy/ssh-action@v1.0.0
@@ -42,8 +47,7 @@ jobs:
         port: ${{ secrets.PORT || 22 }}
         script: |
           cd /opt/ema-landing
-          echo "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}" > .env
-          echo "IMAGE_NAME=${{ env.IMAGE_NAME }}" >> .env
+          # The secrets are already baked into the image, so no need to create a .env file
           docker compose pull || docker-compose pull
           docker compose down || docker-compose down
           docker compose up -d || docker-compose up -d
