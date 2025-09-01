@@ -129,7 +129,7 @@ eMalyami is a digital financial services platform developed by Sobek IT in assoc
 
  * These are just a few examples of the many benefits that eMalyami can offer to various market operatives and players.
 The platform's capabilities are designed to facilitate financial transactions, commerce, and trade across Africa, and its benefits can be tailored to meet the specific needs of different industries and sectors.
-download eMalyami application from   https://play.google.com/store/apps/details?id=com.emalyami.mobile , the emalyami website is https://emalyami.com/
+download eMalyami application from   https://play.google.com/store/apps/details?id=com.emalyami.mobile , the emalyami website is https://ema.emalyami.com/
 
 * emalyami modules are:
 1. eMaMall: A virtual marketplace connecting buyers and sellers, enabling seamless e-commerce with product listings, secure payments, customer reviews, expanding market access for businesses and creation of virtual shops.
