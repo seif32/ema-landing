@@ -6,10 +6,14 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
-# This is the line that uses the secrets passed from GitHub Actions
-RUN --mount=type=secret,id=VITE_GEMINI_KEY_1,env=VITE_GEMINI_KEY_1 \
-    --mount=type=secret,id=VITE_GEMINI_KEY_2,env=VITE_GEMINI_KEY_2 \
-    --mount=type=secret,id=VITE_GEMINI_KEY_3,env=VITE_GEMINI_KEY_3 \
+
+# Use a RUN command to make the secrets available as environment variables for the build
+RUN --mount=type=secret,id=VITE_GEMINI_KEY_1 \
+    --mount=type=secret,id=VITE_GEMINI_KEY_2 \
+    --mount=type=secret,id=VITE_GEMINI_KEY_3 \
+    VITE_GEMINI_KEY_1=$(cat /run/secrets/VITE_GEMINI_KEY_1) \
+    VITE_GEMINI_KEY_2=$(cat /run/secrets/VITE_GEMINI_KEY_2) \
+    VITE_GEMINI_KEY_3=$(cat /run/secrets/VITE_GEMINI_KEY_3) \
     npm run build
 
 # Production Stage
