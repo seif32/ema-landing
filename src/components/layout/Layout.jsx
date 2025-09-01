@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import Header from "./Header";
 import Footer from "./Footer";
 import AnimatedLogo from "../shared/AnimatedLogo";
+import Chatbot from "../sections/chatbot/Chatbot";
 
 export default function Layout() {
   return (
@@ -13,6 +14,7 @@ export default function Layout() {
       scroll-smooth
 "
     >
+      <Chatbot />
       <AnimatedLogo />
       <Header />
 

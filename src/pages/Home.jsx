@@ -32,7 +32,6 @@ function Home() {
         <CtaBanner />
       </div>
       <OurPlans />
-      <Chatbot />
     </div>
   );
 }
