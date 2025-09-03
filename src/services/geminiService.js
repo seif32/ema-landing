@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const apiKeys = [
   import.meta.env.VITE_GEMINI_KEY_1,
   import.meta.env.VITE_GEMINI_KEY_2,
-  import.meta.env.VITE_GEMINI_KEY_3,
+  // import.meta.env.VITE_GEMINI_KEY_3,
 ].filter(Boolean);
 
 /**
@@ -15,6 +15,8 @@ const getRandomApiKey = () => {
     return null;
   }
   const randomIndex = Math.floor(Math.random() * apiKeys.length);
+
+  console.log("randomIndex", randomIndex);
   return apiKeys[randomIndex];
 };
 
@@ -27,6 +29,8 @@ const generateText = async (prompt) => {
     if (!apiKey) {
       throw new Error("No API key available");
     }
+
+    console.log("geminiService", apiKey);
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
