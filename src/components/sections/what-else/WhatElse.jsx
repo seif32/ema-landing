@@ -51,7 +51,7 @@ const components_2 = [
 
 function WhatElse() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-10%" });
+  const isInView = useInView(ref, { once: true });
 
   // Animation variants
   const containerVariants = {
@@ -132,11 +132,9 @@ function WhatElse() {
   const backgroundVariants = {
     hidden: {
       opacity: 0,
-      scale: 1.05,
     },
     visible: {
       opacity: 1,
-      scale: 1,
       transition: {
         duration: 1.5,
         ease: "easeOut",
@@ -147,7 +145,7 @@ function WhatElse() {
   return (
     <motion.section
       ref={ref}
-      className="relative bg-gradient-to-t to-[#D88F4A] from-[#B06926] lg:px-32 py-16 lg:pt-32 sm:px-24 px-12 overflow-hidden"
+      className="relative bg-gradient-to-t to-[#D88F4A] from-[#B06926] lg:px-32 py-16 lg:pt-32 sm:px-24 px-12 overflow-hidden overflow-x-hidden"
       variants={backgroundVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}

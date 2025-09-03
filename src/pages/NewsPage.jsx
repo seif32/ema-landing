@@ -271,13 +271,13 @@ const NewsPage = () => {
                         <span className="font-medium">{post.noOfComments}</span>
                       </button>
 
-                      <button
+                      {/* <button
                         onClick={() => handleShare(post.id)}
                         className="flex items-center space-x-2 text-slate-600 hover:text-green-600 transition-colors"
                       >
                         <Share2 className="h-5 w-5" />
                         <span className="font-medium">Share</span>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>

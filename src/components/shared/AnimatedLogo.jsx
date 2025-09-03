@@ -12,7 +12,7 @@ function AnimatedLogo({
     <div
       className={
         containerClassName ||
-        "fixed z-50 flex flex-col items-center justify-center py-4 bottom-2 right-8 sm:py-6"
+        "fixed z-50 flex flex-col items-center justify-center py-4 bottom-2 right-2 sm:py-6"
       }
       style={{ perspective: "800px" }}
     >

@@ -31,13 +31,13 @@ const differenceCards = [
 ];
 
 function EmaDifference() {
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   return (
     <motion.section
-      ref={sectionRef}
-      className="flex flex-col px-12 mx-auto space-y-8 sm:px-24 xl:px-32"
+      ref={ref}
+      className="overflow-x-hidden flex flex-col px-12 mx-auto space-y-8 sm:px-24 xl:px-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

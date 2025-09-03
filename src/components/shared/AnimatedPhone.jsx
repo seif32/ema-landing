@@ -2,8 +2,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 function AnimatedPhone() {
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   // Animation variants for different parts
   const phoneVariants = {
@@ -74,7 +74,7 @@ function AnimatedPhone() {
 
   return (
     <motion.div
-      ref={sectionRef}
+      ref={ref}
       className="flex items-center justify-center w-full h-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

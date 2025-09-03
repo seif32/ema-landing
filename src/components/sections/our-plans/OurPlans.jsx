@@ -93,7 +93,7 @@ function OurPlans() {
   return (
     <section
       id="pricing"
-      className="grid grid-cols-1 gap-10 px-4 py-16 mx-auto sm:px-8 md:px-16 xl:px-32 md:grid-cols-2 lg:grid-cols-3 max-w-7xl"
+      className="grid grid-cols-1 gap-10 px-4 py-16 mx-auto sm:px-8 md:px-16 xl:px-32 md:grid-cols-2 lg:grid-cols-3 max-w-7xl overflow-x-hidden"
     >
       {plansCard.map((plan, idx) => (
         <Card

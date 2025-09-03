@@ -6,7 +6,7 @@ import ManOnLaptop from "../../../assets/white-label-solutions/man-on-laptop.svg
 
 function WhiteLabelSolutions() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-10%" });
+  const isInView = useInView(ref, { once: true });
 
   // Animation variants
   const containerVariants = {
@@ -107,7 +107,7 @@ function WhiteLabelSolutions() {
     <motion.section
       id="white-label"
       ref={ref}
-      className="flex flex-col gap-8 px-12 py-16 mx-auto lg:py-24 md:px-24 sm:px-24 xl:px-32"
+      className="flex flex-col gap-8 px-12 py-16 mx-auto lg:py-24 md:px-24 sm:px-24 xl:px-32 overflow-x-hidden"
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}

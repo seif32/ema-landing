@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 
 function WhoAreWe() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-10%" });
+  const isInView = useInView(ref, { once: true });
 
   // Animation variants
   const containerVariants = {
@@ -159,10 +159,9 @@ function WhoAreWe() {
       {/* Background */}
       <motion.div
         className="absolute inset-0 bg-top-right xl:bg-center bg-[url('/who-bg.svg')] bg-contain 2xl:bg-cover bg-no-repeat"
-        initial={{ opacity: 0, scale: 1.05 }}
+        initial={{ opacity: 0 }}
         animate={{
           opacity: isInView ? 0.4 : 0,
-          scale: isInView ? 1 : 1.05,
         }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       />

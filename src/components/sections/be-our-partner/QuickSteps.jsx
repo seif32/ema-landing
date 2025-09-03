@@ -28,7 +28,7 @@ const steps = [
 function QuickSteps() {
   return (
     <>
-      <section className="flex items-center justify-between pl-2 pr-12 2xl:justify-center 2xl:gap-40 xl:px-32">
+      <section className="overflow-x-hidden flex items-center justify-between pl-2 pr-12 2xl:justify-center 2xl:gap-40 xl:px-32">
         <div className="relative w-32 md:w-50 sm:-left-6 -left-2 lg:left-0 lg:w-80">
           <AnimatedPhone />
         </div>

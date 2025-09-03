@@ -13,7 +13,7 @@ import Underline from "../../../assets/who-are-we/needle-underline.svg";
 
 function BeOurPartner() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-10%" });
+  const isInView = useInView(ref, { once: true });
 
   // Animation variants
   const containerVariants = {
@@ -132,7 +132,7 @@ function BeOurPartner() {
     <section
       id="partner"
       ref={ref}
-      className="flex flex-col items-center px-12 py-16 space-y-16 lg:py-24 xl:px-32"
+      className="flex flex-col items-center px-12 py-16 space-y-16 lg:py-24 xl:px-32 overflow-x-hidden"
     >
       {/* Header */}
       <motion.div

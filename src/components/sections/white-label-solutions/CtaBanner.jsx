@@ -24,7 +24,7 @@ const items = [
 
 function CtaBanner() {
   return (
-    <section className="px-12 mx-auto md:px-24 sm:px-24 xl:px-32">
+    <section className="overflow-x-hidden px-12 mx-auto md:px-24 sm:px-24 xl:px-32">
       <div className="bg-[#FAEFE6] rounded-2xl md:px-10 lg:px-12 md:py-12 sm:py-10 sm:px-8 px-6 py-8 lg:py-14 flex md:flex-row flex-col justify-start   gap-8 md:gap-20 lg:gap-80 ">
         <div className="flex flex-col justify-center lg:justify-between">
           <div>

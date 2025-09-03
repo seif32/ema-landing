@@ -4,7 +4,7 @@ import { MoveRight } from "lucide-react";
 
 function BeforeAfter() {
   return (
-    <section className="px-4 py-8 mx-auto max-w-7xl sm:px-8 md:px-12 lg:px-16 xl:px-24">
+    <section className="px-4 py-8 mx-auto max-w-7xl sm:px-8 md:px-12 lg:px-16 xl:px-24 overflow-x-hidden">
       <div className="flex items-center gap-8 lg:flex-row lg:items-center lg:justify-between">
         {/* Before Section */}
         <div className="flex flex-col items-center self-start w-full lg:items-start lg:w-auto lg:flex-1">

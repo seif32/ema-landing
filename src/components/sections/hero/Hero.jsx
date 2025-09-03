@@ -58,12 +58,10 @@ function Hero() {
   const backgroundVariants = {
     hidden: {
       opacity: 0,
-      scale: 1.1,
       filter: "blur(8px)",
     },
     visible: {
       opacity: 1,
-      scale: 1,
       filter: "blur(0px)",
       transition: {
         duration: 1.5,
@@ -101,7 +99,7 @@ function Hero() {
   return (
     <section
       ref={ref}
-      className="mt-15 sm:mt-10 lg:mt-7 relative 2xl:min-h-screen pl-10 pt-[12%] pr-[40%]"
+      className="mt-15 sm:mt-10 lg:mt-7 relative 2xl:min-h-screen pl-10 pt-[12%] pr-[40%] overflow-x-hidden"
     >
       {/* Animated Background */}
       <motion.div

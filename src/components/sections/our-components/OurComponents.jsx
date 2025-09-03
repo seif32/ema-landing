@@ -45,7 +45,7 @@ const components = [
 
 function OurComponents() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-10%" });
+  const isInView = useInView(ref, { once: true });
 
   // Animation variants
   const containerVariants = {
@@ -142,7 +142,7 @@ function OurComponents() {
     <section
       id="components"
       ref={ref}
-      className="flex flex-col items-center px-12 py-16 space-y-16 lg:py-24 lg:space-y-32 sm:px-24 lg:px-32"
+      className="flex flex-col items-center px-12 py-16 space-y-16 lg:py-24 lg:space-y-32 sm:px-24 lg:px-32 overflow-x-hidden"
     >
       {/* Header Section */}
       <motion.div
