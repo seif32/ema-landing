@@ -133,7 +133,7 @@ function Hero() {
               animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -20 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Baby steps to
+              خطوات صغيرة نحو
             </motion.span>
             <br className="hidden md:block" />{" "}
             <motion.span
@@ -142,12 +142,12 @@ function Hero() {
               animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 20 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              Financial{" "}
+              الحرية{" "}
               <motion.span className="relative inline-block">
-                Freedom{" "}
+                المالية{" "}
                 <motion.img
                   src={Underline}
-                  alt="underline"
+                  alt="تسطير"
                   className="absolute right-0 w-full h-auto -bottom-4"
                   variants={underlineVariants}
                   initial="hidden"
@@ -162,8 +162,8 @@ function Hero() {
             variants={itemVariants}
             transition={{ delay: 0.9 }}
           >
-            A digital ecosystem empowering financial inclusion, Small and Medium
-            Enterprises (SMEs) growth, transparency and scalable partnerships.
+            نظام بيئي رقمي يعزز الشمول المالي ونمو المشاريع الصغيرة والمتوسطة
+            والشفافية والشراكات القابلة للتوسع.
           </motion.p>
         </motion.div>
 
@@ -181,9 +181,9 @@ function Hero() {
                 initial={{ rotate: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <BiLogoPlayStore size={20} className="mr-2" />
+                <BiLogoPlayStore size={20} className="ml-2" />
               </motion.div>
-              Start Your Transformation
+              ابدأ تحولك
             </Button>
           </motion.div>
 
@@ -194,7 +194,7 @@ function Hero() {
           >
             <Link to={"services"} smooth={true} duration={500} offset={-80}>
               <Button className="px-6 py-3 text-sm font-medium tracking-wide transition-all duration-300 bg-transparent border-2 rounded-full border-accent text-accent lg:text-xl lg:px-10 lg:py-6 hover:bg-accent hover:text-white w-fit hover:shadow-lg">
-                View Our Services
+                اعرض خدماتنا
               </Button>
             </Link>
           </motion.div>
