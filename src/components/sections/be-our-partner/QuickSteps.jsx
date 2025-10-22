@@ -4,24 +4,24 @@ import { Button } from "@/components/ui/button";
 
 const steps = [
   {
-    title: "Discovery Call",
+    title: "Chamada de Descoberta",
     subtitle:
-      "Quick intro meeting to understand your needs and see if we're a good fit",
+      "Reunião de introdução rápida para entender suas necessidades e ver se somos uma boa combinação",
   },
   {
-    title: "Custom Demo",
+    title: "Demonstração Personalizada",
     subtitle:
-      "We build and show you exactly how our solution works for your specific situation",
+      "Construímos e mostramos exatamente como nossa solução funciona para sua situação específica",
   },
   {
-    title: "Pilot Program",
+    title: "Programa Piloto",
     subtitle:
-      "Small-scale test run with real users to prove it works before full launch",
+      "Teste em pequena escala com usuários reais para provar que funciona antes do lançamento completo",
   },
   {
-    title: "Full Deployment ",
+    title: "Implementação Completa",
     subtitle:
-      "Complete rollout to all your users with full support and integration",
+      "Lançamento completo para todos os seus usuários com suporte total e integração",
   },
 ];
 
@@ -34,8 +34,9 @@ function QuickSteps() {
         </div>
         <div className="flex flex-col gap-4 lg:gap-8 w-fit">
           <h2 className="text-2xl leading-5 sm:leading-none sm:text-4xl md:text-5xl lg:tracking-normal lg:text-6xl">
-            4 Quick Steps to be our Partner
+            4 Passos Rápidos para ser nosso Parceiro
           </h2>
+
           <div className="border"></div>
 
           <div className="space-y-2 lg:space-y-4">
@@ -67,14 +68,14 @@ function QuickSteps() {
       </section>
       <section className="flex gap-2 flex-col items-center bg-gradient-to-t to-[#994C00] from-[#D66B00] py-14 sm:py-16 md:py-18 lg:py-22">
         <p className="text-2xl text-white sm:text-3xl md:text-4xl lg:text-5xl">
-          Begin Partnership Discussion Today
+          Comece a Discussão de Parceria Hoje
         </p>
         <Button
           className={
             " bg-black rounded-full text-white md:text-xl sm:text-lg text-md lg:text-2xl md:py-5 sm:py-4 py-2 lg:py-7 lg:px-18 md:px-16 sm:px-14 px-12"
           }
         >
-          Schedule Call
+          Agendar Chamada
         </Button>
       </section>
     </>
