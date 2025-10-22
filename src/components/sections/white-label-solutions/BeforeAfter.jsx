@@ -11,16 +11,16 @@ function BeforeAfter() {
           <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
             <img
               src={Before}
-              alt="before-white-label"
+              alt="antes-marca-branca"
               className="w-full h-auto"
             />
           </div>
           <div className="mt-4 text-center lg:text-left lg:max-w-md">
             <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
-              Generic Platform
+              Plataforma Genérica
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-600 sm:text-base md:text-lg lg:text-xl">
-              Standard eMa interface with our branding and corporate design
+              Interface padrão eMa com nossa marca e design corporativo
             </p>
           </div>
         </div>
@@ -35,17 +35,17 @@ function BeforeAfter() {
           <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl lg:self-end">
             <img
               src={After}
-              alt="after-white-label"
+              alt="depois-marca-branca"
               className="w-full h-auto"
             />
           </div>
           <div className="mt-4 text-center lg:text-left lg:max-w-md">
             <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
-              Your Brand Solution
+              Sua Solução de Marca
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-600 sm:text-base md:text-lg lg:text-xl">
-              Same powerful technology with your logo, colors, and
-              industry-specific design
+              Mesma tecnologia poderosa com seu logotipo, cores e design
+              específico do setor
             </p>
           </div>
         </div>
