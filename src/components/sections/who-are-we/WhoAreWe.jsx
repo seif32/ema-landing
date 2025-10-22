@@ -173,6 +173,7 @@ function WhoAreWe() {
         animate={isInView ? "visible" : "hidden"}
       >
         {/* Header Section */}
+        {/* Header Section */}
         <motion.div
           className="flex flex-col items-center"
           variants={itemVariants}
@@ -181,20 +182,20 @@ function WhoAreWe() {
             className="relative mb-4 text-2xl font-bold sm:text-4xl w-fit"
             variants={itemVariants}
           >
-            Who are we?
+            من نحن؟
             <motion.div
               className="absolute w-10 -top-5 -right-6"
               variants={crownVariants}
             >
-              <img src={TextCrown} alt="crown" />
+              <img src={TextCrown} alt="تاج" />
             </motion.div>
           </motion.h2>
           <motion.p
             className="max-w-2xl text-sm leading-relaxed text-center sm:text-lg text-muted-foreground sm:leading-normal"
             variants={itemVariants}
           >
-            A mission-driven fintech creating transparent, inclusive growth for
-            every entrepreneur.
+            شركة تكنولوجيا مالية قائمة على رسالة تخلق نموًا شفافًا وشاملاً لكل
+            رائد أعمال.
           </motion.p>
         </motion.div>
 
@@ -204,8 +205,13 @@ function WhoAreWe() {
           variants={itemVariants}
         >
           {/* Map Section */}
+          {/* Map Section */}
           <motion.div className="relative" variants={mapVariants}>
-            <motion.img src={Map} className="lg:w-max w-70" alt="Africa map" />
+            <motion.img
+              src={Map}
+              className="lg:w-max w-70"
+              alt="خريطة أفريقيا"
+            />
             {[Person1, Person2, Person3].map((person, i) => (
               <motion.img
                 key={i}
@@ -217,7 +223,7 @@ function WhoAreWe() {
                     ? "inset-20 left-30 lg:inset-40"
                     : "inset-30 left-50 lg:inset-60"
                 }`}
-                alt={`person ${i + 1}`}
+                alt={`شخص ${i + 1}`}
                 custom={i}
                 variants={personVariants}
                 initial="hidden"
@@ -237,11 +243,11 @@ function WhoAreWe() {
               }}
               transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
             >
-              Part of{" "}
+              جزء من{" "}
               <span className="font-bold">
-                Sobek <br /> Group
+                مجموعة <br /> سوبك
               </span>{" "}
-              - trusted <br /> across Africa & <br /> South Africa.
+              - موثوق بها <br /> في جميع أنحاء أفريقيا <br /> وجنوب أفريقيا.
             </motion.p>
             <motion.div
               className="absolute -top-2 -right-5 "
@@ -250,7 +256,7 @@ function WhoAreWe() {
               animate={isInView ? "visible" : "hidden"}
             >
               <Badge variant="destructive" className="text-sm rotate-8">
-                All-in-one solution
+                حل شامل
               </Badge>
             </motion.div>
           </motion.div>
@@ -262,13 +268,13 @@ function WhoAreWe() {
           variants={itemVariants}
         >
           {[
-            { number: "10+", label: "Years Experience" },
+            { number: "10+", label: "سنوات من الخبرة" },
             {
-              number: "Multi-Continental Reach",
+              number: "انتشار متعدد القارات",
               label: "",
               hasUnderline: true,
             },
-            { number: "99%", label: "Client Satisfaction" },
+            { number: "99%", label: "رضا العملاء" },
           ].map((stat, i) => (
             <motion.div
               key={i}
@@ -300,7 +306,7 @@ function WhoAreWe() {
                   <motion.img
                     className="absolute w-[80%] left-[9%] -bottom-8"
                     src={Underline}
-                    alt="underline"
+                    alt="تسطير"
                     variants={underlineVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
