@@ -7,37 +7,37 @@ import MobilePrototype from "../../../assets/our-components/components-mobile-pr
 const components = [
   {
     title: "PAYMATE",
-    subtitle: "Cash-to-Digital Bridge",
+    subtitle: "Pont Espèces-Numérique",
     description:
-      "Local partners who load cash into wallets and handle withdrawals, connecting digital finance with cash communities.",
+      "Partenaires locaux qui chargent de l'argent dans les portefeuilles et gèrent les retraits, reliant la finance numérique aux communautés en espèces.",
     style: "lg:col-start-1 lg:row-start-1",
   },
   {
     title: "SIBA",
-    subtitle: "Rotating Savings Club",
+    subtitle: "Club d'Épargne Rotatif",
     description:
-      "Traditional group savings where members contribute monthly and take turns collecting the pooled amount.",
+      "Épargne de groupe traditionnelle où les membres contribuent mensuellement et se relaient pour collecter le montant mis en commun.",
     style: "lg:col-start-3 lg:row-start-1",
   },
   {
     title: "eWALLET",
-    subtitle: "Your Digital Wallet",
+    subtitle: "Votre Portefeuille Numérique",
     description:
-      "Load funds via cards or Paymates. Send/receive money using QR codes or phone numbers instantly.",
+      "Chargez des fonds via des cartes ou Paymates. Envoyez/recevez de l'argent en utilisant des codes QR ou des numéros de téléphone instantanément.",
     style: "lg:col-start-1 lg:row-start-2",
   },
   {
     title: "eMaSave",
-    subtitle: "Group Savings Goals",
+    subtitle: "Objectifs d'Épargne de Groupe",
     description:
-      "Collaborative savings with group control - withdrawals need unanimous agreement from all members.",
+      "Épargne collaborative avec contrôle de groupe - les retraits nécessitent l'accord unanime de tous les membres.",
     style: "lg:col-start-3 lg:row-start-2",
   },
   {
     title: "eMaTuma",
-    subtitle: "Cross-Border Transfers",
+    subtitle: "Transferts Transfrontaliers",
     description:
-      "Send money internationally with real-time transfers and cash pickup at registered Paymates.",
+      "Envoyez de l'argent à l'international avec des transferts en temps réel et retrait d'espèces chez les Paymates enregistrés.",
     style:
       "lg:col-span-3 lg:row-start-3 sm:col-span-2 sm:place-self-center lg:self-start",
   },
@@ -160,7 +160,7 @@ function OurComponents() {
           }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          Our Components
+          Nos Composants
         </motion.h2>
         <motion.p
           className="max-w-2xl text-sm leading-relaxed text-center sm:text-lg text-muted-foreground"
@@ -171,7 +171,8 @@ function OurComponents() {
           }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
-          Fund flow engines—SIBA, PAYMATE, eWALLET—built for speed and accuracy.
+          Moteurs de flux de fonds—SIBA, PAYMATE, eWALLET—conçus pour la vitesse
+          et la précision.
         </motion.p>
       </motion.div>
 
@@ -191,7 +192,7 @@ function OurComponents() {
         >
           <motion.img
             src={MobilePrototype}
-            alt="mobile-prototype"
+            alt="prototype mobile"
             className="absolute -top-20 left-1/2 -translate-x-1/2 z-10 w-[70%]"
             variants={phoneVariants}
             initial="hidden"
