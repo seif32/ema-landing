@@ -144,8 +144,8 @@ function BeOurPartner() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <SectionHeader
-          title="Be Our Partner"
-          subtitle="Transform Your Economy Through Partnership"
+          title="كن شريكنا"
+          subtitle="حول اقتصادك من خلال الشراكة"
         />
       </motion.div>
 
@@ -156,6 +156,7 @@ function BeOurPartner() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
+        {/* Left Column - Partner Cards */}
         {/* Left Column - Partner Cards */}
         <motion.div
           className="flex flex-col flex-1 gap-2 sm:flex-row xl:gap-5 lg:gap-3 xl:flex-col"
@@ -171,10 +172,10 @@ function BeOurPartner() {
           >
             <PartnerCard
               icon={Wallet}
-              title="For Financial Institutions"
-              description="Access 5 million unbanked users in Africa through our eWALLET and PAYMATE modules"
-              keyFeature1="Expand customer base instantly"
-              keyFeature2="Digital-first banking solutions"
+              title="للمؤسسات المالية"
+              description="الوصول إلى 5 ملايين مستخدم بدون حسابات مصرفية في أفريقيا من خلال وحدات eWALLET وPAYMATE"
+              keyFeature1="توسيع قاعدة العملاء على الفور"
+              keyFeature2="حلول مصرفية رقمية أولاً"
             />
           </motion.div>
           <motion.div
@@ -187,10 +188,10 @@ function BeOurPartner() {
           >
             <PartnerCard
               icon={Users}
-              title="For NGOs & Partners"
-              description="Reach rural communities with eMaClinic telemedicine and PATELE agricultural tools"
-              keyFeature1="Direct beneficiary access"
-              keyFeature2="Impact measurement tools"
+              title="للمنظمات غير الحكومية والشركاء"
+              description="الوصول إلى المجتمعات الريفية مع الطب عن بعد eMaClinic وأدوات PATELE الزراعية"
+              keyFeature1="الوصول المباشر للمستفيدين"
+              keyFeature2="أدوات قياس التأثير"
             />
           </motion.div>
         </motion.div>
@@ -202,7 +203,7 @@ function BeOurPartner() {
         >
           <motion.img
             src={EmployeesTable}
-            alt="employees-table"
+            alt="جدول-الموظفين"
             className="mb-8 sm:w-100 w-70 xl:mb-4"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{
@@ -222,12 +223,12 @@ function BeOurPartner() {
               }}
               transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
             >
-              Partner with{" "}
+              شريك مع{" "}
               <span className="relative">
                 eMa
                 <motion.img
                   src={Underline}
-                  alt="underline"
+                  alt="تسطير"
                   className="absolute bottom-0 right-0"
                   variants={underlineVariants}
                   initial="hidden"
@@ -240,11 +241,11 @@ function BeOurPartner() {
               {[
                 {
                   emoji: HandshakeEmoji,
-                  text: "Digitize MSME support, eliminate ghost beneficiaries.",
+                  text: "رقمنة دعم المشاريع الصغيرة والمتوسطة، والقضاء على المستفيدين الوهميين.",
                 },
                 {
                   emoji: FaceEmoji,
-                  text: "Reach 50 million affected youth through our 12-module ecosystem.",
+                  text: "الوصول إلى 50 مليون شاب متأثر من خلال نظامنا البيئي المكون من 12 وحدة.",
                 },
               ].map((item, index) => (
                 <motion.div
@@ -263,7 +264,7 @@ function BeOurPartner() {
                 >
                   <motion.img
                     src={item.emoji}
-                    alt={`emoji-${index}`}
+                    alt={`رمز-تعبيري-${index}`}
                     variants={emojiVariants}
                     custom={index}
                     initial="hidden"
@@ -291,10 +292,10 @@ function BeOurPartner() {
           >
             <PartnerCard
               icon={FaRegBuilding}
-              title="For Government Agencies"
-              description="Reduce administrative overhead by 85%, eliminate subsidy leakages."
-              keyFeature1="Automated compliance reporting"
-              keyFeature2="Transparent audit trails"
+              title="للوكالات الحكومية"
+              description="تقليل التكاليف الإدارية بنسبة 85%، والقضاء على تسرب الدعم."
+              keyFeature1="تقارير الامتثال الآلية"
+              keyFeature2="مسارات تدقيق شفافة"
             />
           </motion.div>
           <motion.div
@@ -307,10 +308,10 @@ function BeOurPartner() {
           >
             <PartnerCard
               icon={BriefcaseBusiness}
-              title="For Job Creations"
-              description="Connect employment agencies with millions rural job seekers"
-              keyFeature1="Rural Talent Access"
-              keyFeature2="Automated Skills Matching"
+              title="لخلق فرص العمل"
+              description="ربط وكالات التوظيف بملايين الباحثين عن عمل في المناطق الريفية"
+              keyFeature1="الوصول إلى المواهب الريفية"
+              keyFeature2="مطابقة المهارات الآلية"
             />
           </motion.div>
         </motion.div>
