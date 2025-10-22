@@ -9,24 +9,24 @@ import Mobile3 from "../../../assets/our-services/our-services-mobile-3.svg";
 
 const services = [
   {
-    title: "Virtual Wallet (VW) ",
-    one: "Daily transaction limits (R3,000-R5,000)",
-    two: "Bill payments (DSTV, Netflix, utilities)",
-    three: "QR code payments",
+    title: "المحفظة الافتراضية (VW)",
+    one: "حدود المعاملات اليومية (R3,000-R5,000)",
+    two: "دفع الفواتير (DSTV، Netflix، المرافق)",
+    three: "المدفوعات برمز QR",
     image: Mobile1,
   },
   {
-    title: "Small business funding options",
-    one: "Digital Financial Access",
-    two: "MSME Capital Solutions",
-    three: "Community Economic Growth",
+    title: "خيارات تمويل الأعمال الصغيرة",
+    one: "الوصول المالي الرقمي",
+    two: "حلول رأس المال للمشاريع الصغيرة والمتوسطة",
+    three: "النمو الاقتصادي المجتمعي",
     image: Mobile2Small,
   },
   {
-    title: "Payment Solutions for SMMEs",
-    one: "B2B focus",
-    two: "Invoice collection",
-    three: "Creditor management",
+    title: "حلول الدفع للمشاريع الصغيرة والمتوسطة",
+    one: "التركيز على B2B",
+    two: "تحصيل الفواتير",
+    three: "إدارة الدائنين",
     image: Mobile3,
   },
 ];
@@ -128,8 +128,8 @@ function OurServices() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <SectionHeader
-          subtitle="From onboarding to real-time analytics, we manage the entire digital-finance lifecycle for you."
-          title="Our Services"
+          subtitle="من التسجيل إلى التحليلات في الوقت الفعلي، نحن ندير دورة الحياة الكاملة للتمويل الرقمي من أجلك."
+          title="خدماتنا"
         />
       </motion.div>
 
