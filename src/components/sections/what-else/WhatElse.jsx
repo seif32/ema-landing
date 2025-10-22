@@ -6,45 +6,45 @@ import Mobile from "../../../assets/what-else/what-else-mobile-prototype.svg";
 
 const components_2 = [
   {
-    title: "eMaMall ",
-    subtitle: "Virtual Marketplace",
+    title: "eMaMall",
+    subtitle: "السوق الافتراضي",
     description:
-      "A digital storefront where buyers meet sellers, with secure payments, product reviews, and easy checkout.",
+      "واجهة رقمية حيث يلتقي المشترون بالبائعين، مع مدفوعات آمنة ومراجعات المنتجات وعملية دفع سهلة.",
     style: "",
   },
   {
     title: "eMa(POS)",
-    subtitle: "Point-of-Sale System",
+    subtitle: "نظام نقاط البيع",
     description:
-      "Smart POS with sales tracking, inventory control, digital receipts, and quick, secure payments.",
+      "نظام نقاط بيع ذكي مع تتبع المبيعات والتحكم في المخزون والإيصالات الرقمية والمدفوعات السريعة والآمنة.",
     style: "",
   },
   {
     title: "eMaServe",
-    subtitle: "Service Marketplace",
+    subtitle: "سوق الخدمات",
     description:
-      "Book trusted service providers, manage tasks, and pay securely with built-in ratings and reviews.",
+      "احجز مقدمي خدمات موثوقين، وأدر المهام، وادفع بأمان مع التقييمات والمراجعات المدمجة.",
     style: "",
   },
   {
     title: "PATELE",
-    subtitle: "Financial Services Hub",
+    subtitle: "مركز الخدمات المالية",
     description:
-      "Access loans, insurance, and funeral cover with automated repayments and simple financial tools.",
+      "الوصول إلى القروض والتأمين وتغطية الجنازات مع السداد الآلي وأدوات مالية بسيطة.",
     style: "",
   },
   {
     title: "eMaFunding",
-    subtitle: "Crowdfunding Platform",
+    subtitle: "منصة التمويل الجماعي",
     description:
-      "Launch campaigns, engage backers, and track funds transparently to bring projects to life.",
+      "أطلق الحملات، وتفاعل مع الداعمين، وتتبع الأموال بشفافية لإحياء المشاريع.",
     style: "",
   },
   {
     title: "eMaCom",
-    subtitle: "Communication Suite",
+    subtitle: "مجموعة الاتصالات",
     description:
-      "Affordable VoIP, video calls, and encrypted messaging with cross-device access for teams and individuals.",
+      "VoIP بأسعار معقولة ومكالمات فيديو ورسائل مشفرة مع الوصول عبر الأجهزة للفرق والأفراد.",
     style: "",
   },
 ];
@@ -174,12 +174,12 @@ function WhatElse() {
 
       {/* Main Title */}
       <motion.h2
-        className="absolute top-0 left-0 font-bold text-7xl lg:text-9xl leading-[0.6] text-white/90"
+        className="absolute top-5 right-0 font-bold text-7xl lg:text-9xl leading-[0.6] text-white/90"
         variants={titleVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        What Else?
+        ماذا أيضاً؟
       </motion.h2>
 
       {/* Main Grid */}
@@ -211,7 +211,7 @@ function WhatElse() {
         {/* Central Mobile Image */}
         <motion.img
           src={Mobile}
-          alt="mobile-what-else"
+          alt="الهاتف المحمول-ماذا-أيضاً"
           className="hidden sm:block lg:col-start-2 lg:w-60 sm:row-span-2 sm:col-start-2 sm:row-start-1 sm:w-40 lg:row-span-full place-self-center sm:rotate-8 lg:rotate-0"
           variants={mobileVariants}
           initial="hidden"
