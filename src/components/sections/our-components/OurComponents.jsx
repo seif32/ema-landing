@@ -7,37 +7,37 @@ import MobilePrototype from "../../../assets/our-components/components-mobile-pr
 const components = [
   {
     title: "PAYMATE",
-    subtitle: "Cash-to-Digital Bridge",
+    subtitle: "جسر النقد إلى الرقمي",
     description:
-      "Local partners who load cash into wallets and handle withdrawals, connecting digital finance with cash communities.",
+      "شركاء محليون يحملون النقد في المحافظ ويتعاملون مع السحوبات، لربط التمويل الرقمي بمجتمعات النقد.",
     style: "lg:col-start-1 lg:row-start-1",
   },
   {
     title: "SIBA",
-    subtitle: "Rotating Savings Club",
+    subtitle: "نادي الادخار الدوار",
     description:
-      "Traditional group savings where members contribute monthly and take turns collecting the pooled amount.",
+      "الادخار الجماعي التقليدي حيث يساهم الأعضاء شهريًا ويتناوبون على جمع المبلغ المجمع.",
     style: "lg:col-start-3 lg:row-start-1",
   },
   {
     title: "eWALLET",
-    subtitle: "Your Digital Wallet",
+    subtitle: "محفظتك الرقمية",
     description:
-      "Load funds via cards or Paymates. Send/receive money using QR codes or phone numbers instantly.",
+      "قم بتحميل الأموال عبر البطاقات أو Paymates. أرسل/استقبل الأموال باستخدام رموز QR أو أرقام الهاتف فورًا.",
     style: "lg:col-start-1 lg:row-start-2",
   },
   {
     title: "eMaSave",
-    subtitle: "Group Savings Goals",
+    subtitle: "أهداف الادخار الجماعي",
     description:
-      "Collaborative savings with group control - withdrawals need unanimous agreement from all members.",
+      "الادخار التعاوني مع السيطرة الجماعية - تحتاج السحوبات إلى موافقة بالإجماع من جميع الأعضاء.",
     style: "lg:col-start-3 lg:row-start-2",
   },
   {
     title: "eMaTuma",
-    subtitle: "Cross-Border Transfers",
+    subtitle: "التحويلات عبر الحدود",
     description:
-      "Send money internationally with real-time transfers and cash pickup at registered Paymates.",
+      "أرسل الأموال دوليًا مع التحويلات في الوقت الفعلي واستلام النقد في Paymates المسجلين.",
     style:
       "lg:col-span-3 lg:row-start-3 sm:col-span-2 sm:place-self-center lg:self-start",
   },
@@ -160,7 +160,7 @@ function OurComponents() {
           }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          Our Components
+          مكوناتنا
         </motion.h2>
         <motion.p
           className="max-w-2xl text-sm leading-relaxed text-center sm:text-lg text-muted-foreground"
@@ -171,7 +171,7 @@ function OurComponents() {
           }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
-          Fund flow engines—SIBA, PAYMATE, eWALLET—built for speed and accuracy.
+          محركات تدفق الأموال—SIBA، PAYMATE، eWALLET—مصممة للسرعة والدقة.
         </motion.p>
       </motion.div>
 
@@ -191,7 +191,7 @@ function OurComponents() {
         >
           <motion.img
             src={MobilePrototype}
-            alt="mobile-prototype"
+            alt="نموذج الهاتف المحمول"
             className="absolute -top-20 left-1/2 -translate-x-1/2 z-10 w-[70%]"
             variants={phoneVariants}
             initial="hidden"
