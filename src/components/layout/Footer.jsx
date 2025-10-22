@@ -23,7 +23,7 @@ function Footer() {
     <footer className="bg-gradient-to-br from-[#2c1914] to-[#583228] text-white">
       {/* Main Footer Content */}
       <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-0">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
