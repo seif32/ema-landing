@@ -23,7 +23,7 @@ function Footer() {
     <footer className="bg-gradient-to-br from-[#2c1914] to-[#583228] text-white">
       {/* Main Footer Content */}
       <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-0">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -39,8 +39,9 @@ function Footer() {
               </h3>
             </div>
             <p className="mb-6 leading-relaxed text-gray-300">
-              A digital ecosystem empowering financial inclusion, SME growth,
-              transparency and scalable partnerships across Africa.
+              Um ecossistema digital que capacita a inclusão financeira, o
+              crescimento de PMEs, transparência e parcerias escaláveis em toda
+              a África.
             </p>
 
             {/* Social Links */}
@@ -69,15 +70,15 @@ function Footer() {
               className="mb-6 text-lg font-semibold"
               style={{ color: "#c38b7d" }}
             >
-              Quick Links
+              Links Rápidos
             </h4>
             <ul className="space-y-3">
               {[
-                { label: "Components", href: "#components" },
-                { label: "Services", href: "#services" },
-                { label: "White Label", href: "#white-label" },
-                { label: "Pricing", href: "#pricing" },
-                { label: "Partner Program", href: "#partner" },
+                { label: "Componentes", href: "#components" },
+                { label: "Serviços", href: "#services" },
+                { label: "Marca Branca", href: "#white-label" },
+                { label: "Preços", href: "#pricing" },
+                { label: "Programa de Parceria", href: "#partner" },
               ].map((link) => (
                 <li key={link.label}>
                   <a
@@ -97,7 +98,7 @@ function Footer() {
               className="mb-6 text-lg font-semibold"
               style={{ color: "#c38b7d" }}
             >
-              Our Services
+              Nossos Serviços
             </h4>
             <ul className="space-y-3">
               {[
@@ -123,7 +124,7 @@ function Footer() {
               className="mb-6 text-lg font-semibold"
               style={{ color: "#c38b7d" }}
             >
-              Contact Us
+              Entre em Contato
             </h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -132,8 +133,8 @@ function Footer() {
                   className="text-[#AF6553] mt-1 flex-shrink-0"
                 />
                 <div className="text-gray-300">
-                  <p>123 Business District</p>
-                  <p>Lagos, Nigeria</p>
+                  <p>123 Distrito Comercial</p>
+                  <p>Lagos, Nigéria</p>
                 </div>
               </div>
 
@@ -164,16 +165,16 @@ function Footer() {
                 className="mb-3 text-sm font-medium"
                 style={{ color: "#c38b7d" }}
               >
-                Stay Updated
+                Fique Atualizado
               </h5>
               <div className="flex flex-col gap-2 sm:flex-row">
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Digite seu e-mail"
                   className="flex-1 px-4 py-2 bg-[#583228] border border-[#AF6553] rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-[#c38b7d] transition-colors duration-200"
                 />
                 <button className="bg-[#AF6553] hover:bg-[#c38b7d] text-white px-6 py-2 rounded-md transition-colors duration-200 font-medium">
-                  Subscribe
+                  Inscrever-se
                 </button>
               </div>
             </div>
@@ -186,19 +187,19 @@ function Footer() {
         <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <div className="flex flex-col items-center space-y-2 text-sm text-gray-400 sm:flex-row sm:space-y-0 sm:space-x-6">
-              <p>&copy; 2025 eMa. All rights reserved.</p>
+              <p>&copy; 2025 eMa. Todos os direitos reservados.</p>
               <div className="flex space-x-6">
                 <a
                   href="#"
                   className="hover:text-[#c38b7d] transition-colors duration-200"
                 >
-                  Privacy Policy
+                  Política de Privacidade
                 </a>
                 <a
                   href="#"
                   className="hover:text-[#c38b7d] transition-colors duration-200"
                 >
-                  Terms of Service
+                  Termos de Serviço
                 </a>
                 <a
                   href="#"
@@ -213,7 +214,7 @@ function Footer() {
             <button
               onClick={scrollToTop}
               className="bg-[#AF6553] hover:bg-[#c38b7d] text-white p-2 rounded-full transition-all duration-200 hover:scale-105"
-              aria-label="Back to top"
+              aria-label="Voltar ao topo"
             >
               <ArrowUp size={18} />
             </button>
