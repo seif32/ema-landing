@@ -115,8 +115,8 @@ function WhiteLabelSolutions() {
       {/* Header */}
       <motion.div variants={itemVariants}>
         <SectionHeader
-          title="White Label Solutions"
-          subtitle="Launch your branded platform in weeks using our 12-module ecosystem"
+          title="حلول العلامة البيضاء"
+          subtitle="أطلق منصتك ذات العلامة التجارية في أسابيع باستخدام نظامنا البيئي المكون من 12 وحدة"
         />
       </motion.div>
 
@@ -159,8 +159,8 @@ function WhiteLabelSolutions() {
               ease: "easeOut",
             }}
           >
-            Your Brand,
-            <br /> Our Technology
+            علامتك التجارية،
+            <br /> تقنيتنا
           </motion.h2>
 
           <motion.p
@@ -176,16 +176,15 @@ function WhiteLabelSolutions() {
               ease: "easeOut",
             }}
           >
-            Transform your organization with a fully-customized digital finance
-            platform, that carries
+            حول مؤسستك بمنصة مالية رقمية مخصصة بالكامل، تحمل
           </motion.p>
 
           {/* Animated Bars */}
           <div className="space-y-2 lg:space-y-3">
             {[
-              { width: "60%", color: "#CC6600", text: "YOUR name" },
-              { width: "80%", color: "#B25900", text: "YOUR identity" },
-              { width: "100%", color: "#994D00", text: "YOUR colors" },
+              { width: "60%", color: "#CC6600", text: "اسمك" },
+              { width: "80%", color: "#B25900", text: "هويتك" },
+              { width: "100%", color: "#994D00", text: "ألوانك" },
             ].map((bar, index) => (
               <motion.div
                 key={index}
@@ -203,7 +202,7 @@ function WhiteLabelSolutions() {
                 }}
               >
                 <motion.div
-                  className="pt-4 sm:pt-6 md:pt-8 lg:pt-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-4 sm:leading-4.5 md:leading-6 lg:leading-8 text-white font-bold px-4"
+                  className="pt-4 sm:pt-6 md:pt-8 lg:pt-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-4 sm:leading-4.5 md:leading-6 lg:leading-8 text-white font-bold px-4 py-3"
                   style={{ backgroundColor: bar.color }}
                   variants={barVariants}
                   custom={index}
