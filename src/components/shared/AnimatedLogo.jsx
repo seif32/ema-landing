@@ -55,6 +55,7 @@ function AnimatedLogo({
       </motion.div>
 
       {/* Dynamic Slogan - Only show if showSlogan is true */}
+      {/* Dynamic Slogan - Only show if showSlogan is true */}
       {showSlogan && (
         <motion.div
           className="hidden mt-4 text-center sm:flex"
@@ -89,7 +90,7 @@ function AnimatedLogo({
               EMA • EMALYAMI
             </motion.span>
             <span className="text-xs italic" style={{ color: "#c38b7d" }}>
-              Same vision, evolved experience
+              نفس الرؤية، تجربة متطورة
             </span>
           </motion.p>
         </motion.div>
