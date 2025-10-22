@@ -6,45 +6,45 @@ import Mobile from "../../../assets/what-else/what-else-mobile-prototype.svg";
 
 const components_2 = [
   {
-    title: "eMaMall ",
-    subtitle: "Virtual Marketplace",
+    title: "eMaMall",
+    subtitle: "Marché Virtuel",
     description:
-      "A digital storefront where buyers meet sellers, with secure payments, product reviews, and easy checkout.",
+      "Une vitrine numérique où les acheteurs rencontrent les vendeurs, avec des paiements sécurisés, des avis sur les produits et un paiement facile.",
     style: "",
   },
   {
     title: "eMa(POS)",
-    subtitle: "Point-of-Sale System",
+    subtitle: "Système de Point de Vente",
     description:
-      "Smart POS with sales tracking, inventory control, digital receipts, and quick, secure payments.",
+      "POS intelligent avec suivi des ventes, contrôle des stocks, reçus numériques et paiements rapides et sécurisés.",
     style: "",
   },
   {
     title: "eMaServe",
-    subtitle: "Service Marketplace",
+    subtitle: "Marché de Services",
     description:
-      "Book trusted service providers, manage tasks, and pay securely with built-in ratings and reviews.",
+      "Réservez des prestataires de services de confiance, gérez les tâches et payez en toute sécurité avec des évaluations et des avis intégrés.",
     style: "",
   },
   {
     title: "PATELE",
-    subtitle: "Financial Services Hub",
+    subtitle: "Centre de Services Financiers",
     description:
-      "Access loans, insurance, and funeral cover with automated repayments and simple financial tools.",
+      "Accédez aux prêts, assurances et couverture funéraire avec des remboursements automatisés et des outils financiers simples.",
     style: "",
   },
   {
     title: "eMaFunding",
-    subtitle: "Crowdfunding Platform",
+    subtitle: "Plateforme de Financement Participatif",
     description:
-      "Launch campaigns, engage backers, and track funds transparently to bring projects to life.",
+      "Lancez des campagnes, engagez les contributeurs et suivez les fonds de manière transparente pour donner vie aux projets.",
     style: "",
   },
   {
     title: "eMaCom",
-    subtitle: "Communication Suite",
+    subtitle: "Suite de Communication",
     description:
-      "Affordable VoIP, video calls, and encrypted messaging with cross-device access for teams and individuals.",
+      "VoIP abordable, appels vidéo et messagerie cryptée avec accès multi-appareils pour les équipes et les individus.",
     style: "",
   },
 ];
@@ -173,13 +173,14 @@ function WhatElse() {
       />
 
       {/* Main Title */}
+      {/* Main Title */}
       <motion.h2
         className="absolute top-0 left-0 font-bold text-7xl lg:text-9xl leading-[0.6] text-white/90"
         variants={titleVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        What Else?
+        Quoi d'Autre?
       </motion.h2>
 
       {/* Main Grid */}
@@ -211,7 +212,7 @@ function WhatElse() {
         {/* Central Mobile Image */}
         <motion.img
           src={Mobile}
-          alt="mobile-what-else"
+          alt="mobile-quoi-d-autre"
           className="hidden sm:block lg:col-start-2 lg:w-60 sm:row-span-2 sm:col-start-2 sm:row-start-1 sm:w-40 lg:row-span-full place-self-center sm:rotate-8 lg:rotate-0"
           variants={mobileVariants}
           initial="hidden"
