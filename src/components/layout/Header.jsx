@@ -21,12 +21,12 @@ function Header() {
   const navigate = useNavigate(); // 👈 Add navigate hook
 
   const navItems = [
-    { id: "components", label: "Components", type: "scroll" },
+    { id: "components", label: "Composants", type: "scroll" },
     { id: "services", label: "Services", type: "scroll" },
-    { id: "white-label", label: "White Label", type: "scroll" },
-    { id: "pricing", label: "Pricing", type: "scroll" },
-    { id: "partner", label: "Partner", type: "scroll" },
-    { id: "/news", label: "News", type: "route" },
+    { id: "white-label", label: "Marque Blanche", type: "scroll" },
+    { id: "pricing", label: "Tarifs", type: "scroll" },
+    { id: "partner", label: "Partenaire", type: "scroll" },
+    { id: "/news", label: "Actualités", type: "route" },
     { id: "https://emalyami.wordpress.com/", label: "Blog", type: "external" },
   ];
 
@@ -199,7 +199,7 @@ function Header() {
                   )
                 }
               >
-                Get Started
+                Commencer
               </Button>
             </nav>
 
@@ -223,7 +223,7 @@ function Header() {
                 <div className="mx-auto w-full max-w-sm">
                   <DrawerHeader>
                     <DrawerTitle className="text-center text-[#AF6553]">
-                      Navigation Menu
+                      Menu de Navigation
                     </DrawerTitle>
                   </DrawerHeader>
 
@@ -244,7 +244,7 @@ function Header() {
                           setIsDrawerOpen(false);
                         }}
                       >
-                        Get Started 🚀
+                        Commencer 🚀
                       </Button>
                     </div>
 
@@ -252,7 +252,7 @@ function Header() {
                     <div className="mt-4">
                       <DrawerClose asChild>
                         <Button variant="outline" className="w-full">
-                          Close Menu
+                          Fermer le Menu
                         </Button>
                       </DrawerClose>
                     </div>
