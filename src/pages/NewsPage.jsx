@@ -43,7 +43,7 @@ const NewsPage = () => {
   }, []);
 
   const formatTime = (timestamp) => {
-    return new Date(timestamp).toLocaleDateString("en-US", {
+    return new Date(timestamp).toLocaleDateString("pt-BR", {
       year: "numeric",
       month: "short",
       day: "numeric",
@@ -105,12 +105,13 @@ const NewsPage = () => {
   // };
 
   // 🔄 Loading state
+  // 🔄 Loading state
   if (isLoadingPosts) {
     return (
       <div className="pt-24 min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
         <div className="text-center">
           <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4 text-blue-600" />
-          <p className="text-slate-600">Loading latest posts...</p>
+          <p className="text-slate-600">Carregando últimas postagens...</p>
         </div>
       </div>
     );
@@ -123,16 +124,16 @@ const NewsPage = () => {
         <div className="text-center max-w-md mx-auto px-4">
           <div className="bg-red-50 border border-red-200 rounded-lg p-6">
             <h2 className="text-lg font-semibold text-red-800 mb-2">
-              Unable to Load Posts
+              Não foi Possível Carregar as Postagens
             </h2>
             <p className="text-red-600 mb-4">
-              Something went wrong while fetching the news.
+              Algo deu errado ao buscar as notícias.
             </p>
             <button
               onClick={() => window.location.reload()}
               className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
             >
-              Try Again
+              Tentar Novamente
             </button>
           </div>
         </div>
@@ -143,15 +144,16 @@ const NewsPage = () => {
   return (
     <div className="pt-24 min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
       {/* 🎨 Hero Section */}
+      {/* 🎨 Hero Section */}
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 py-12">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-slate-900 mb-4">
-              Latest News & Updates
+              Últimas Notícias e Atualizações
             </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Stay informed with our latest posts, insights, and community
-              discussions
+              Fique informado com nossas últimas postagens, insights e
+              discussões da comunidade
             </p>
           </div>
         </div>
@@ -163,10 +165,10 @@ const NewsPage = () => {
           <div className="text-center py-12">
             <div className="bg-white rounded-xl p-8 shadow-sm">
               <h3 className="text-lg font-semibold text-slate-700 mb-2">
-                No Posts Yet
+                Ainda Não Há Postagens
               </h3>
               <p className="text-slate-500">
-                Check back later for new content!
+                Volte mais tarde para novo conteúdo!
               </p>
             </div>
           </div>
@@ -286,6 +288,7 @@ const NewsPage = () => {
                 {selectedPostId === post.id && (
                   <div className="border-t border-slate-200 bg-slate-50">
                     {/* Comment Form */}
+                    {/* Comment Form */}
                     <div className="p-6">
                       <form
                         onSubmit={handleCommentSubmit}
@@ -294,7 +297,7 @@ const NewsPage = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <input
                             type="text"
-                            placeholder="Your name"
+                            placeholder="Seu nome"
                             value={commentFormData.name}
                             onChange={(e) =>
                               setCommentFormData((prev) => ({
@@ -307,7 +310,7 @@ const NewsPage = () => {
                         </div>
                         <div className="flex space-x-3">
                           <textarea
-                            placeholder="Write your comment..."
+                            placeholder="Escreva seu comentário..."
                             rows={3}
                             value={commentFormData.comment}
                             onChange={(e) =>
@@ -328,25 +331,26 @@ const NewsPage = () => {
                             ) : (
                               <Send className="h-4 w-4" />
                             )}
-                            <span>Post</span>
+                            <span>Publicar</span>
                           </button>
                         </div>
                       </form>
                     </div>
 
                     {/* Comments List */}
+                    {/* Comments List */}
                     <div className="px-6 pb-6">
                       {isLoadingComments ? (
                         <div className="flex items-center justify-center py-8">
                           <Loader2 className="h-6 w-6 animate-spin text-blue-600" />
                           <span className="ml-2 text-slate-600">
-                            Loading comments...
+                            Carregando comentários...
                           </span>
                         </div>
                       ) : comments?.length > 0 ? (
                         <div className="space-y-4">
                           <h4 className="font-semibold text-slate-900">
-                            Comments ({comments.length})
+                            Comentários ({comments.length})
                           </h4>
                           {comments.map((comment) => (
                             <div
@@ -376,7 +380,8 @@ const NewsPage = () => {
                         <div className="text-center py-8">
                           <MessageCircle className="h-12 w-12 text-slate-300 mx-auto mb-3" />
                           <p className="text-slate-500">
-                            No comments yet. Be the first to comment!
+                            Ainda não há comentários. Seja o primeiro a
+                            comentar!
                           </p>
                         </div>
                       )}
