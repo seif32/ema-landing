@@ -7,18 +7,18 @@ import Shield from "../../../assets/white-label-solutions/shield.svg";
 const items = [
   {
     emoji: HighVoltage,
-    description: "Launch in weeks, not years",
-    alt: "high-voltage",
+    description: "Lance em semanas, não anos",
+    alt: "alta-voltagem",
   },
   {
     emoji: Shield,
-    description: "Enterprise-Grade Foundation",
-    alt: "shield",
+    description: "Base de Nível Empresarial",
+    alt: "escudo",
   },
   {
     emoji: Crown,
-    description: "Complete Brand Control",
-    alt: "crown",
+    description: "Controle Completo da Marca",
+    alt: "coroa",
   },
 ];
 
@@ -29,10 +29,10 @@ function CtaBanner() {
         <div className="flex flex-col justify-center lg:justify-between">
           <div>
             <h2 className="text-2xl md:text-4xl sm:text-3xl lg:text-5xl text-accent">
-              Start your <br /> Branded Platform
+              Comece sua <br /> Plataforma de Marca
             </h2>
             <h3 className="md:text-xl sm:text-lg text-md lg:text-2xl ">
-              Create Your Digital Platform
+              Crie Sua Plataforma Digital
             </h3>
           </div>
           <Button
@@ -40,7 +40,7 @@ function CtaBanner() {
               " bg-accent md:text-lg sm:text-md text-sm lg:text-xl py-6"
             }
           >
-            Request White-label Demo
+            Solicitar Demo White-label
           </Button>
         </div>
         <div className="">
