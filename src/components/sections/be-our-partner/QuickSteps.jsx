@@ -4,24 +4,21 @@ import { Button } from "@/components/ui/button";
 
 const steps = [
   {
-    title: "Discovery Call",
-    subtitle:
-      "Quick intro meeting to understand your needs and see if we're a good fit",
+    title: "مكالمة الاكتشاف",
+    subtitle: "اجتماع تعريفي سريع لفهم احتياجاتك ومعرفة ما إذا كنا مناسبين لك",
   },
   {
-    title: "Custom Demo",
-    subtitle:
-      "We build and show you exactly how our solution works for your specific situation",
+    title: "عرض توضيحي مخصص",
+    subtitle: "نقوم ببناء وإظهار كيفية عمل حلنا بالضبط لحالتك المحددة",
   },
   {
-    title: "Pilot Program",
+    title: "برنامج تجريبي",
     subtitle:
-      "Small-scale test run with real users to prove it works before full launch",
+      "اختبار على نطاق صغير مع مستخدمين حقيقيين لإثبات أنه يعمل قبل الإطلاق الكامل",
   },
   {
-    title: "Full Deployment ",
-    subtitle:
-      "Complete rollout to all your users with full support and integration",
+    title: "النشر الكامل",
+    subtitle: "طرح كامل لجميع المستخدمين مع دعم كامل وتكامل",
   },
 ];
 
@@ -34,8 +31,9 @@ function QuickSteps() {
         </div>
         <div className="flex flex-col gap-4 lg:gap-8 w-fit">
           <h2 className="text-2xl leading-5 sm:leading-none sm:text-4xl md:text-5xl lg:tracking-normal lg:text-6xl">
-            4 Quick Steps to be our Partner
+            4 خطوات سريعة لتصبح شريكنا
           </h2>
+
           <div className="border"></div>
 
           <div className="space-y-2 lg:space-y-4">
@@ -67,14 +65,14 @@ function QuickSteps() {
       </section>
       <section className="flex gap-2 flex-col items-center bg-gradient-to-t to-[#994C00] from-[#D66B00] py-14 sm:py-16 md:py-18 lg:py-22">
         <p className="text-2xl text-white sm:text-3xl md:text-4xl lg:text-5xl">
-          Begin Partnership Discussion Today
+          ابدأ مناقشة الشراكة اليوم
         </p>
         <Button
           className={
             " bg-black rounded-full text-white md:text-xl sm:text-lg text-md lg:text-2xl md:py-5 sm:py-4 py-2 lg:py-7 lg:px-18 md:px-16 sm:px-14 px-12"
           }
         >
-          Schedule Call
+          جدولة مكالمة
         </Button>
       </section>
     </>
