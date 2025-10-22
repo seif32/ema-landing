@@ -173,6 +173,7 @@ function WhoAreWe() {
         animate={isInView ? "visible" : "hidden"}
       >
         {/* Header Section */}
+        {/* Header Section */}
         <motion.div
           className="flex flex-col items-center"
           variants={itemVariants}
@@ -181,20 +182,20 @@ function WhoAreWe() {
             className="relative mb-4 text-2xl font-bold sm:text-4xl w-fit"
             variants={itemVariants}
           >
-            Who are we?
+            Qui sommes-nous?
             <motion.div
               className="absolute w-10 -top-5 -right-6"
               variants={crownVariants}
             >
-              <img src={TextCrown} alt="crown" />
+              <img src={TextCrown} alt="couronne" />
             </motion.div>
           </motion.h2>
           <motion.p
             className="max-w-2xl text-sm leading-relaxed text-center sm:text-lg text-muted-foreground sm:leading-normal"
             variants={itemVariants}
           >
-            A mission-driven fintech creating transparent, inclusive growth for
-            every entrepreneur.
+            Une fintech axée sur la mission créant une croissance transparente
+            et inclusive pour chaque entrepreneur.
           </motion.p>
         </motion.div>
 
@@ -205,7 +206,11 @@ function WhoAreWe() {
         >
           {/* Map Section */}
           <motion.div className="relative" variants={mapVariants}>
-            <motion.img src={Map} className="lg:w-max w-70" alt="Africa map" />
+            <motion.img
+              src={Map}
+              className="lg:w-max w-70"
+              alt="Carte de l'Afrique"
+            />
             {[Person1, Person2, Person3].map((person, i) => (
               <motion.img
                 key={i}
@@ -217,7 +222,7 @@ function WhoAreWe() {
                     ? "inset-20 left-30 lg:inset-40"
                     : "inset-30 left-50 lg:inset-60"
                 }`}
-                alt={`person ${i + 1}`}
+                alt={`personne ${i + 1}`}
                 custom={i}
                 variants={personVariants}
                 initial="hidden"
@@ -237,11 +242,12 @@ function WhoAreWe() {
               }}
               transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
             >
-              Part of{" "}
+              Membre du{" "}
               <span className="font-bold">
-                Sobek <br /> Group
+                Groupe <br /> Sobek
               </span>{" "}
-              - trusted <br /> across Africa & <br /> South Africa.
+              - de confiance <br /> à travers l'Afrique & <br /> l'Afrique du
+              Sud.
             </motion.p>
             <motion.div
               className="absolute -top-2 -right-5 "
@@ -250,7 +256,7 @@ function WhoAreWe() {
               animate={isInView ? "visible" : "hidden"}
             >
               <Badge variant="destructive" className="text-sm rotate-8">
-                All-in-one solution
+                Solution tout-en-un
               </Badge>
             </motion.div>
           </motion.div>
@@ -261,14 +267,15 @@ function WhoAreWe() {
           className="flex flex-col w-full gap-6 sm:gap-2 sm:flex-row sm:justify-between"
           variants={itemVariants}
         >
+          {/* Stats Section */}
           {[
-            { number: "10+", label: "Years Experience" },
+            { number: "10+", label: "Années d'Expérience" },
             {
-              number: "Multi-Continental Reach",
+              number: "Portée Multi-Continentale",
               label: "",
               hasUnderline: true,
             },
-            { number: "99%", label: "Client Satisfaction" },
+            { number: "99%", label: "Satisfaction Client" },
           ].map((stat, i) => (
             <motion.div
               key={i}
@@ -300,7 +307,7 @@ function WhoAreWe() {
                   <motion.img
                     className="absolute w-[80%] left-[9%] -bottom-8"
                     src={Underline}
-                    alt="underline"
+                    alt="soulignement"
                     variants={underlineVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
