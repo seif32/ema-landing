@@ -21,13 +21,13 @@ function Header() {
   const navigate = useNavigate(); // 👈 Add navigate hook
 
   const navItems = [
-    { id: "components", label: "Components", type: "scroll" },
-    { id: "services", label: "Services", type: "scroll" },
-    { id: "white-label", label: "White Label", type: "scroll" },
-    { id: "pricing", label: "Pricing", type: "scroll" },
-    { id: "partner", label: "Partner", type: "scroll" },
-    { id: "/news", label: "News", type: "route" },
-    { id: "https://emalyami.wordpress.com/", label: "Blog", type: "external" },
+    { id: "components", label: "المكونات", type: "scroll" },
+    { id: "services", label: "الخدمات", type: "scroll" },
+    { id: "white-label", label: "العلامة البيضاء", type: "scroll" },
+    { id: "pricing", label: "الأسعار", type: "scroll" },
+    { id: "partner", label: "شريك", type: "scroll" },
+    { id: "/news", label: "الأخبار", type: "route" },
+    { id: "https://emalyami.wordpress.com/", label: "مدونة", type: "external" },
   ];
 
   const textOptions = ["eMa", "eMalyami"];
@@ -189,7 +189,6 @@ function Header() {
             {/* Desktop Navigation */}
             <nav className="items-center hidden space-x-8 lg:flex">
               {navItems.map((item) => renderNavItem(item, false))}
-
               <Button
                 className="bg-[#AF6553] text-white px-6 py-2 rounded-full hover:bg-[#844b3d] transition-colors duration-200 cursor-pointer font-medium"
                 onClick={() =>
@@ -199,7 +198,7 @@ function Header() {
                   )
                 }
               >
-                Get Started
+                ابدأ
               </Button>
             </nav>
 
@@ -223,7 +222,7 @@ function Header() {
                 <div className="mx-auto w-full max-w-sm">
                   <DrawerHeader>
                     <DrawerTitle className="text-center text-[#AF6553]">
-                      Navigation Menu
+                      قائمة التنقل
                     </DrawerTitle>
                   </DrawerHeader>
 
@@ -244,7 +243,7 @@ function Header() {
                           setIsDrawerOpen(false);
                         }}
                       >
-                        Get Started 🚀
+                        ابدأ 🚀
                       </Button>
                     </div>
 
@@ -252,7 +251,7 @@ function Header() {
                     <div className="mt-4">
                       <DrawerClose asChild>
                         <Button variant="outline" className="w-full">
-                          Close Menu
+                          إغلاق القائمة
                         </Button>
                       </DrawerClose>
                     </div>
