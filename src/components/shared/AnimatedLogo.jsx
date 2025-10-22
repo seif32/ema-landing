@@ -89,7 +89,7 @@ function AnimatedLogo({
               EMA • EMALYAMI
             </motion.span>
             <span className="text-xs italic" style={{ color: "#c38b7d" }}>
-              Same vision, evolved experience
+              Mesma visão, experiência evoluída
             </span>
           </motion.p>
         </motion.div>
