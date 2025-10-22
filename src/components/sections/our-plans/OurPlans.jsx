@@ -11,62 +11,60 @@ import {
 import CheckMark from "../../../assets/white-label-solutions/check-mark.svg";
 import Handshake from "../../../assets/white-label-solutions/handshake.svg";
 import GemStone from "../../../assets/our-plans/gem-stone.svg";
-import Star from "../../../assets/our-plans/star.svg";
 import { Button } from "@/components/ui/button";
 
 // PLANS DATA CONFIG
 const plansCard = [
   {
-    badgeTitle: "EVERYDAY",
+    badgeTitle: "يومي",
     badgeStyle: "bg-black/10 border border-black text-black",
     planTitle: (
       <>
-        4%<span className="text-2xl font-normal"> Rate</span>
+        4%<span className="text-2xl font-normal"> نسبة</span>
       </>
     ),
-    planSubtitle: "Essential Services",
+    planSubtitle: "الخدمات الأساسية",
     planDescription:
-      "Simple, everyday banking made affordable. Handle all your personal transactions with ease.",
+      "الخدمات المصرفية اليومية البسيطة بأسعار معقولة. تعامل مع جميع معاملاتك الشخصية بسهولة.",
     emoji: CheckMark,
-    features: ["Send Money", "Cash Withdrawals", "P2P Business"],
-    ctaBtn: "Choose Standard",
+    features: ["إرسال الأموال", "السحوبات النقدية", "أعمال P2P"],
+    ctaBtn: "اختر القياسي",
     ctaStyle: "bg-black text-white",
   },
   {
-    badgeTitle: "PARTNER WITH US",
+    badgeTitle: "كن شريكنا",
     badgeStyle: "bg-blue-100 border border-blue-600 text-blue-600",
     planTitle: (
       <span className="flex items-center gap-2 text-3xl">
-        White Label Solutions
+        حلول العلامة البيضاء
       </span>
     ),
-    planSubtitle: "Partner Program",
+    planSubtitle: "برنامج الشراكة",
     planDescription:
-      "Power your business with our proven fintech platform — customize our technology under your brand.",
+      "عزز عملك بمنصة التكنولوجيا المالية المثبتة لدينا — خصص تقنيتنا تحت علامتك التجارية.",
     emoji: Handshake,
 
     features: [
-      "Full Brand Customization",
-      "Ready-to-Deploy",
-      "Complete API Access",
-      "Real-time Analytics",
-      "Dedicated Support",
+      "تخصيص كامل للعلامة التجارية",
+      "جاهز للنشر",
+      "وصول كامل لواجهة برمجة التطبيقات",
+      "تحليلات في الوقت الفعلي",
+      "دعم مخصص",
     ],
-    ctaBtn: "Contact Us",
+    ctaBtn: "اتصل بنا",
     ctaStyle: "bg-blue-700 text-white",
-    // ctaStyle: "bg-black text-white",
   },
   {
-    badgeTitle: "BUSINESS",
+    badgeTitle: "الأعمال",
     badgeStyle: "bg-amber-100 border border-amber-600 text-amber-700",
     planTitle: (
       <>
-        5%<span className="text-2xl font-normal"> Rate</span>
+        5%<span className="text-2xl font-normal"> نسبة</span>
       </>
     ),
-    planSubtitle: "Business Solutions",
+    planSubtitle: "حلول الأعمال",
     planDescription:
-      "Complete business ecosystem designed for growth — from point-of-sale to funding solutions.",
+      "نظام بيئي تجاري كامل مصمم للنمو — من نقاط البيع إلى حلول التمويل.",
     emoji: GemStone,
     features: [
       "eMaSERVE",
@@ -78,14 +76,13 @@ const plansCard = [
     ],
     note: (
       <div className="mt-2 text-xs font-medium text-gray-500">
-        Special Tiers: <br />
+        مستويات خاصة: <br />
         <span className="font-bold">Paymates</span> • 1.5-2% /{" "}
         <span className="font-bold">SIBA</span> • 15%
       </div>
     ),
-    ctaBtn: "Choose Premium",
+    ctaBtn: "اختر المميز",
     ctaStyle: "bg-amber-500 text-white",
-    // ctaStyle: "bg-black text-white",
   },
 ];
 
