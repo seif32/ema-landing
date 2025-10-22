@@ -11,22 +11,22 @@ const differenceCards = [
   {
     emoji: MoneyBag,
     value: "60k",
-    description: "Transaction through our platform",
+    description: "Transações através da nossa plataforma",
   },
   {
     emoji: TippingHand,
     value: "58%",
-    description: "Reduction in payment's cost achieved",
+    description: "Redução no custo de pagamentos alcançada",
   },
   {
     emoji: PeopleHugging,
     value: "50%",
-    description: "Africa's GDP comes from MSMEs we support",
+    description: "PIB da África vem das MPMEs que apoiamos",
   },
   {
     emoji: MoneyFlies,
     value: "125M",
-    description: "SMME potential beneficiaries market",
+    description: "Mercado potencial de beneficiários de PMEs",
   },
 ];
 
@@ -49,9 +49,10 @@ function EmaDifference() {
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h2 className="text-2xl md:text-4xl">The eMa Difference</h2>
+        <h2 className="text-2xl md:text-4xl">A Diferença eMa</h2>
         <p className="text-lg leading-none text-muted-foreground">
-          Driving Africa's economic transformation through digital innovation
+          Impulsionando a transformação econômica da África através da inovação
+          digital
         </p>
       </motion.div>
 
@@ -63,7 +64,7 @@ function EmaDifference() {
           animate={isInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <img src={ManWoman} alt="Man and Woman" />
+          <img src={ManWoman} alt="Homem e Mulher" />
         </motion.div>
 
         {/* Cards Grid Animation */}
