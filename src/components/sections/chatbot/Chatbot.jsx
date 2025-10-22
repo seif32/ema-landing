@@ -143,7 +143,7 @@ const Chatbot = () => {
                 >
                   <Bot className="h-5 w-5" />
                 </motion.div>
-                <h3 className="font-semibold">eMa Assistant</h3>
+                <h3 className="font-semibold">Assistant eMa</h3>
               </div>
               <div className="flex items-center space-x-2">
                 <motion.button
@@ -151,7 +151,7 @@ const Chatbot = () => {
                   whileTap={{ scale: 0.9 }}
                   onClick={clearChat}
                   className="text-white/80 hover:text-white transition-colors"
-                  title="Clear chat"
+                  title="Effacer le chat"
                 >
                   <X className="h-4 w-4" />
                 </motion.button>
@@ -160,7 +160,7 @@ const Chatbot = () => {
                   whileTap={{ scale: 0.9 }}
                   onClick={toggleChat}
                   className="text-white/80 hover:text-white transition-colors"
-                  title="Minimize"
+                  title="Réduire"
                 >
                   <Minimize2 className="h-4 w-4" />
                 </motion.button>
@@ -194,8 +194,10 @@ const Chatbot = () => {
                   >
                     <Bot className="h-12 w-12 mx-auto mb-3 text-gray-400" />
                   </motion.div>
-                  <p>Hi! I'm your eMa assistant.</p>
-                  <p className="text-sm">How can I help you today?</p>
+                  <p>Bonjour! Je suis votre assistant eMa.</p>
+                  <p className="text-sm">
+                    Comment puis-je vous aider aujourd'hui?
+                  </p>
                 </motion.div>
               )}
 
@@ -304,7 +306,7 @@ const Chatbot = () => {
                           transition={{ duration: 1.5, repeat: Infinity }}
                           className="text-sm"
                         >
-                          Thinking...
+                          Réflexion...
                         </motion.span>
                       </div>
                     </div>
@@ -330,10 +332,11 @@ const Chatbot = () => {
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Ask me anything about eMa..."
+                  placeholder="Posez-moi n'importe quelle question sur eMa..."
                   className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#AF6553] focus:border-transparent text-sm transition-all"
                   disabled={loading}
                 />
+
                 <motion.button
                   whileHover={{
                     scale: 1.05,
@@ -362,7 +365,7 @@ const Chatbot = () => {
         whileTap="tap"
         onClick={toggleChat}
         className="text-white p-3 rounded-full shadow-lg transition-all"
-        title={isMinimized ? "Open chat" : "Close chat"}
+        title={isMinimized ? "Ouvrir le chat" : "Fermer le chat"}
       >
         <motion.div
           animate={{ rotate: isMinimized ? 0 : 180 }}
