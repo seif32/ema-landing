@@ -181,20 +181,20 @@ function WhoAreWe() {
             className="relative mb-4 text-2xl font-bold sm:text-4xl w-fit"
             variants={itemVariants}
           >
-            Who are we?
+            Quem somos nós?
             <motion.div
               className="absolute w-10 -top-5 -right-6"
               variants={crownVariants}
             >
-              <img src={TextCrown} alt="crown" />
+              <img src={TextCrown} alt="coroa" />
             </motion.div>
           </motion.h2>
           <motion.p
             className="max-w-2xl text-sm leading-relaxed text-center sm:text-lg text-muted-foreground sm:leading-normal"
             variants={itemVariants}
           >
-            A mission-driven fintech creating transparent, inclusive growth for
-            every entrepreneur.
+            Uma fintech orientada por missão criando crescimento transparente e
+            inclusivo para cada empreendedor.
           </motion.p>
         </motion.div>
 
@@ -205,7 +205,11 @@ function WhoAreWe() {
         >
           {/* Map Section */}
           <motion.div className="relative" variants={mapVariants}>
-            <motion.img src={Map} className="lg:w-max w-70" alt="Africa map" />
+            <motion.img
+              src={Map}
+              className="lg:w-max w-70"
+              alt="Mapa da África"
+            />
             {[Person1, Person2, Person3].map((person, i) => (
               <motion.img
                 key={i}
@@ -217,7 +221,7 @@ function WhoAreWe() {
                     ? "inset-20 left-30 lg:inset-40"
                     : "inset-30 left-50 lg:inset-60"
                 }`}
-                alt={`person ${i + 1}`}
+                alt={`pessoa ${i + 1}`}
                 custom={i}
                 variants={personVariants}
                 initial="hidden"
@@ -237,11 +241,11 @@ function WhoAreWe() {
               }}
               transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
             >
-              Part of{" "}
+              Parte do{" "}
               <span className="font-bold">
-                Sobek <br /> Group
+                Grupo <br /> Sobek
               </span>{" "}
-              - trusted <br /> across Africa & <br /> South Africa.
+              - confiável <br /> em toda África & <br /> África do Sul.
             </motion.p>
             <motion.div
               className="absolute -top-2 -right-5 "
@@ -250,7 +254,7 @@ function WhoAreWe() {
               animate={isInView ? "visible" : "hidden"}
             >
               <Badge variant="destructive" className="text-sm rotate-8">
-                All-in-one solution
+                Solução completa
               </Badge>
             </motion.div>
           </motion.div>
@@ -261,14 +265,15 @@ function WhoAreWe() {
           className="flex flex-col w-full gap-6 sm:gap-2 sm:flex-row sm:justify-between"
           variants={itemVariants}
         >
+          {/* Stats Section */}
           {[
-            { number: "10+", label: "Years Experience" },
+            { number: "10+", label: "Anos de Experiência" },
             {
-              number: "Multi-Continental Reach",
+              number: "Alcance Multi-Continental",
               label: "",
               hasUnderline: true,
             },
-            { number: "99%", label: "Client Satisfaction" },
+            { number: "99%", label: "Satisfação do Cliente" },
           ].map((stat, i) => (
             <motion.div
               key={i}
@@ -300,7 +305,7 @@ function WhoAreWe() {
                   <motion.img
                     className="absolute w-[80%] left-[9%] -bottom-8"
                     src={Underline}
-                    alt="underline"
+                    alt="sublinhado"
                     variants={underlineVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
