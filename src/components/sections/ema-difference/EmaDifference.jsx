@@ -11,22 +11,23 @@ const differenceCards = [
   {
     emoji: MoneyBag,
     value: "60k",
-    description: "Transaction through our platform",
+    description: "معاملة عبر منصتنا",
   },
   {
     emoji: TippingHand,
     value: "58%",
-    description: "Reduction in payment's cost achieved",
+    description: "تخفيض في تكلفة المدفوعات تم تحقيقه",
   },
   {
     emoji: PeopleHugging,
     value: "50%",
-    description: "Africa's GDP comes from MSMEs we support",
+    description:
+      "الناتج المحلي الإجمالي لأفريقيا يأتي من المشاريع الصغيرة والمتوسطة التي ندعمها",
   },
   {
     emoji: MoneyFlies,
     value: "125M",
-    description: "SMME potential beneficiaries market",
+    description: "سوق المستفيدين المحتملين من المشاريع الصغيرة والمتوسطة",
   },
 ];
 
@@ -49,9 +50,9 @@ function EmaDifference() {
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h2 className="text-2xl md:text-4xl">The eMa Difference</h2>
+        <h2 className="text-2xl md:text-4xl">فرق eMa</h2>
         <p className="text-lg leading-none text-muted-foreground">
-          Driving Africa's economic transformation through digital innovation
+          قيادة التحول الاقتصادي لأفريقيا من خلال الابتكار الرقمي
         </p>
       </motion.div>
 
@@ -63,7 +64,7 @@ function EmaDifference() {
           animate={isInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <img src={ManWoman} alt="Man and Woman" />
+          <img src={ManWoman} alt="رجل وامرأة" />
         </motion.div>
 
         {/* Cards Grid Animation */}
@@ -99,7 +100,7 @@ function EmaDifference() {
                         stiffness: 200,
                       }}
                     >
-                      <img src={card.emoji} alt="emoji" />
+                      <img src={card.emoji} alt="رمز تعبيري" />
                     </motion.div>
                     <motion.p
                       className="text-4xl sm:text-5xl md:text-6xl text-accent"
