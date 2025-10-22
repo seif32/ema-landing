@@ -144,8 +144,8 @@ function BeOurPartner() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <SectionHeader
-          title="Be Our Partner"
-          subtitle="Transform Your Economy Through Partnership"
+          title="Soyez Notre Partenaire"
+          subtitle="Transformez Votre Économie Grâce au Partenariat"
         />
       </motion.div>
 
@@ -171,10 +171,10 @@ function BeOurPartner() {
           >
             <PartnerCard
               icon={Wallet}
-              title="For Financial Institutions"
-              description="Access 5 million unbanked users in Africa through our eWALLET and PAYMATE modules"
-              keyFeature1="Expand customer base instantly"
-              keyFeature2="Digital-first banking solutions"
+              title="Pour les Institutions Financières"
+              description="Accédez à 5 millions d'utilisateurs non bancarisés en Afrique via nos modules eWALLET et PAYMATE"
+              keyFeature1="Élargissez instantanément la base de clients"
+              keyFeature2="Solutions bancaires axées sur le numérique"
             />
           </motion.div>
           <motion.div
@@ -187,10 +187,10 @@ function BeOurPartner() {
           >
             <PartnerCard
               icon={Users}
-              title="For NGOs & Partners"
-              description="Reach rural communities with eMaClinic telemedicine and PATELE agricultural tools"
-              keyFeature1="Direct beneficiary access"
-              keyFeature2="Impact measurement tools"
+              title="Pour les ONG et Partenaires"
+              description="Atteignez les communautés rurales avec la télémédecine eMaClinic et les outils agricoles PATELE"
+              keyFeature1="Accès direct aux bénéficiaires"
+              keyFeature2="Outils de mesure d'impact"
             />
           </motion.div>
         </motion.div>
@@ -202,7 +202,7 @@ function BeOurPartner() {
         >
           <motion.img
             src={EmployeesTable}
-            alt="employees-table"
+            alt="tableau-employés"
             className="mb-8 sm:w-100 w-70 xl:mb-4"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{
@@ -222,12 +222,12 @@ function BeOurPartner() {
               }}
               transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
             >
-              Partner with{" "}
+              Partenaire avec{" "}
               <span className="relative">
                 eMa
                 <motion.img
                   src={Underline}
-                  alt="underline"
+                  alt="soulignement"
                   className="absolute bottom-0 right-0"
                   variants={underlineVariants}
                   initial="hidden"
@@ -240,11 +240,11 @@ function BeOurPartner() {
               {[
                 {
                   emoji: HandshakeEmoji,
-                  text: "Digitize MSME support, eliminate ghost beneficiaries.",
+                  text: "Numérisez le soutien aux MPME, éliminez les bénéficiaires fantômes.",
                 },
                 {
                   emoji: FaceEmoji,
-                  text: "Reach 50 million affected youth through our 12-module ecosystem.",
+                  text: "Atteignez 50 millions de jeunes touchés grâce à notre écosystème de 12 modules.",
                 },
               ].map((item, index) => (
                 <motion.div
@@ -291,10 +291,10 @@ function BeOurPartner() {
           >
             <PartnerCard
               icon={FaRegBuilding}
-              title="For Government Agencies"
-              description="Reduce administrative overhead by 85%, eliminate subsidy leakages."
-              keyFeature1="Automated compliance reporting"
-              keyFeature2="Transparent audit trails"
+              title="Pour les Agences Gouvernementales"
+              description="Réduisez les frais administratifs de 85%, éliminez les fuites de subventions."
+              keyFeature1="Rapports de conformité automatisés"
+              keyFeature2="Pistes d'audit transparentes"
             />
           </motion.div>
           <motion.div
@@ -307,10 +307,10 @@ function BeOurPartner() {
           >
             <PartnerCard
               icon={BriefcaseBusiness}
-              title="For Job Creations"
-              description="Connect employment agencies with millions rural job seekers"
-              keyFeature1="Rural Talent Access"
-              keyFeature2="Automated Skills Matching"
+              title="Pour la Création d'Emplois"
+              description="Connectez les agences d'emploi avec des millions de demandeurs d'emploi ruraux"
+              keyFeature1="Accès aux Talents Ruraux"
+              keyFeature2="Correspondance Automatisée des Compétences"
             />
           </motion.div>
         </motion.div>
