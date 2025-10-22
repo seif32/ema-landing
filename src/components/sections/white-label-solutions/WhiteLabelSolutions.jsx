@@ -115,8 +115,8 @@ function WhiteLabelSolutions() {
       {/* Header */}
       <motion.div variants={itemVariants}>
         <SectionHeader
-          title="White Label Solutions"
-          subtitle="Launch your branded platform in weeks using our 12-module ecosystem"
+          title="Solutions en Marque Blanche"
+          subtitle="Lancez votre plateforme de marque en quelques semaines en utilisant notre écosystème de 12 modules"
         />
       </motion.div>
 
@@ -159,8 +159,8 @@ function WhiteLabelSolutions() {
               ease: "easeOut",
             }}
           >
-            Your Brand,
-            <br /> Our Technology
+            Votre Marque,
+            <br /> Notre Technologie
           </motion.h2>
 
           <motion.p
@@ -176,16 +176,16 @@ function WhiteLabelSolutions() {
               ease: "easeOut",
             }}
           >
-            Transform your organization with a fully-customized digital finance
-            platform, that carries
+            Transformez votre organisation avec une plateforme de finance
+            numérique entièrement personnalisée, qui porte
           </motion.p>
 
           {/* Animated Bars */}
           <div className="space-y-2 lg:space-y-3">
             {[
-              { width: "60%", color: "#CC6600", text: "YOUR name" },
-              { width: "80%", color: "#B25900", text: "YOUR identity" },
-              { width: "100%", color: "#994D00", text: "YOUR colors" },
+              { width: "60%", color: "#CC6600", text: "VOTRE nom" },
+              { width: "80%", color: "#B25900", text: "VOTRE identité" },
+              { width: "100%", color: "#994D00", text: "VOS couleurs" },
             ].map((bar, index) => (
               <motion.div
                 key={index}
