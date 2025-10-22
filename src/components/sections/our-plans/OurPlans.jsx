@@ -17,56 +17,55 @@ import { Button } from "@/components/ui/button";
 // PLANS DATA CONFIG
 const plansCard = [
   {
-    badgeTitle: "EVERYDAY",
+    badgeTitle: "QUOTIDIEN",
     badgeStyle: "bg-black/10 border border-black text-black",
     planTitle: (
       <>
-        4%<span className="text-2xl font-normal"> Rate</span>
+        4%<span className="text-2xl font-normal"> Taux</span>
       </>
     ),
-    planSubtitle: "Essential Services",
+    planSubtitle: "Services Essentiels",
     planDescription:
-      "Simple, everyday banking made affordable. Handle all your personal transactions with ease.",
+      "Services bancaires simples et quotidiens abordables. Gérez toutes vos transactions personnelles facilement.",
     emoji: CheckMark,
-    features: ["Send Money", "Cash Withdrawals", "P2P Business"],
-    ctaBtn: "Choose Standard",
+    features: ["Envoyer de l'Argent", "Retraits d'Espèces", "Affaires P2P"],
+    ctaBtn: "Choisir Standard",
     ctaStyle: "bg-black text-white",
   },
   {
-    badgeTitle: "PARTNER WITH US",
+    badgeTitle: "DEVENEZ PARTENAIRE",
     badgeStyle: "bg-blue-100 border border-blue-600 text-blue-600",
     planTitle: (
       <span className="flex items-center gap-2 text-3xl">
-        White Label Solutions
+        Solutions en Marque Blanche
       </span>
     ),
-    planSubtitle: "Partner Program",
+    planSubtitle: "Programme de Partenariat",
     planDescription:
-      "Power your business with our proven fintech platform — customize our technology under your brand.",
+      "Boostez votre entreprise avec notre plateforme fintech éprouvée — personnalisez notre technologie sous votre marque.",
     emoji: Handshake,
 
     features: [
-      "Full Brand Customization",
-      "Ready-to-Deploy",
-      "Complete API Access",
-      "Real-time Analytics",
-      "Dedicated Support",
+      "Personnalisation Complète de la Marque",
+      "Prêt à Déployer",
+      "Accès API Complet",
+      "Analyses en Temps Réel",
+      "Support Dédié",
     ],
-    ctaBtn: "Contact Us",
+    ctaBtn: "Contactez-nous",
     ctaStyle: "bg-blue-700 text-white",
-    // ctaStyle: "bg-black text-white",
   },
   {
-    badgeTitle: "BUSINESS",
+    badgeTitle: "ENTREPRISE",
     badgeStyle: "bg-amber-100 border border-amber-600 text-amber-700",
     planTitle: (
       <>
-        5%<span className="text-2xl font-normal"> Rate</span>
+        5%<span className="text-2xl font-normal"> Taux</span>
       </>
     ),
-    planSubtitle: "Business Solutions",
+    planSubtitle: "Solutions d'Entreprise",
     planDescription:
-      "Complete business ecosystem designed for growth — from point-of-sale to funding solutions.",
+      "Écosystème commercial complet conçu pour la croissance — du point de vente aux solutions de financement.",
     emoji: GemStone,
     features: [
       "eMaSERVE",
@@ -78,14 +77,13 @@ const plansCard = [
     ],
     note: (
       <div className="mt-2 text-xs font-medium text-gray-500">
-        Special Tiers: <br />
-        <span className="font-bold">Paymates</span> • 1.5-2% /{" "}
+        Niveaux Spéciaux: <br />
+        <span className="font-bold">Paymates</span> • 1,5-2% /{" "}
         <span className="font-bold">SIBA</span> • 15%
       </div>
     ),
-    ctaBtn: "Choose Premium",
+    ctaBtn: "Choisir Premium",
     ctaStyle: "bg-amber-500 text-white",
-    // ctaStyle: "bg-black text-white",
   },
 ];
 
