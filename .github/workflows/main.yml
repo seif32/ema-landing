@@ -2,7 +2,7 @@ name: Deploy EMA Landing Page
 
 on:
   push:
-    branches: [ master ]
+    branches: [ arabic ]
 
 env:
   IMAGE_NAME: ema-app
@@ -48,7 +48,7 @@ jobs:
         script: |
           cd /opt/ema-landing
           # The secrets are already baked into the image, so no need to create a .env file
-          docker compose pull || docker-compose pull
-          docker compose down || docker-compose down
-          docker compose up -d || docker-compose up -d
+          docker compose ema-app-ar pull || docker-compose pull
+          docker compose ema-app-ar down || docker-compose down
+          docker compose ema-app-ar up -d || docker-compose up -d
           docker image prune -f
