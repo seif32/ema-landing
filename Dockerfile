@@ -19,5 +19,8 @@ RUN --mount=type=secret,id=VITE_GEMINI_KEY_1 \
 # Production Stage
 FROM nginx:stable-alpine AS production
 COPY --from=build /app/dist /usr/share/nginx/html
+# SPA fallback + caching rules. Required: the app serves client-side routes
+# (/modules/:id, /faq, /help), which 404 under nginx's default config.
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
