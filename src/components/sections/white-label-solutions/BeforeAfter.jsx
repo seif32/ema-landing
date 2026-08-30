@@ -1,6 +1,7 @@
 import Before from "../../../assets/white-label-solutions/before-white-label-solutions.svg";
 import After from "../../../assets/white-label-solutions/after-white-label-solutions.svg";
 import { MoveRight } from "lucide-react";
+import { BEFORE_AFTER } from "@/content";
 
 function BeforeAfter() {
   return (
@@ -11,16 +12,16 @@ function BeforeAfter() {
           <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
             <img
               src={Before}
-              alt="قبل-العلامة-البيضاء"
+              alt={BEFORE_AFTER.beforeAlt}
               className="w-full h-auto"
             />
           </div>
           <div className="mt-4 text-center lg:text-right lg:max-w-md">
             <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
-              منصة عامة
+              {BEFORE_AFTER.beforeTitle}
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-600 sm:text-base md:text-lg lg:text-xl">
-              واجهة eMa القياسية مع علامتنا التجارية والتصميم المؤسسي
+              {BEFORE_AFTER.beforeBody}
             </p>
           </div>
         </div>
@@ -35,16 +36,16 @@ function BeforeAfter() {
           <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl lg:self-end">
             <img
               src={After}
-              alt="بعد-العلامة-البيضاء"
+              alt={BEFORE_AFTER.afterAlt}
               className="w-full h-auto"
             />
           </div>
           <div className="mt-4 text-center lg:text-right lg:max-w-md">
             <h2 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
-              حل علامتك التجارية
+              {BEFORE_AFTER.afterTitle}
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-600 sm:text-base md:text-lg lg:text-xl">
-              نفس التكنولوجيا القوية مع شعارك وألوانك وتصميم خاص بصناعتك
+              {BEFORE_AFTER.afterBody}
             </p>
           </div>
         </div>

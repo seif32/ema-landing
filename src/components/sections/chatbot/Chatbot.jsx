@@ -9,6 +9,7 @@ import {
   User,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { CHATBOT } from "@/content";
 
 const Chatbot = () => {
   const {
@@ -143,7 +144,7 @@ const Chatbot = () => {
                 >
                   <Bot className="h-5 w-5" />
                 </motion.div>
-                <h3 className="font-semibold">مساعد eMa</h3>
+                <h3 className="font-semibold">{CHATBOT.title}</h3>
               </div>
               <div className="flex items-center space-x-2">
                 <motion.button
@@ -151,7 +152,7 @@ const Chatbot = () => {
                   whileTap={{ scale: 0.9 }}
                   onClick={clearChat}
                   className="text-white/80 hover:text-white transition-colors"
-                  title="مسح الدردشة"
+                  title={CHATBOT.clear}
                 >
                   <X className="h-4 w-4" />
                 </motion.button>
@@ -160,7 +161,7 @@ const Chatbot = () => {
                   whileTap={{ scale: 0.9 }}
                   onClick={toggleChat}
                   className="text-white/80 hover:text-white transition-colors"
-                  title="تصغير"
+                  title={CHATBOT.minimize}
                 >
                   <Minimize2 className="h-4 w-4" />
                 </motion.button>
@@ -194,8 +195,8 @@ const Chatbot = () => {
                   >
                     <Bot className="h-12 w-12 mx-auto mb-3 text-gray-400" />
                   </motion.div>
-                  <p>مرحباً! أنا مساعد eMa الخاص بك.</p>
-                  <p className="text-sm">كيف يمكنني مساعدتك اليوم؟</p>
+                  <p>{CHATBOT.greeting}</p>
+                  <p className="text-sm">{CHATBOT.greetingSub}</p>
                 </motion.div>
               )}
 
@@ -304,7 +305,7 @@ const Chatbot = () => {
                           transition={{ duration: 1.5, repeat: Infinity }}
                           className="text-sm"
                         >
-                          جاري التفكير...
+                          {CHATBOT.thinking}
                         </motion.span>
                       </div>
                     </div>
@@ -330,7 +331,7 @@ const Chatbot = () => {
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="اسألني أي شيء عن eMa..."
+                  placeholder={CHATBOT.placeholder}
                   className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#AF6553] focus:border-transparent text-sm transition-all"
                   disabled={loading}
                 />
@@ -363,7 +364,7 @@ const Chatbot = () => {
         whileTap="tap"
         onClick={toggleChat}
         className="text-white p-3 rounded-full shadow-lg transition-all"
-        title={isMinimized ? "فتح الدردشة" : "إغلاق الدردشة"}
+        title={isMinimized ? CHATBOT.open : CHATBOT.close}
       >
         <motion.div
           animate={{ rotate: isMinimized ? 0 : 180 }}

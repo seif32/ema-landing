@@ -1,227 +1,173 @@
+import { Link } from "react-router";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
+import { BiLogoPlayStore } from "react-icons/bi";
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  ArrowUp,
-} from "lucide-react";
-import { animateScroll as scroll } from "react-scroll";
-import NewLogo from "../../assets/shared/new_logo.svg";
+  BUSINESS_MODULES,
+  COMPANY,
+  COMPANY_ADDRESS,
+  MONEY_MODULES,
+  UI,
+} from "@/content";
+
+const SOCIALS = [
+  { icon: Facebook, href: COMPANY.social.facebook, label: "Facebook" },
+  { icon: FaXTwitter, href: COMPANY.social.twitter, label: "X" },
+  { icon: Linkedin, href: COMPANY.social.linkedin, label: "LinkedIn" },
+  { icon: Instagram, href: COMPANY.social.instagram, label: "Instagram" },
+];
+
+function ModuleColumn({ title, modules }) {
+  return (
+    <div>
+      <h3 className="mb-3 text-sm font-bold text-primary">{title}</h3>
+      <ul className="space-y-2">
+        {modules.map((module) => (
+          <li key={module.id}>
+            <Link
+              to={`/modules/${module.id}`}
+              className="text-sm text-white/70 transition-colors hover:text-primary"
+            >
+              {module.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function LinkColumn({ title, links }) {
+  return (
+    <div>
+      <h3 className="mb-3 text-sm font-bold text-primary">{title}</h3>
+      <ul className="space-y-2">
+        {links.map((link) => (
+          <li key={link.label}>
+            {link.external ? (
+              <a
+                href={link.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-white/70 transition-colors hover:text-primary"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                to={link.to}
+                className="text-sm text-white/70 transition-colors hover:text-primary"
+              >
+                {link.label}
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 function Footer() {
-  const scrollToTop = () => {
-    scroll.scrollToTop({
-      duration: 500,
-      smooth: true,
-    });
-  };
+  const company = [
+    { label: UI.company, to: "/#about" },
+    { label: "News", to: "/news" },
+    { label: "Blog", to: COMPANY.blog, external: true },
+    { label: "eMalyami", to: COMPANY.website, external: true },
+  ];
+
+  const support = [
+    { label: UI.support, to: "/help" },
+    { label: "FAQ", to: "/faq" },
+    { label: "Fraud awareness", to: "/fraud-awareness" },
+  ];
+
+  const legal = [
+    { label: "Terms & conditions", to: "/terms-conditions" },
+    { label: "Privacy policy", to: "/privacy-policy" },
+  ];
 
   return (
-    <footer className="bg-gradient-to-br from-[#2c1914] to-[#583228] text-white">
-      {/* Main Footer Content */}
-      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-0">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 mr-3">
-                <img
-                  src={NewLogo}
-                  alt="Logo"
-                  className="object-contain w-full h-full"
-                />
-              </div>
-              <h3 className="text-2xl font-bold" style={{ color: "#c38b7d" }}>
-                eMa
-              </h3>
-            </div>
-            <p className="mb-6 leading-relaxed text-gray-300">
-              نظام بيئي رقمي يعزز الشمول المالي ونمو المشاريع الصغيرة والمتوسطة
-              والشفافية والشراكات القابلة للتوسع في جميع أنحاء أفريقيا.
+    <footer className="mt-16 bg-accent text-white">
+      <div className="mx-auto max-w-7xl px-6 py-14 sm:px-10 lg:px-16">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
+          {/* Brand + contact */}
+          <div>
+            <p className="mb-3 text-2xl font-bold">eMalyami</p>
+            <p className="mb-5 max-w-xs text-sm leading-relaxed text-white/70">
+              {COMPANY.legalEntity} · {UI.patentNo} {COMPANY.patentNumber}
             </p>
 
-            {/* Social Links - Labels in Arabic */}
-            <div className="flex space-x-4">
-              {[
-                { icon: Facebook, href: "#", label: "فيسبوك" },
-                { icon: Twitter, href: "#", label: "تويتر" },
-                { icon: Linkedin, href: "#", label: "لينكد إن" },
-                { icon: Instagram, href: "#", label: "إنستغرام" },
-              ].map(({ icon: Icon, href, label }) => (
+            <ul className="space-y-2.5 text-sm text-white/70">
+              <li className="flex items-start gap-2.5">
+                <MapPin size={15} className="mt-0.5 shrink-0 text-primary" />
+                <span>{COMPANY_ADDRESS}</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Phone size={15} className="shrink-0 text-primary" />
                 <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="w-10 h-10 bg-[#AF6553] rounded-full flex items-center justify-center hover:bg-[#c38b7d] transition-colors duration-200"
+                  href={`tel:${COMPANY.phone.replace(/[^\d+]/g, "")}`}
+                  className="transition-colors hover:text-primary"
+                  dir="ltr"
                 >
-                  <Icon size={18} />
+                  {COMPANY.phone}
                 </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          {/* Quick Links */}
-          <div>
-            <h4
-              className="mb-6 text-lg font-semibold"
-              style={{ color: "#c38b7d" }}
-            >
-              روابط سريعة
-            </h4>
-            <ul className="space-y-3">
-              {[
-                { label: "المكونات", href: "#components" },
-                { label: "الخدمات", href: "#services" },
-                { label: "العلامة البيضاء", href: "#white-label" },
-                { label: "الأسعار", href: "#pricing" },
-                { label: "برنامج الشراكة", href: "#partner" },
-              ].map((link) => (
-                <li key={link.label}>
+              </li>
+              {Object.values(COMPANY.email).map((email) => (
+                <li key={email} className="flex items-center gap-2.5">
+                  <Mail size={15} className="shrink-0 text-primary" />
                   <a
-                    href={link.href}
-                    className="text-gray-300 hover:text-[#c38b7d] transition-colors duration-200 block"
+                    href={`mailto:${email}`}
+                    className="transition-colors hover:text-primary"
+                    dir="ltr"
                   >
-                    {link.label}
+                    {email}
                   </a>
                 </li>
               ))}
             </ul>
+
+            <a
+              href={COMPANY.apps.main}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-accent transition-colors hover:bg-primary/90"
+            >
+              <BiLogoPlayStore size={18} />
+              {UI.downloadApp}
+            </a>
           </div>
 
-          {/* Services */}
-          {/* Services */}
-          <div>
-            <h4
-              className="mb-6 text-lg font-semibold"
-              style={{ color: "#c38b7d" }}
-            >
-              خدماتنا
-            </h4>
-            <ul className="space-y-3">
-              {[
-                "eMaSERVE",
-                "eMaMALL",
-                "eMaPOS",
-                "eMaFunding",
-                "eMaSave",
-                "eMaTuna",
-              ].map((service) => (
-                <li key={service}>
-                  <span className="text-gray-300 hover:text-[#c38b7d] transition-colors duration-200 cursor-pointer block">
-                    {service}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ModuleColumn title={UI.moneyStack} modules={MONEY_MODULES} />
+          <ModuleColumn title={UI.businessStack} modules={BUSINESS_MODULES} />
+          <LinkColumn title={UI.company} links={company} />
 
-          {/* Contact Info */}
-          {/* Contact Info */}
-          <div>
-            <h4
-              className="mb-6 text-lg font-semibold"
-              style={{ color: "#c38b7d" }}
-            >
-              اتصل بنا
-            </h4>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <MapPin
-                  size={18}
-                  className="text-[#AF6553] mt-1 flex-shrink-0"
-                />
-                <div className="text-gray-300">
-                  <p>123 منطقة الأعمال</p>
-                  <p>لاغوس، نيجيريا</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <Phone size={18} className="text-[#AF6553] flex-shrink-0" />
-                <a
-                  href="tel:+234123456789"
-                  className="text-gray-300 hover:text-[#c38b7d] transition-colors duration-200"
-                >
-                  +234 123 456 789
-                </a>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <Mail size={18} className="text-[#AF6553] flex-shrink-0" />
-                <a
-                  href="mailto:contact@ema.com"
-                  className="text-gray-300 hover:text-[#c38b7d] transition-colors duration-200"
-                >
-                  contact@ema.com
-                </a>
-              </div>
-            </div>
-
-            {/* Newsletter Signup */}
-            <div className="mt-8">
-              <h5
-                className="mb-3 text-sm font-medium"
-                style={{ color: "#c38b7d" }}
-              >
-                ابق على اطلاع
-              </h5>
-              <div className="flex flex-col gap-2 sm:flex-row">
-                <input
-                  type="email"
-                  placeholder="أدخل بريدك الإلكتروني"
-                  className="flex-1 px-4 py-2 bg-[#583228] border border-[#AF6553] rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-[#c38b7d] transition-colors duration-200"
-                />
-                <button className="bg-[#AF6553] hover:bg-[#c38b7d] text-white px-6 py-2 rounded-md transition-colors duration-200 font-medium">
-                  اشترك
-                </button>
-              </div>
-            </div>
+          <div className="space-y-8">
+            <LinkColumn title={UI.support} links={support} />
+            <LinkColumn title={UI.legal} links={legal} />
           </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      {/* Bottom Bar */}
-      <div className="border-t border-[#583228]">
-        <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-            <div className="flex flex-col items-center space-y-2 text-sm text-gray-400 sm:flex-row sm:space-y-0 sm:space-x-6">
-              <p>&copy; 2025 eMa. جميع الحقوق محفوظة.</p>
-              <div className="flex space-x-6">
-                <a
-                  href="#"
-                  className="hover:text-[#c38b7d] transition-colors duration-200"
-                >
-                  سياسة الخصوصية
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-[#c38b7d] transition-colors duration-200"
-                >
-                  شروط الخدمة
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-[#c38b7d] transition-colors duration-200"
-                >
-                  ملفات تعريف الارتباط
-                </a>
-              </div>
-            </div>
+        <div className="mt-12 flex flex-col items-center justify-between gap-5 border-t border-white/15 pt-6 sm:flex-row">
+          <p className="text-sm text-white/60">
+            &copy; {new Date().getFullYear()} eMalyami. {UI.rightsReserved}
+          </p>
 
-            {/* Back to Top Button */}
-            <button
-              onClick={scrollToTop}
-              className="bg-[#AF6553] hover:bg-[#c38b7d] text-white p-2 rounded-full transition-all duration-200 hover:scale-105"
-              aria-label="العودة إلى الأعلى"
-            >
-              <ArrowUp size={18} />
-            </button>
-          </div>
+          <ul className="flex gap-3">
+            {SOCIALS.map(({ icon: Icon, href, label }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="grid size-9 place-items-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-accent"
+                >
+                  <Icon size={16} />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>
