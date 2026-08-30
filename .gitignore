@@ -30,9 +30,5 @@ dist-ssr
 .env.test.local
 .env.production.local
 
-# Legacy Angular reference project — kept locally for content migration only.
-# Contains live API keys in src/environments/environment.ts; must never be committed.
-old emalyami/
-
 # Local branch backups (zip archives) — not part of the source tree.
 ema landing backup/
