@@ -4,7 +4,6 @@ import { ArrowLeft, ArrowRight, ExternalLink, Globe } from "lucide-react";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import StatusBadge from "@/components/shared/StatusBadge";
 import StepList from "@/components/shared/StepList";
 import CapabilityGrid from "@/components/shared/CapabilityGrid";
 import ModuleCard from "@/components/shared/ModuleCard";
@@ -84,7 +83,6 @@ function ModuleDetailPage() {
           className="mt-6 border-b border-border/70 pb-8"
         >
           <div className="mb-3 flex flex-wrap items-center gap-2">
-            <StatusBadge status={module.status} />
             <Badge variant="outline" className="text-[11px]">
               {familyLabel}
             </Badge>

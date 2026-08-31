@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import StatusBadge from "./StatusBadge";
 import { IS_RTL, UI } from "@/content";
 import { cn } from "@/lib/utils";
 
@@ -31,23 +30,20 @@ function ModuleCard({ module, index = 0, showNumber = false, className }) {
         to={`/modules/${module.id}`}
         className="group flex h-full flex-col rounded-2xl border border-border/70 bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 sm:p-6"
       >
-        <div className="mb-3 flex items-start justify-between gap-3">
-          <div className="flex items-center gap-3">
-            {showNumber && (
-              <span className="grid size-8 shrink-0 place-items-center rounded-[16px] bg-accent text-sm text-white">
-                {index + 1}
-              </span>
-            )}
-            <div>
-              <h3 className="text-xl font-bold leading-tight md:text-2xl">
-                {module.name}
-              </h3>
-              <p className="text-sm leading-snug text-primary-strong md:text-base">
-                {module.tagline}
-              </p>
-            </div>
+        <div className="mb-3 flex items-center gap-3">
+          {showNumber && (
+            <span className="grid size-8 shrink-0 place-items-center rounded-[16px] bg-accent text-sm text-white">
+              {index + 1}
+            </span>
+          )}
+          <div>
+            <h3 className="text-xl font-bold leading-tight md:text-2xl">
+              {module.name}
+            </h3>
+            <p className="text-sm leading-snug text-primary-strong md:text-base">
+              {module.tagline}
+            </p>
           </div>
-          <StatusBadge status={module.status} className="shrink-0" />
         </div>
 
         <p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground">
