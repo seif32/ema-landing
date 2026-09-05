@@ -21,11 +21,18 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "src");
 const CONTENT = path.join(SRC, "content");
 
-const LOCALES = ["en", "ar", "fr", "pt"];
+const LOCALES = ["en", "ar", "fr", "pt", "es"];
 const ARABIC = /[؀-ۿ]/;
 
-// Verbatim legal text, deliberately not translated.
-const ALLOW_HARDCODED = new Set([path.join(SRC, "services", "legacyPolicyText.js")]);
+// Files that legitimately contain non-Latin characters that are NOT copy:
+//   legacyPolicyText.js — verbatim legal text, deliberately not translated.
+//   normalize.js        — Arabic letterforms used as orthographic folding
+//                         rules, plus a stopword list. Linguistic data for the
+//                         search index; nothing here is ever shown to anyone.
+const ALLOW_HARDCODED = new Set([
+  path.join(SRC, "services", "legacyPolicyText.js"),
+  path.join(SRC, "services", "chatbot", "local", "normalize.js"),
+]);
 
 function walk(dir, out = []) {
   for (const entry of readdirSync(dir)) {
@@ -56,7 +63,7 @@ if (stray.length) {
   failures += stray.length;
   console.error(`\n✗ ${stray.length} hardcoded string(s) outside src/content:\n`);
   stray.forEach((s) => console.error("   " + s));
-  console.error("\n   Move these into src/content and translate all four locales.");
+  console.error("\n   Move these into src/content and translate all five locales.");
 } else {
   console.log("✓ no hardcoded translatable strings outside src/content");
 }
@@ -90,7 +97,7 @@ if (gaps.length) {
   console.error(`\n✗ ${gaps.length} content file(s) with locale gaps:\n`);
   gaps.forEach((g) => console.error("   " + g));
 } else {
-  console.log("✓ every content bundle covers en / ar / fr / pt");
+  console.log("✓ every content bundle covers en / ar / fr / pt / es");
 }
 
 if (failures) {

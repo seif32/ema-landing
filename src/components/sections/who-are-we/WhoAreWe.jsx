@@ -54,7 +54,7 @@ function WhoAreWe() {
   ];
 
   return (
-    <section ref={ref} className="relative py-14 lg:py-20">
+    <section id="about" ref={ref} className="relative py-14 lg:py-20">
       <motion.div
         className="absolute inset-0 bg-[url('/who-bg.svg')] bg-top-right bg-contain bg-no-repeat xl:bg-center 2xl:bg-cover"
         initial={{ opacity: 0 }}

@@ -3,7 +3,7 @@
  *
  * One build serves every language. The visitor chooses from the header
  * switcher, the choice is stored in the browser, and every later visit comes
- * back in that language. Content files carry all four locales side by side, so
+ * back in that language. Content files carry all five locales side by side, so
  * this is the ONLY place the language is chosen.
  *
  * Resolution order (first match wins):
@@ -21,7 +21,7 @@
 
 const DEFAULT_LOCALE = "en";
 
-export const SUPPORTED_LOCALES = ["en", "ar", "fr", "pt"];
+export const SUPPORTED_LOCALES = ["en", "ar", "fr", "pt", "es"];
 
 /**
  * Endonyms — each language written in itself. A switcher that lists "Arabic"
@@ -32,6 +32,7 @@ export const LOCALE_NAMES = {
   ar: "العربية",
   fr: "Français",
   pt: "Português",
+  es: "Español",
 };
 
 const RTL_LOCALES = ["ar"];
@@ -60,7 +61,7 @@ function writeStored(locale) {
   }
 }
 
-/** "fr-CA" and "pt-BR" should land on fr and pt. */
+/** "fr-CA", "pt-BR" and "es-MX" should land on fr, pt and es. */
 function fromBrowser() {
   const nav = window.navigator;
   const tags = nav?.languages?.length ? nav.languages : [nav?.language];
@@ -146,6 +147,6 @@ export function pick(bundle) {
  */
 export function localize(record) {
   if (!record) return record;
-  const { en, ar, fr, pt, ...shared } = record;
-  return { ...shared, ...(pick({ en, ar, fr, pt }) ?? {}) };
+  const { en, ar, fr, pt, es, ...shared } = record;
+  return { ...shared, ...(pick({ en, ar, fr, pt, es }) ?? {}) };
 }

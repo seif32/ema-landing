@@ -2,8 +2,14 @@ import { pick } from "./locale";
 
 /**
  * Pricing. The three plan cards are kept from the original design; the fee
- * table underneath is new — it states the per-module, event-based fee model
- * documented by the eMa team, which is a selling point the site was hiding.
+ * table underneath states the per-module, event-based fee model.
+ *
+ * Two things the QA review flagged and this file now fixes: the table mixed a
+ * Paymates cash handling fee with a SIBA administration fee in one confusing
+ * row, and "Everyday 4% / Business 5%" gave no clue what the percentage
+ * applies to. Every row now names the event that triggers the charge, and
+ * `feeNote` states plainly that the published schedule is the South African
+ * one — rates and limits are set per country and per KYC tier.
  */
 
 export const PRICING = pick({
@@ -12,6 +18,8 @@ export const PRICING = pick({
     subtitle:
       "No terminals to buy. No monthly rental. No lock-in contract. Most eMa fees are only charged at the moment value changes hands.",
     feeTableHeaders: { module: "Module", when: "When the fee is charged" },
+    feeNote:
+      "The schedule above is the South African one. Rates, daily limits and balance caps are set per country and per KYC tier, and are confirmed to you before you transact.",
     plans: [
       {
         badge: "Everyday",
@@ -58,23 +66,24 @@ export const PRICING = pick({
           "eMaSave",
           "eMaTuma",
         ],
-        noteLab: "Special rates:",
-        note: "Paymates · 1.5–2%   /   SIBA · 15%",
+        noteLabel: "Separate rates apply to:",
+        note: "Paymates cash handling · 1.5–2%   /   SIBA administration · 15%",
         cta: "Choose Business",
         ctaStyle: "bg-amber-700 text-white",
       },
     ],
     fees: [
+      { module: "eWallet — Everyday (personal)", when: "4% per transaction on everyday personal transactions" },
+      { module: "Business plan", when: "5% per transaction across the business modules" },
+      { module: "Paymates", when: "1.5–2% per cash-in or cash-out handled by the agent" },
+      { module: "SIBA", when: "15% administration fee on the group's monthly disbursement" },
+      { module: "eMaTuma", when: "When you confirm the cross-border transfer — a fraction of the 8–12% conventional market rate" },
       { module: "eMaPOS", when: "Monthly, auto-debited from your eMa account, calculated on your total orders" },
       { module: "eMaMall", when: "When buyer and seller both accept the offer" },
       { module: "eMaServe", when: "When the job is marked complete" },
-      { module: "eMaTuma", when: "When you confirm the transfer" },
       { module: "eMaSave", when: "When the strongbox starts, and on payout" },
       { module: "eMaFunding", when: "When the campaign is created" },
-      { module: "PAYMATE", when: "1.5–2% per cash-in / cash-out" },
-      { module: "SIBA", when: "15%" },
-      { module: "Everyday (personal)", when: "4%" },
-      { module: "Business", when: "5%" },
+      { module: "eMaCargo · eMaClinic · eMaExpo · eMaCom", when: "Quoted per country and per service — ask us" },
       { module: "White label", when: "Contact us" },
     ],
   },
@@ -83,6 +92,8 @@ export const PRICING = pick({
     subtitle:
       "لا أجهزة تشتريها. لا إيجار شهري. لا عقود مُلزِمة. معظم رسوم eMa تُحتسب فقط في اللحظة التي تنتقل فيها القيمة.",
     feeTableHeaders: { module: "الوحدة", when: "متى تُحتسب الرسوم" },
+    feeNote:
+      "الجدول أعلاه هو جدول جنوب أفريقيا. وتُحدَّد الأسعار والحدود اليومية والحد الأقصى للرصيد لكل دولة ولكل مستوى تحقّق من الهوية، وتُبلَّغ بها قبل إجراء أي معاملة.",
     plans: [
       {
         badge: "يومي",
@@ -129,23 +140,24 @@ export const PRICING = pick({
           "eMaSave",
           "eMaTuma",
         ],
-        noteLabel: "مستويات خاصة:",
-        note: "Paymates · 1.5–2%   /   SIBA · 15%",
+        noteLabel: "تُطبَّق أسعار منفصلة على:",
+        note: "التعامل النقدي عبر Paymates · 1.5–2%   /   رسوم إدارة SIBA · 15%",
         cta: "اختر الأعمال",
         ctaStyle: "bg-amber-700 text-white",
       },
     ],
     fees: [
+      { module: "eWallet — الباقة اليومية (الأفراد)", when: "4% لكل معاملة على المعاملات الشخصية اليومية" },
+      { module: "باقة الأعمال", when: "5% لكل معاملة عبر وحدات الأعمال" },
+      { module: "Paymates", when: "1.5–2% لكل إيداع أو سحب نقدي ينفّذه الوكيل" },
+      { module: "SIBA", when: "رسوم إدارية 15% على الصرف الشهري للمجموعة" },
+      { module: "eMaTuma", when: "عند تأكيدك للتحويل عبر الحدود — بجزء من سعر السوق التقليدي البالغ 8–12%" },
       { module: "eMaPOS", when: "شهريًا، تُخصم تلقائيًا من حساب eMa، وتُحسب على إجمالي طلباتك" },
       { module: "eMaMall", when: "عندما يقبل المشتري والبائع العرض معًا" },
       { module: "eMaServe", when: "عند تسجيل إنجاز المهمة" },
-      { module: "eMaTuma", when: "عند تأكيدك للتحويل" },
       { module: "eMaSave", when: "عند بدء الصندوق، وعند الصرف" },
       { module: "eMaFunding", when: "عند إنشاء الحملة" },
-      { module: "PAYMATE", when: "1.5–2% لكل إيداع أو سحب نقدي" },
-      { module: "SIBA", when: "15%" },
-      { module: "الباقة اليومية (الأفراد)", when: "4%" },
-      { module: "باقة الأعمال", when: "5%" },
+      { module: "eMaCargo · eMaClinic · eMaExpo · eMaCom", when: "بعرض سعر لكل دولة ولكل خدمة — تواصل معنا" },
       { module: "العلامة البيضاء", when: "تواصل معنا" },
     ],
   },
@@ -154,6 +166,8 @@ export const PRICING = pick({
     subtitle:
       "Aucun terminal à acheter. Aucun loyer mensuel. Aucun engagement. La plupart des frais eMa ne s'appliquent qu'au moment où la valeur change de mains.",
     feeTableHeaders: { module: "Module", when: "Quand les frais s'appliquent" },
+    feeNote:
+      "La grille ci-dessus est celle de l'Afrique du Sud. Les taux, plafonds journaliers et plafonds de solde sont fixés par pays et par niveau de KYC, et vous sont confirmés avant toute transaction.",
     plans: [
       {
         badge: "Quotidien",
@@ -200,23 +214,24 @@ export const PRICING = pick({
           "eMaSave",
           "eMaTuma",
         ],
-        noteLabel: "Tarifs particuliers :",
-        note: "Paymates · 1,5–2 %   /   SIBA · 15 %",
+        noteLabel: "Des tarifs distincts s'appliquent à :",
+        note: "Manipulation d'espèces Paymates · 1,5–2 %   /   Administration SIBA · 15 %",
         cta: "Choisir Entreprise",
         ctaStyle: "bg-amber-700 text-white",
       },
     ],
     fees: [
+      { module: "eWallet — Quotidien (particuliers)", when: "4 % par transaction sur les opérations personnelles courantes" },
+      { module: "Offre Entreprise", when: "5 % par transaction sur les modules professionnels" },
+      { module: "Paymates", when: "1,5–2 % par dépôt ou retrait d'espèces traité par l'agent" },
+      { module: "SIBA", when: "Frais d'administration de 15 % sur le versement mensuel du groupe" },
+      { module: "eMaTuma", when: "À la confirmation du transfert transfrontalier — une fraction du taux marché habituel de 8–12 %" },
       { module: "eMaPOS", when: "Mensuellement, prélevé automatiquement sur votre compte eMa, calculé sur le total de vos commandes" },
       { module: "eMaMall", when: "Lorsque l'acheteur et le vendeur acceptent tous deux l'offre" },
       { module: "eMaServe", when: "Lorsque la mission est marquée comme terminée" },
-      { module: "eMaTuma", when: "Lorsque vous confirmez le transfert" },
       { module: "eMaSave", when: "Au démarrage du coffre, puis au versement" },
       { module: "eMaFunding", when: "À la création de la campagne" },
-      { module: "PAYMATE", when: "1,5–2 % par dépôt ou retrait d'espèces" },
-      { module: "SIBA", when: "15 %" },
-      { module: "Quotidien (particuliers)", when: "4 %" },
-      { module: "Entreprise", when: "5 %" },
+      { module: "eMaCargo · eMaClinic · eMaExpo · eMaCom", when: "Sur devis, par pays et par service — contactez-nous" },
       { module: "Marque blanche", when: "Nous contacter" },
     ],
   },
@@ -225,6 +240,8 @@ export const PRICING = pick({
     subtitle:
       "Sem terminais para comprar. Sem renda mensal. Sem fidelização. A maioria das taxas eMa só é cobrada no momento em que o valor muda de mãos.",
     feeTableHeaders: { module: "Módulo", when: "Quando a taxa é cobrada" },
+    feeNote:
+      "A tabela acima é a da África do Sul. As taxas, os limites diários e os tetos de saldo são definidos por país e por nível de KYC, e são-lhe confirmados antes de transacionar.",
     plans: [
       {
         badge: "Diário",
@@ -271,24 +288,99 @@ export const PRICING = pick({
           "eMaSave",
           "eMaTuma",
         ],
-        noteLabel: "Taxas especiais:",
-        note: "Paymates · 1,5–2%   /   SIBA · 15%",
+        noteLabel: "Aplicam-se taxas distintas a:",
+        note: "Movimentação de numerário Paymates · 1,5–2%   /   Administração SIBA · 15%",
         cta: "Escolher Empresas",
         ctaStyle: "bg-amber-700 text-white",
       },
     ],
     fees: [
+      { module: "eWallet — Diário (particulares)", when: "4% por transação nas operações pessoais do dia a dia" },
+      { module: "Plano Empresas", when: "5% por transação nos módulos empresariais" },
+      { module: "Paymates", when: "1,5–2% por depósito ou levantamento processado pelo agente" },
+      { module: "SIBA", when: "Taxa de administração de 15% sobre o desembolso mensal do grupo" },
+      { module: "eMaTuma", when: "Quando confirma a transferência além-fronteiras — uma fração da taxa de mercado convencional de 8–12%" },
       { module: "eMaPOS", when: "Mensalmente, debitado automaticamente da sua conta eMa, calculado sobre o total das suas encomendas" },
       { module: "eMaMall", when: "Quando comprador e vendedor aceitam a proposta" },
       { module: "eMaServe", when: "Quando o trabalho é dado como concluído" },
-      { module: "eMaTuma", when: "Quando confirma a transferência" },
       { module: "eMaSave", when: "No arranque do cofre e no levantamento" },
       { module: "eMaFunding", when: "Na criação da campanha" },
-      { module: "PAYMATE", when: "1,5–2% por depósito ou levantamento em numerário" },
-      { module: "SIBA", when: "15%" },
-      { module: "Diário (particulares)", when: "4%" },
-      { module: "Empresas", when: "5%" },
+      { module: "eMaCargo · eMaClinic · eMaExpo · eMaCom", when: "Orçamentado por país e por serviço — fale connosco" },
       { module: "Marca branca", when: "Fale connosco" },
+    ],
+  },
+  es: {
+    title: "Pagas cuando ganas",
+    subtitle:
+      "Sin terminales que comprar. Sin cuota mensual. Sin permanencia. La mayoría de las comisiones de eMa solo se cobran en el momento en que el valor cambia de manos.",
+    feeTableHeaders: { module: "Módulo", when: "Cuándo se cobra la comisión" },
+    feeNote:
+      "La tabla anterior corresponde a Sudáfrica. Las tarifas, los límites diarios y los topes de saldo se fijan por país y por nivel de KYC, y se te confirman antes de operar.",
+    plans: [
+      {
+        badge: "Diario",
+        badgeStyle: "bg-black/10 border border-black text-black",
+        rate: "4 %",
+        rateSuffix: "por transacción",
+        subtitle: "Lo esencial del día a día",
+        description:
+          "Servicios financieros sencillos a un precio asequible. Gestiona todas tus operaciones personales sin complicaciones.",
+        features: ["Enviar dinero", "Retiradas de efectivo", "Transferencias entre particulares"],
+        cta: "Elegir Diario",
+        ctaStyle: "bg-black text-white",
+      },
+      {
+        badge: "Sé nuestro socio",
+        badgeStyle: "bg-blue-100 border border-blue-600 text-blue-600",
+        rate: "Marca blanca",
+        subtitle: "Programa de alianzas",
+        description:
+          "Impulsa tu negocio con nuestra plataforma fintech probada: personaliza nuestra tecnología bajo tu propia marca.",
+        features: [
+          "Personalización total de la marca",
+          "Lista para desplegar",
+          "Acceso completo a la API",
+          "Analítica en tiempo real",
+          "Soporte dedicado",
+        ],
+        cta: "Contáctanos",
+        ctaStyle: "bg-blue-700 text-white",
+      },
+      {
+        badge: "Empresas",
+        badgeStyle: "bg-amber-100 border border-amber-600 text-amber-700",
+        rate: "5 %",
+        rateSuffix: "por transacción",
+        subtitle: "Soluciones empresariales",
+        description:
+          "Un ecosistema comercial completo pensado para crecer: del punto de venta a la financiación.",
+        features: [
+          "eMaPOS",
+          "eMaMall",
+          "eMaServe",
+          "eMaFunding",
+          "eMaSave",
+          "eMaTuma",
+        ],
+        noteLabel: "Se aplican tarifas distintas a:",
+        note: "Manejo de efectivo Paymates · 1,5–2 %   /   Administración SIBA · 15 %",
+        cta: "Elegir Empresas",
+        ctaStyle: "bg-amber-700 text-white",
+      },
+    ],
+    fees: [
+      { module: "eWallet — Diario (particulares)", when: "4 % por transacción en las operaciones personales del día a día" },
+      { module: "Plan Empresas", when: "5 % por transacción en los módulos empresariales" },
+      { module: "Paymates", when: "1,5–2 % por cada ingreso o retirada de efectivo gestionado por el agente" },
+      { module: "SIBA", when: "Comisión de administración del 15 % sobre el desembolso mensual del grupo" },
+      { module: "eMaTuma", when: "Al confirmar la transferencia transfronteriza: una fracción de la tarifa de mercado habitual del 8–12 %" },
+      { module: "eMaPOS", when: "Mensual, con cargo automático a tu cuenta eMa, calculado sobre el total de tus pedidos" },
+      { module: "eMaMall", when: "Cuando comprador y vendedor aceptan la oferta" },
+      { module: "eMaServe", when: "Cuando el trabajo se marca como completado" },
+      { module: "eMaSave", when: "Al abrir la hucha y en el reparto" },
+      { module: "eMaFunding", when: "Al crear la campaña" },
+      { module: "eMaCargo · eMaClinic · eMaExpo · eMaCom", when: "Presupuestado por país y por servicio: consúltanos" },
+      { module: "Marca blanca", when: "Contáctanos" },
     ],
   },
 });

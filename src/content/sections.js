@@ -4,63 +4,88 @@ import { pick } from "./locale";
  * Section copy for the home page.
  * One entry per section; components read from here instead of hardcoding text,
  * so a translation is an edit to this file rather than an edit to 18 JSX files.
+ *
+ * Figures and claims here are taken from "All about eMa" (the platform deck):
+ * the COMESA Business Council partnership (21 member states, 580M people,
+ * $900B+ combined GDP, MoU signed Feb 2026), the licensing footprint, and the
+ * vision and mission wording. Country-specific limits are deliberately NOT
+ * stated as absolutes — they vary by country and KYC tier.
  */
 
 export const HERO = pick({
   en: {
-    kicker: "Small steps to financial freedom",
+    kicker: "eMa-CBC — the private-sector execution layer for COMESA",
     titleLead: "Everything your business needs.",
-    titleAccent: "One account.",
+    titleAccent: "One account, 21 COMESA states.",
     subtitle:
-      "eMa is the digital operating system for Africa's small and medium enterprises. Sell in your shop and online, take payments by QR or cash, restock, raise capital, save with your group, and trade across borders — all settling into one wallet, on one phone number.",
+      "eMa is the digital operating system for Africa's small and medium enterprises — and, as eMa-CBC, the execution arm of a signed COMESA Business Council partnership reaching 21 member states, 580 million people and over $900bn of combined GDP. Sell in your shop and online, take payments by QR or cash, restock, raise capital, save with your group, and trade across borders — all settling into one wallet, on one phone number.",
     primaryCta: "Start free",
     secondaryCta: "See the 14 modules",
     trustChips: [
-      "KYC verified",
+      "Licensed in South Africa and eSwatini",
+      "COMESA Business Council MoU",
       "Cash-in at any Paymate",
-      "Works on any Android phone",
+      "Android app · web access ready",
     ],
   },
   ar: {
-    kicker: "خطوات صغيرة نحو الحرية المالية",
+    kicker: "eMa-CBC — الذراع التنفيذية للقطاع الخاص في الكوميسا",
     titleLead: "كل ما يحتاجه عملك.",
-    titleAccent: "في حساب واحد.",
+    titleAccent: "حساب واحد، و21 دولة في الكوميسا.",
     subtitle:
-      "eMa هو النظام التشغيلي الرقمي للمشاريع الصغيرة والمتوسطة في أفريقيا. بِع في متجرك وعلى الإنترنت، واقبض المدفوعات برمز QR أو نقدًا، وأعِد التخزين، واحصل على التمويل، وادّخر مع مجموعتك، وتاجر عبر الحدود — وكل ذلك يستقرّ في محفظة واحدة، على رقم هاتف واحد.",
+      "eMa هو النظام التشغيلي الرقمي للمشاريع الصغيرة والمتوسطة في أفريقيا — وهو، تحت اسم eMa-CBC، الذراع التنفيذية لشراكة موقّعة مع مجلس الأعمال للكوميسا تمتدّ إلى 21 دولة عضوًا و580 مليون نسمة وأكثر من 900 مليار دولار من الناتج المحلي المجمّع. بِع في متجرك وعلى الإنترنت، واقبض المدفوعات برمز QR أو نقدًا، وأعِد التخزين، واحصل على التمويل، وادّخر مع مجموعتك، وتاجر عبر الحدود — وكل ذلك يستقرّ في محفظة واحدة، على رقم هاتف واحد.",
     primaryCta: "ابدأ مجانًا",
     secondaryCta: "استعرض الوحدات الـ14",
     trustChips: [
-      "تحقّق KYC",
+      "مرخَّص في جنوب أفريقيا وإسواتيني",
+      "مذكرة تفاهم مع مجلس الأعمال للكوميسا",
       "إيداع نقدي لدى أي وكيل Paymate",
-      "يعمل على أي هاتف أندرويد",
+      "تطبيق أندرويد · وجاهز للوصول عبر الويب",
     ],
   },
   fr: {
-    kicker: "De petits pas vers la liberté financière",
+    kicker: "eMa-CBC — le bras d'exécution du secteur privé pour le COMESA",
     titleLead: "Tout ce dont votre entreprise a besoin.",
-    titleAccent: "Un seul compte.",
+    titleAccent: "Un seul compte, 21 États du COMESA.",
     subtitle:
-      "eMa est le système d'exploitation numérique des petites et moyennes entreprises africaines. Vendez en boutique et en ligne, encaissez par QR ou en espèces, réapprovisionnez, levez des fonds, épargnez en groupe et commercez au-delà des frontières — le tout sur un seul portefeuille, un seul numéro de téléphone.",
+      "eMa est le système d'exploitation numérique des petites et moyennes entreprises africaines — et, sous le nom d'eMa-CBC, le bras d'exécution d'un partenariat signé avec le COMESA Business Council, couvrant 21 États membres, 580 millions d'habitants et plus de 900 milliards de dollars de PIB cumulé. Vendez en boutique et en ligne, encaissez par QR ou en espèces, réapprovisionnez, levez des fonds, épargnez en groupe et commercez au-delà des frontières — le tout sur un seul portefeuille, un seul numéro de téléphone.",
     primaryCta: "Commencer gratuitement",
     secondaryCta: "Voir les 14 modules",
     trustChips: [
-      "Identité vérifiée (KYC)",
+      "Agréé en Afrique du Sud et en Eswatini",
+      "Protocole d'accord avec le COMESA Business Council",
       "Dépôt d'espèces chez tout Paymate",
-      "Fonctionne sur tout téléphone Android",
+      "Application Android · accès web disponible",
     ],
   },
   pt: {
-    kicker: "Pequenos passos para a liberdade financeira",
+    kicker: "eMa-CBC — o braço de execução do setor privado para o COMESA",
     titleLead: "Tudo o que o seu negócio precisa.",
-    titleAccent: "Uma só conta.",
+    titleAccent: "Uma só conta, 21 Estados do COMESA.",
     subtitle:
-      "O eMa é o sistema operativo digital das pequenas e médias empresas africanas. Venda na loja e online, receba por QR ou em numerário, reponha stock, obtenha capital, poupe com o seu grupo e negoceie além-fronteiras — tudo a liquidar numa só carteira, num só número de telemóvel.",
+      "O eMa é o sistema operativo digital das pequenas e médias empresas africanas — e, sob o nome eMa-CBC, o braço de execução de uma parceria assinada com o COMESA Business Council, que abrange 21 Estados-membros, 580 milhões de pessoas e mais de 900 mil milhões de dólares de PIB combinado. Venda na loja e online, receba por QR ou em numerário, reponha stock, obtenha capital, poupe com o seu grupo e negoceie além-fronteiras — tudo a liquidar numa só carteira, num só número de telemóvel.",
     primaryCta: "Começar gratuitamente",
     secondaryCta: "Ver os 14 módulos",
     trustChips: [
-      "Identidade verificada (KYC)",
+      "Licenciado na África do Sul e em Essuatíni",
+      "Memorando com o COMESA Business Council",
       "Depósito em numerário em qualquer Paymate",
-      "Funciona em qualquer telemóvel Android",
+      "Aplicação Android · acesso web disponível",
+    ],
+  },
+  es: {
+    kicker: "eMa-CBC — el brazo ejecutor del sector privado para el COMESA",
+    titleLead: "Todo lo que tu negocio necesita.",
+    titleAccent: "Una sola cuenta, 21 Estados del COMESA.",
+    subtitle:
+      "eMa es el sistema operativo digital de las pequeñas y medianas empresas africanas y, bajo el nombre eMa-CBC, el brazo ejecutor de una alianza firmada con el COMESA Business Council que alcanza 21 Estados miembros, 580 millones de personas y más de 900.000 millones de dólares de PIB combinado. Vende en tu tienda y en línea, cobra por QR o en efectivo, repón inventario, consigue capital, ahorra con tu grupo y comercia más allá de las fronteras: todo se liquida en una sola cartera, con un solo número de teléfono.",
+    primaryCta: "Empieza gratis",
+    secondaryCta: "Ver los 14 módulos",
+    trustChips: [
+      "Con licencia en Sudáfrica y Esuatini",
+      "Memorando con el COMESA Business Council",
+      "Ingreso de efectivo en cualquier Paymate",
+      "Aplicación Android · acceso web disponible",
     ],
   },
 });
@@ -158,6 +183,29 @@ export const PROBLEM = pick({
       "A reconciliação acontece sozinha, porque é um só registo",
     ],
   },
+  es: {
+    title: "Llevar un pequeño negocio no debería exigir seis aplicaciones",
+    subtitle:
+      "La mayoría de las pymes africanas combinan herramientas que no se comunican entre sí. eMa sustituye ese conjunto por una sola cuenta.",
+    beforeLabel: "Sin eMa",
+    afterLabel: "Con eMa",
+    before: [
+      "Un datáfono del banco, una cartera de la operadora, un préstamo de quien no ve tus ventas",
+      "Ingresos en efectivo que nunca llegan a ser saldo digital",
+      "Inventario contado en papel, ventas anotadas en un cuaderno",
+      "Sin historial comercial y, por tanto, sin crédito, incluso tras diez años rentables",
+      "Pagos transfronterizos que cuestan entre el 8 % y el 12 % y tardan días",
+      "Conciliación a mano, todas las noches",
+    ],
+    after: [
+      "Un solo saldo detrás de cada módulo: punto de venta, mercado, ahorro, crédito",
+      "Cualquier Paymate convierte el efectivo en saldo digital en segundos",
+      "Inventario, ventas, cajeros y proveedores en un único panel",
+      "Tu historial de transacciones es tu historial crediticio",
+      "Transferencia transfronteriza en tiempo real, por una fracción del coste",
+      "La conciliación ocurre sola, porque hay un único libro mayor",
+    ],
+  },
 });
 
 export const ARCHITECTURE = pick({
@@ -179,7 +227,7 @@ export const ARCHITECTURE = pick({
       {
         label: "Money Stack",
         title: "Move, save, borrow, insure",
-        detail: "PAYMATE · eMaTuma · SIBA · eMaSave · eMaFunding · PATELE",
+        detail: "Paymates · eMaTuma · SIBA · eMaSave · eMaFunding · Patele",
       },
       {
         label: "Business Stack",
@@ -189,7 +237,8 @@ export const ARCHITECTURE = pick({
       {
         label: "Ledger",
         title: "One statement",
-        detail: "Every transaction in every module lands in the same place.",
+        detail:
+          "Every transaction in every module lands in the same place, with regulator, admin and super-admin oversight.",
       },
     ],
   },
@@ -211,7 +260,7 @@ export const ARCHITECTURE = pick({
       {
         label: "المنظومة المالية",
         title: "حرِّك أموالك، وادّخر، واقترض، وأمِّن",
-        detail: "PAYMATE · eMaTuma · SIBA · eMaSave · eMaFunding · PATELE",
+        detail: "Paymates · eMaTuma · SIBA · eMaSave · eMaFunding · Patele",
       },
       {
         label: "المنظومة التجارية",
@@ -221,7 +270,8 @@ export const ARCHITECTURE = pick({
       {
         label: "دفتر الحسابات",
         title: "كشف حساب واحد",
-        detail: "كل معاملة في كل وحدة تصل إلى المكان نفسه.",
+        detail:
+          "كل معاملة في كل وحدة تصل إلى المكان نفسه، مع إشراف على مستوى الجهة الرقابية والمشرف والمشرف العام.",
       },
     ],
   },
@@ -243,7 +293,7 @@ export const ARCHITECTURE = pick({
       {
         label: "Pôle financier",
         title: "Transférer, épargner, emprunter, assurer",
-        detail: "PAYMATE · eMaTuma · SIBA · eMaSave · eMaFunding · PATELE",
+        detail: "Paymates · eMaTuma · SIBA · eMaSave · eMaFunding · Patele",
       },
       {
         label: "Pôle commercial",
@@ -253,7 +303,8 @@ export const ARCHITECTURE = pick({
       {
         label: "Registre",
         title: "Un seul relevé",
-        detail: "Chaque transaction de chaque module arrive au même endroit.",
+        detail:
+          "Chaque transaction de chaque module arrive au même endroit, avec une supervision régulateur, admin et super-admin.",
       },
     ],
   },
@@ -275,7 +326,7 @@ export const ARCHITECTURE = pick({
       {
         label: "Bloco financeiro",
         title: "Movimentar, poupar, financiar, segurar",
-        detail: "PAYMATE · eMaTuma · SIBA · eMaSave · eMaFunding · PATELE",
+        detail: "Paymates · eMaTuma · SIBA · eMaSave · eMaFunding · Patele",
       },
       {
         label: "Bloco comercial",
@@ -285,7 +336,41 @@ export const ARCHITECTURE = pick({
       {
         label: "Registo",
         title: "Um só extrato",
-        detail: "Cada transação de cada módulo chega ao mesmo sítio.",
+        detail:
+          "Cada transação de cada módulo chega ao mesmo sítio, com supervisão de regulador, administrador e super-administrador.",
+      },
+    ],
+  },
+  es: {
+    title: "Una identidad. Un saldo. Catorce herramientas.",
+    subtitle:
+      "Cada módulo de eMa liquida en la misma cartera, bajo la misma identidad verificada. Eso es lo que hace interoperable a la plataforma, y lo que por fin hace legible tu negocio ante prestamistas, socios y compradores.",
+    layers: [
+      {
+        label: "Identidad",
+        title: "Un número de teléfono verificado",
+        detail: "KYC, código OTP, geolocalización.",
+      },
+      {
+        label: "Saldo",
+        title: "Una eWallet multidivisa",
+        detail: "Recarga con tarjeta, transferencia o Paymate.",
+      },
+      {
+        label: "Bloque financiero",
+        title: "Mover, ahorrar, financiar, asegurar",
+        detail: "Paymates · eMaTuma · SIBA · eMaSave · eMaFunding · Patele",
+      },
+      {
+        label: "Bloque comercial",
+        title: "Vender, atender, promocionar, enviar",
+        detail: "eMaPOS · eMaMall · eMaServe · eMaExpo · eMaCargo · eMaCom · eMaClinic",
+      },
+      {
+        label: "Libro mayor",
+        title: "Un solo extracto",
+        detail:
+          "Cada transacción de cada módulo llega al mismo sitio, con supervisión de regulador, administrador y superadministrador.",
       },
     ],
   },
@@ -294,45 +379,56 @@ export const ARCHITECTURE = pick({
 export const DIFFERENCE = pick({
   en: {
     title: "The eMa difference",
-    subtitle: "Driving Africa's economic transformation through digital innovation",
+    subtitle:
+      "eMa-CBC — the private-sector execution layer for the COMESA Business Council",
     cards: [
+      { value: "21", description: "COMESA member states in the eMa-CBC footprint" },
+      { value: "580M", description: "people inside that single market" },
+      { value: "$900B+", description: "combined GDP the partnership reaches" },
       { value: "14", description: "interoperable modules on one account" },
-      { value: "1", description: "wallet behind every module — no reconciliation" },
-      { value: "Cash → Digital", description: "every Paymate is a branch" },
-      { value: "SMEs", description: "the customer we were built for" },
     ],
   },
   ar: {
     title: "فرق eMa",
-    subtitle: "قيادة التحول الاقتصادي لأفريقيا من خلال الابتكار الرقمي",
+    subtitle: "eMa-CBC — الذراع التنفيذية للقطاع الخاص لمجلس الأعمال للكوميسا",
     cards: [
+      { value: "21", description: "دولة عضوًا في الكوميسا ضمن نطاق eMa-CBC" },
+      { value: "580 مليون", description: "نسمة داخل هذه السوق الموحّدة" },
+      { value: "900+ مليار $", description: "ناتج محلي مجمّع تصل إليه الشراكة" },
       { value: "14", description: "وحدة متكاملة على حساب واحد" },
-      { value: "1", description: "محفظة واحدة خلف كل وحدة — بلا تسوية يدوية" },
-      { value: "نقد ← رقمي", description: "كل وكيل Paymate هو فرع" },
-      {
-        value: "المشاريع الصغيرة",
-        description: "العميل الذي بُنينا من أجله",
-      },
     ],
   },
   fr: {
     title: "La différence eMa",
-    subtitle: "Au service de la transformation économique de l'Afrique par l'innovation numérique",
+    subtitle:
+      "eMa-CBC — le bras d'exécution du secteur privé pour le COMESA Business Council",
     cards: [
+      { value: "21", description: "États membres du COMESA dans le périmètre eMa-CBC" },
+      { value: "580 M", description: "d'habitants dans ce marché unique" },
+      { value: "900 Md$+", description: "de PIB cumulé touché par le partenariat" },
       { value: "14", description: "modules interopérables sur un seul compte" },
-      { value: "1", description: "portefeuille derrière chaque module — aucun rapprochement" },
-      { value: "Espèces → Numérique", description: "chaque Paymate est une agence" },
-      { value: "PME", description: "le client pour lequel nous avons été conçus" },
     ],
   },
   pt: {
     title: "A diferença eMa",
-    subtitle: "A impulsionar a transformação económica de África através da inovação digital",
+    subtitle:
+      "eMa-CBC — o braço de execução do setor privado para o COMESA Business Council",
     cards: [
+      { value: "21", description: "Estados-membros do COMESA no perímetro eMa-CBC" },
+      { value: "580M", description: "de pessoas dentro desse mercado único" },
+      { value: "900 mil M$+", description: "de PIB combinado alcançado pela parceria" },
       { value: "14", description: "módulos interoperáveis numa só conta" },
-      { value: "1", description: "carteira por trás de cada módulo — sem reconciliação" },
-      { value: "Numerário → Digital", description: "cada Paymate é uma agência" },
-      { value: "PME", description: "o cliente para quem fomos criados" },
+    ],
+  },
+  es: {
+    title: "La diferencia eMa",
+    subtitle:
+      "eMa-CBC: el brazo ejecutor del sector privado para el COMESA Business Council",
+    cards: [
+      { value: "21", description: "Estados miembros del COMESA en el alcance de eMa-CBC" },
+      { value: "580 M", description: "de personas dentro de ese mercado único" },
+      { value: "900.000 M$+", description: "de PIB combinado al que llega la alianza" },
+      { value: "14", description: "módulos interoperables en una sola cuenta" },
     ],
   },
 });
@@ -341,66 +437,102 @@ export const WHO_WE_ARE = pick({
   en: {
     title: "Who are we?",
     subtitle:
-      "A mission-driven fintech creating transparent, inclusive growth for every entrepreneur.",
-    groupLine: ["Part of the", "Sobek Group", "— trusted across Africa and South Africa."],
+      "A mission-driven fintech creating transparent, inclusive growth for every entrepreneur — a Sobek Group platform, operated under licence by SobekIMF.",
+    groupLine: [
+      "Part of the",
+      "Sobek Group",
+      "— licensed in South Africa and eSwatini, present from Mauritius to Morocco, Botswana, Nigeria, Qatar and the USA.",
+    ],
     badge: "Complete solution",
     missionLabel: "Our mission",
     mission:
-      "To become the trusted financial home for every community burdened by the cost and complexity of conventional banking — creating jobs and improving lives, inclusively and credibly.",
+      "To empower communities with ethical financial services — promoting transparency in e-commerce and fintech, supporting remote communities towards financial inclusion, and partnering to build wealth for all, across more than 14 innovative modules.",
     visionLabel: "Our vision",
     vision:
-      "Africa's leading digital commerce and finance platform — connecting SMEs, cutting cross-border transaction costs, and bringing the unbanked into the formal economy through mobile-first tools, microfinance and crowdfunding.",
+      "To be the leading pan-African digital financial services platform, promoting inclusive growth through trade and commerce: facilitating trade in Africa by developing SMEs, connecting buyers and sellers seamlessly, integrating digital payments and logistics and automating trade processes to cut costs; and driving financial inclusion through accessible banking, capital raising, mobile banking for the unbanked, microfinance for lower-income earners, cross-border remittances and crowdfunding.",
     buildersLabel: "Who builds it",
     builders:
-      "eMa is developed by Sobek IT in association with Sobek IMF, members of the Sobek Group.",
+      "eMalyami is a Sobek Group platform, operated under licence by SobekIMF (Pty) Ltd — eSwatini, with the technology built by Sobek IT (Pty) Ltd. Group companies span SOBEK Group (Pty) Ltd — Mauritius, SOBEK Holding, SOBEK, SOBEK IT and SOBEK IMF — South Africa, SE Maroc — Morocco, Sobek Engineering — Botswana, Sobek Consult — Nigeria, Sobek Partnership — Doha, Qatar, and Sobek Group LLC — Texas and Delaware, USA.",
   },
   ar: {
     title: "من نحن؟",
     subtitle:
-      "شركة تكنولوجيا مالية قائمة على رسالة تخلق نموًا شفافًا وشاملاً لكل رائد أعمال.",
-    groupLine: ["جزء من", "مجموعة سوبك", "— موثوق بها في جميع أنحاء أفريقيا وجنوب أفريقيا."],
+      "شركة تكنولوجيا مالية قائمة على رسالة تخلق نموًا شفافًا وشاملاً لكل رائد أعمال — منصّة من مجموعة Sobek، تُشغَّل بترخيص من SobekIMF.",
+    groupLine: [
+      "جزء من",
+      "مجموعة سوبك",
+      "— مرخَّصة في جنوب أفريقيا وإسواتيني، وحاضرة من موريشيوس إلى المغرب وبوتسوانا ونيجيريا وقطر والولايات المتحدة.",
+    ],
     badge: "حل شامل",
     missionLabel: "رسالتنا",
     mission:
-      "أن نصبح البيت المالي الموثوق لكل مجتمع أنهكته تكاليف الخدمات المصرفية التقليدية وتعقيدها — عبر خلق فرص العمل وتحسين حياة من نخدمهم، بشمولٍ ومصداقية.",
+      "تمكين المجتمعات بخدمات مالية أخلاقية — وتعزيز الشفافية في التجارة الإلكترونية والتكنولوجيا المالية، ودعم المجتمعات النائية نحو الشمول المالي، والشراكة في بناء الثروة للجميع، عبر أكثر من 14 وحدة مبتكرة.",
     visionLabel: "رؤيتنا",
     vision:
-      "أن نكون المنصّة الرائدة للتجارة والتمويل الرقمي في أفريقيا — نربط المشاريع الصغيرة والمتوسطة، ونخفّض تكاليف المعاملات عبر الحدود، وندخل غير المتعاملين مع البنوك إلى الاقتصاد الرسمي عبر أدوات تعمل على الهاتف أولًا، والتمويل الأصغر، والتمويل الجماعي.",
+      "أن نكون المنصّة الرائدة للخدمات المالية الرقمية في عموم أفريقيا، ونعزّز النمو الشامل عبر التجارة والأعمال: بتيسير التجارة في أفريقيا من خلال تنمية المشاريع الصغيرة والمتوسطة، وربط المشترين بالبائعين بسلاسة، ودمج المدفوعات الرقمية والخدمات اللوجستية، وأتمتة العمليات التجارية لخفض التكاليف؛ وبدفع الشمول المالي عبر خدمات مصرفية ميسورة، وجمع رأس المال، والخدمات المصرفية عبر الهاتف لغير المتعاملين مع البنوك، والتمويل الأصغر لذوي الدخل المحدود، والتحويلات عبر الحدود، والتمويل الجماعي.",
     buildersLabel: "من يبنيها",
     builders:
-      "eMa تطوير Sobek IT بالتعاون مع Sobek IMF، من شركات مجموعة Sobek.",
+      "eMalyami منصّة من مجموعة Sobek، تُشغَّل بترخيص من SobekIMF (Pty) Ltd — إسواتيني، وتقنيتها من بناء Sobek IT (Pty) Ltd. وتضمّ المجموعة SOBEK Group (Pty) Ltd — موريشيوس، وSOBEK Holding وSOBEK وSOBEK IT وSOBEK IMF — جنوب أفريقيا، وSE Maroc — المغرب، وSobek Engineering — بوتسوانا، وSobek Consult — نيجيريا، وSobek Partnership — الدوحة، قطر، وSobek Group LLC — تكساس وديلاوير، الولايات المتحدة.",
   },
   fr: {
     title: "Qui sommes-nous ?",
     subtitle:
-      "Une fintech portée par une mission : une croissance transparente et inclusive pour chaque entrepreneur.",
-    groupLine: ["Membre du", "groupe Sobek", "— une confiance établie en Afrique et en Afrique du Sud."],
+      "Une fintech portée par une mission : une croissance transparente et inclusive pour chaque entrepreneur — une plateforme du groupe Sobek, exploitée sous licence par SobekIMF.",
+    groupLine: [
+      "Membre du",
+      "groupe Sobek",
+      "— agréé en Afrique du Sud et en Eswatini, présent de Maurice au Maroc, au Botswana, au Nigeria, au Qatar et aux États-Unis.",
+    ],
     badge: "Solution complète",
     missionLabel: "Notre mission",
     mission:
-      "Devenir la maison financière de confiance de chaque communauté pénalisée par le coût et la complexité de la banque traditionnelle — en créant des emplois et en améliorant des vies, de manière inclusive et crédible.",
+      "Donner aux communautés des services financiers éthiques — promouvoir la transparence dans le e-commerce et la fintech, accompagner les communautés isolées vers l'inclusion financière et bâtir la richesse pour tous, à travers plus de 14 modules innovants.",
     visionLabel: "Notre vision",
     vision:
-      "La première plateforme africaine de commerce et de finance numériques — connecter les PME, réduire le coût des transactions transfrontalières et faire entrer les non-bancarisés dans l'économie formelle grâce à des outils pensés pour le mobile, au microcrédit et au financement participatif.",
+      "Être la première plateforme panafricaine de services financiers numériques, au service d'une croissance inclusive par le commerce : faciliter les échanges en Afrique en développant les PME, en connectant acheteurs et vendeurs sans friction, en intégrant paiements numériques et logistique et en automatisant les processus commerciaux pour réduire les coûts ; et porter l'inclusion financière par une banque accessible, la levée de capitaux, la banque mobile pour les non-bancarisés, le microcrédit pour les bas revenus, les transferts transfrontaliers et le financement participatif.",
     buildersLabel: "Qui la construit",
     builders:
-      "eMa est développé par Sobek IT en association avec Sobek IMF, membres du groupe Sobek.",
+      "eMalyami est une plateforme du groupe Sobek, exploitée sous licence par SobekIMF (Pty) Ltd — Eswatini, dont la technologie est développée par Sobek IT (Pty) Ltd. Le groupe réunit SOBEK Group (Pty) Ltd — Maurice, SOBEK Holding, SOBEK, SOBEK IT et SOBEK IMF — Afrique du Sud, SE Maroc — Maroc, Sobek Engineering — Botswana, Sobek Consult — Nigeria, Sobek Partnership — Doha, Qatar, et Sobek Group LLC — Texas et Delaware, États-Unis.",
   },
   pt: {
     title: "Quem somos?",
     subtitle:
-      "Uma fintech movida por uma missão: crescimento transparente e inclusivo para cada empreendedor.",
-    groupLine: ["Parte do", "grupo Sobek", "— de confiança em toda a África e na África do Sul."],
+      "Uma fintech movida por uma missão: crescimento transparente e inclusivo para cada empreendedor — uma plataforma do grupo Sobek, operada sob licença pela SobekIMF.",
+    groupLine: [
+      "Parte do",
+      "grupo Sobek",
+      "— licenciado na África do Sul e em Essuatíni, presente das Maurícias a Marrocos, Botsuana, Nigéria, Catar e EUA.",
+    ],
     badge: "Solução completa",
     missionLabel: "A nossa missão",
     mission:
-      "Tornar-nos a casa financeira de confiança de cada comunidade sobrecarregada pelo custo e pela complexidade da banca tradicional — criando emprego e melhorando vidas, de forma inclusiva e credível.",
+      "Capacitar comunidades com serviços financeiros éticos — promovendo transparência no comércio eletrónico e na fintech, apoiando comunidades remotas rumo à inclusão financeira e construindo riqueza para todos, através de mais de 14 módulos inovadores.",
     visionLabel: "A nossa visão",
     vision:
-      "A principal plataforma africana de comércio e finanças digitais — ligando PME, reduzindo os custos das transações além-fronteiras e trazendo os não bancarizados para a economia formal através de ferramentas pensadas para o telemóvel, microfinanciamento e financiamento colaborativo.",
+      "Ser a principal plataforma pan-africana de serviços financeiros digitais, promovendo crescimento inclusivo através do comércio: facilitando o comércio em África com o desenvolvimento das PME, ligando compradores e vendedores sem atritos, integrando pagamentos digitais e logística e automatizando processos comerciais para reduzir custos; e impulsionando a inclusão financeira com banca acessível, captação de capital, banca móvel para os não bancarizados, microfinanciamento para rendimentos baixos, remessas além-fronteiras e financiamento colaborativo.",
     buildersLabel: "Quem a constrói",
     builders:
-      "O eMa é desenvolvido pela Sobek IT em associação com a Sobek IMF, empresas do grupo Sobek.",
+      "O eMalyami é uma plataforma do grupo Sobek, operada sob licença pela SobekIMF (Pty) Ltd — Essuatíni, com tecnologia construída pela Sobek IT (Pty) Ltd. O grupo inclui SOBEK Group (Pty) Ltd — Maurícias, SOBEK Holding, SOBEK, SOBEK IT e SOBEK IMF — África do Sul, SE Maroc — Marrocos, Sobek Engineering — Botsuana, Sobek Consult — Nigéria, Sobek Partnership — Doha, Catar, e Sobek Group LLC — Texas e Delaware, EUA.",
+  },
+  es: {
+    title: "¿Quiénes somos?",
+    subtitle:
+      "Una fintech con una misión: crecimiento transparente e inclusivo para cada emprendedor. Una plataforma del grupo Sobek, operada bajo licencia por SobekIMF.",
+    groupLine: [
+      "Parte del",
+      "grupo Sobek",
+      "— con licencia en Sudáfrica y Esuatini, presente desde Mauricio hasta Marruecos, Botsuana, Nigeria, Catar y EE. UU.",
+    ],
+    badge: "Solución completa",
+    missionLabel: "Nuestra misión",
+    mission:
+      "Empoderar a las comunidades con servicios financieros éticos: promover la transparencia en el comercio electrónico y las finanzas digitales, acompañar a las comunidades remotas hacia la inclusión financiera y construir riqueza para todos, a través de más de 14 módulos innovadores.",
+    visionLabel: "Nuestra visión",
+    vision:
+      "Ser la principal plataforma panafricana de servicios financieros digitales, impulsando un crecimiento inclusivo mediante el comercio: facilitar el comercio en África desarrollando las pymes, conectando compradores y vendedores sin fricciones, integrando pagos digitales y logística y automatizando los procesos comerciales para reducir costes; e impulsar la inclusión financiera con banca accesible, captación de capital, banca móvil para la población no bancarizada, microfinanzas para rentas bajas, remesas transfronterizas y financiación colectiva.",
+    buildersLabel: "Quién la construye",
+    builders:
+      "eMalyami es una plataforma del grupo Sobek, operada bajo licencia por SobekIMF (Pty) Ltd — Esuatini, con tecnología desarrollada por Sobek IT (Pty) Ltd. El grupo reúne a SOBEK Group (Pty) Ltd — Mauricio, SOBEK Holding, SOBEK, SOBEK IT y SOBEK IMF — Sudáfrica, SE Maroc — Marruecos, Sobek Engineering — Botsuana, Sobek Consult — Nigeria, Sobek Partnership — Doha, Catar, y Sobek Group LLC — Texas y Delaware, EE. UU.",
   },
 });
 
@@ -425,6 +557,11 @@ export const MONEY_STACK = pick({
     subtitle:
       "Sete formas de o dinheiro entrar, circular e sair do seu negócio — todas a liquidar na mesma carteira.",
   },
+  es: {
+    title: "El bloque financiero",
+    subtitle:
+      "Siete formas de que el dinero entre, circule y salga de tu negocio, todas liquidando en la misma cartera.",
+  },
 });
 
 export const BUSINESS_STACK = pick({
@@ -447,13 +584,18 @@ export const BUSINESS_STACK = pick({
     subtitle:
       "Tudo o que precisa para negociar — presencialmente, online e por todo o continente.",
   },
+  es: {
+    title: "El bloque comercial",
+    subtitle:
+      "Todo lo que necesitas para comerciar: en persona, en línea y por todo el continente.",
+  },
 });
 
 export const PAYMATE_LOOP = pick({
   en: {
     title: "Your customers pay cash. That's fine.",
     subtitle:
-      "The Paymate network is what connects a cash economy to a digital ledger — in both directions.",
+      "The Paymates network is what connects a cash economy to a digital ledger — in both directions.",
     steps: [
       {
         title: "Cash in",
@@ -481,7 +623,7 @@ export const PAYMATE_LOOP = pick({
   ar: {
     title: "عملاؤك يدفعون نقدًا. لا مشكلة.",
     subtitle:
-      "شبكة Paymate هي ما يربط الاقتصاد النقدي بالدفتر الرقمي — في الاتجاهين.",
+      "شبكة Paymates هي ما يربط الاقتصاد النقدي بالدفتر الرقمي — في الاتجاهين.",
     steps: [
       {
         title: "الإيداع النقدي",
@@ -501,7 +643,7 @@ export const PAYMATE_LOOP = pick({
       {
         title: "كن وكيلًا",
         detail:
-          "وكلاء Paymate يربحون من كل معاملة ينفّذونها. إنه عمل قائم بذاته.",
+          "وكلاء Paymates يربحون من كل معاملة ينفّذونها. إنه عمل قائم بذاته.",
         cta: "كن وكيل Paymate",
       },
     ],
@@ -509,7 +651,7 @@ export const PAYMATE_LOOP = pick({
   fr: {
     title: "Vos clients paient en espèces. C'est très bien.",
     subtitle:
-      "Le réseau Paymate est ce qui relie une économie de liquide à un registre numérique — dans les deux sens.",
+      "Le réseau Paymates est ce qui relie une économie de liquide à un registre numérique — dans les deux sens.",
     steps: [
       {
         title: "Dépôt d'espèces",
@@ -537,7 +679,7 @@ export const PAYMATE_LOOP = pick({
   pt: {
     title: "Os seus clientes pagam em numerário. Não há problema.",
     subtitle:
-      "A rede Paymate é o que liga uma economia de numerário a um registo digital — nos dois sentidos.",
+      "A rede Paymates é o que liga uma economia de numerário a um registo digital — nos dois sentidos.",
     steps: [
       {
         title: "Depósito em numerário",
@@ -562,6 +704,34 @@ export const PAYMATE_LOOP = pick({
       },
     ],
   },
+  es: {
+    title: "Tus clientes pagan en efectivo. No pasa nada.",
+    subtitle:
+      "La red Paymates es lo que conecta una economía de efectivo con un libro mayor digital, en ambos sentidos.",
+    steps: [
+      {
+        title: "Ingreso de efectivo",
+        detail:
+          "El cliente entrega el efectivo a cualquier Paymate: una tienda de barrio, una gasolinera, un comerciante local de confianza. Se convierte en saldo de la cartera en segundos.",
+      },
+      {
+        title: "Operar",
+        detail:
+          "Ese saldo funciona ya en los 14 módulos: comprar inventario, pagar a un proveedor, aportar a tu SIBA o enviarlo a otro país.",
+      },
+      {
+        title: "Retirada de efectivo",
+        detail:
+          "¿Necesitas billetes? Retira en cualquier Paymate: sin sucursal bancaria, sin cajero, sin tarjeta.",
+      },
+      {
+        title: "Conviértete en uno",
+        detail:
+          "Los Paymates ganan con cada transacción que gestionan. Es un negocio en sí mismo.",
+        cta: "Hazte Paymate",
+      },
+    ],
+  },
 });
 
 export const SERVICES = pick({
@@ -573,7 +743,7 @@ export const SERVICES = pick({
         title: "Get paid",
         points: [
           "QR and phone-number payments",
-          "Daily limits R3,000–R5,000",
+          "Daily limits vary by country and KYC tier",
           "Bill payments — DSTV, Netflix, utilities",
           "Airtime on every network",
         ],
@@ -584,7 +754,7 @@ export const SERVICES = pick({
           "SME capital access",
           "Crowdfunding via eMaFunding",
           "Community savings via SIBA and eMaSave",
-          "Your transaction record as your credit record",
+          "AI credit scoring on alternative data (under testing)",
         ],
       },
       {
@@ -606,7 +776,7 @@ export const SERVICES = pick({
         title: "اقبض",
         points: [
           "الدفع برمز QR ورقم الهاتف",
-          "حدود يومية 3,000–5,000 راند",
+          "الحدود اليومية تختلف بحسب الدولة ومستوى التحقق من الهوية",
           "سداد الفواتير — DSTV ونتفليكس والمرافق",
           "رصيد اتصال لجميع الشبكات",
         ],
@@ -617,7 +787,7 @@ export const SERVICES = pick({
           "تمويل المشاريع الصغيرة والمتوسطة",
           "التمويل الجماعي عبر eMaFunding",
           "الادّخار المجتمعي عبر SIBA وeMaSave",
-          "سجل معاملاتك كسجل ائتماني",
+          "تقييم ائتماني بالذكاء الاصطناعي على بيانات بديلة (قيد الاختبار)",
         ],
       },
       {
@@ -639,7 +809,7 @@ export const SERVICES = pick({
         title: "Encaisser",
         points: [
           "Paiements par QR et par numéro de téléphone",
-          "Plafonds journaliers de 3 000 à 5 000 R",
+          "Les plafonds journaliers varient selon le pays et le niveau de KYC",
           "Paiement de factures — DSTV, Netflix, services publics",
           "Crédit téléphonique sur tous les réseaux",
         ],
@@ -650,7 +820,7 @@ export const SERVICES = pick({
           "Accès au capital pour les PME",
           "Financement participatif via eMaFunding",
           "Épargne communautaire via SIBA et eMaSave",
-          "Votre historique de transactions comme historique de crédit",
+          "Scoring de crédit par IA sur données alternatives (en test)",
         ],
       },
       {
@@ -672,7 +842,7 @@ export const SERVICES = pick({
         title: "Receber",
         points: [
           "Pagamentos por QR e por número de telemóvel",
-          "Limites diários de 3 000 a 5 000 R",
+          "Os limites diários variam consoante o país e o nível de KYC",
           "Pagamento de faturas — DSTV, Netflix, serviços públicos",
           "Saldo de telemóvel em todas as redes",
         ],
@@ -683,7 +853,7 @@ export const SERVICES = pick({
           "Acesso a capital para PME",
           "Financiamento colaborativo via eMaFunding",
           "Poupança comunitária via SIBA e eMaSave",
-          "O seu registo de transações como histórico de crédito",
+          "Scoring de crédito por IA sobre dados alternativos (em testes)",
         ],
       },
       {
@@ -693,6 +863,39 @@ export const SERVICES = pick({
           "Gestão de credores",
           "Pagamentos em massa a colaboradores e fornecedores",
           "Extratos para qualquer período",
+        ],
+      },
+    ],
+  },
+  es: {
+    title: "De tu primera venta a tu primer crédito",
+    subtitle: "eMa acompaña toda la vida de un pequeño negocio, no solo un momento.",
+    items: [
+      {
+        title: "Cobrar",
+        points: [
+          "Pagos por QR y por número de teléfono",
+          "Los límites diarios varían según el país y el nivel de KYC",
+          "Pago de facturas: DSTV, Netflix, suministros",
+          "Saldo telefónico en todas las redes",
+        ],
+      },
+      {
+        title: "Crecer",
+        points: [
+          "Acceso a capital para pymes",
+          "Financiación colectiva con eMaFunding",
+          "Ahorro comunitario con SIBA y eMaSave",
+          "Scoring crediticio con IA sobre datos alternativos (en pruebas)",
+        ],
+      },
+      {
+        title: "Operar",
+        points: [
+          "Pagos entre empresas y cobro de facturas",
+          "Gestión de acreedores",
+          "Pagos masivos a personal y proveedores",
+          "Extractos de cualquier periodo",
         ],
       },
     ],
@@ -713,9 +916,11 @@ export const WHITE_LABEL = pick({
       "Your name, logo and colour system",
       "Full API access",
       "Real-time analytics dashboard",
+      "Flexible deployment — integrate directly, or take a branded dashboard on eMalyami's backend",
+      "Zero-downtime infrastructure — master-replica database with load balancing and automatic failover",
+      "Disaster recovery — geographic redundancy designed for data integrity",
       "Dedicated integration support",
       "Deployment in weeks, not years",
-      "Enterprise-grade foundation",
     ],
     corporateLabel: "Built for corporates",
     corporate: [
@@ -741,9 +946,11 @@ export const WHITE_LABEL = pick({
       "اسمك وشعارك ونظام ألوانك",
       "وصول كامل لواجهات البرمجة (API)",
       "لوحة تحليلات في الوقت الفعلي",
+      "نشر مرن — تكامل مباشر، أو لوحة تحكّم بعلامتك تعمل على منظومة eMalyami الخلفية",
+      "بنية بلا توقّف — قاعدة بيانات رئيسية ونسخ متماثلة مع موازنة أحمال وتحويل تلقائي عند الأعطال",
+      "التعافي من الكوارث — تكرار جغرافي مصمَّم لسلامة البيانات",
       "دعم تكامل مخصّص",
       "إطلاق في أسابيع لا سنوات",
-      "بنية على مستوى المؤسسات",
     ],
     corporateLabel: "مصمَّم للشركات",
     corporate: [
@@ -769,9 +976,11 @@ export const WHITE_LABEL = pick({
       "Votre nom, votre logo et votre charte graphique",
       "Accès complet à l'API",
       "Tableau de bord analytique en temps réel",
+      "Déploiement flexible — intégration directe, ou tableau de bord à votre marque adossé au backend eMalyami",
+      "Infrastructure sans interruption — base maître-réplique avec répartition de charge et bascule automatique",
+      "Reprise après sinistre — redondance géographique conçue pour l'intégrité des données",
       "Assistance dédiée à l'intégration",
       "Déploiement en semaines, pas en années",
-      "Socle de niveau entreprise",
     ],
     corporateLabel: "Conçu pour les entreprises",
     corporate: [
@@ -797,9 +1006,11 @@ export const WHITE_LABEL = pick({
       "O seu nome, logótipo e sistema de cores",
       "Acesso completo à API",
       "Painel de análise em tempo real",
+      "Implementação flexível — integração direta ou painel com a sua marca sobre o backend do eMalyami",
+      "Infraestrutura sem paragens — base de dados mestre-réplica com balanceamento de carga e failover automático",
+      "Recuperação de desastres — redundância geográfica pensada para a integridade dos dados",
       "Apoio dedicado à integração",
       "Implementação em semanas, não em anos",
-      "Base de nível empresarial",
     ],
     corporateLabel: "Feito para empresas",
     corporate: [
@@ -812,13 +1023,43 @@ export const WHITE_LABEL = pick({
       "Cobrar quotas de um número ilimitado de subscritores numa só conta",
     ],
   },
+  es: {
+    title: "Soluciones de marca blanca",
+    subtitle:
+      "Lanza tu propia plataforma de marca en semanas, sobre nuestro ecosistema de 14 módulos.",
+    headline: ["Tu marca,", "nuestra tecnología"],
+    lead: "Transforma tu institución con una plataforma financiera digital totalmente personalizable, con",
+    bars: ["tu nombre", "tu identidad", "tus colores"],
+    whatYouGetLabel: "Qué obtienes",
+    whatYouGet: [
+      "La plataforma completa de 14 módulos bajo tu marca",
+      "Tu nombre, tu logotipo y tu sistema de color",
+      "Acceso completo a la API",
+      "Panel de analítica en tiempo real",
+      "Despliegue flexible: integración directa o un panel con tu marca sobre el backend de eMalyami",
+      "Infraestructura sin caídas: base de datos maestro-réplica con balanceo de carga y conmutación automática",
+      "Recuperación ante desastres: redundancia geográfica diseñada para la integridad de los datos",
+      "Soporte de integración dedicado",
+      "Despliegue en semanas, no en años",
+    ],
+    corporateLabel: "Pensado para empresas",
+    corporate: [
+      "Pagar facturas, nóminas y proveedores de forma masiva",
+      "Cobrar pagos masivos",
+      "Extractos diarios, semanales y mensuales de cualquier periodo",
+      "Cuentas de empresa conjuntas",
+      "Un circuito cerrado privado donde los fondos llegan automáticamente",
+      "Mover dinero desde y hacia tu cuenta bancaria",
+      "Cobrar cuotas de un número ilimitado de suscriptores en una sola cuenta",
+    ],
+  },
 });
 
 export const PARTNER = pick({
   en: {
     title: "Four ways to build with eMa",
     subtitle:
-      "Whether you have a shop counter, a lending book or a national mandate — there's a way in.",
+      "Whether you have a shop counter, a lending book or a national mandate — there's a way in. Phase One markets: eSwatini, Kenya, Zambia, Zimbabwe, Uganda, Mauritius and Malawi.",
     tracks: [
       {
         title: "Become a Paymate",
@@ -829,12 +1070,12 @@ export const PARTNER = pick({
       {
         title: "Governments & development agencies",
         detail:
-          "Digitise SME support and disbursement, and eliminate ghost beneficiaries with verified KYC identity on every payment.",
+          "Digitise SME support and disbursement, and eliminate ghost beneficiaries with verified KYC identity on every payment. Through the COMESA Business Council MoU, eMa-CBC reaches SMEs, cooperatives and exporters across the region.",
       },
       {
         title: "Banks & financial institutions",
         detail:
-          "Reach the unbanked without building branches. Offer loans, insurance and cover through PATELE to a market you can finally see.",
+          "Reach the unbanked without building branches. Offer loans, insurance and cover through Patele to a market you can finally see — supported by AI credit scoring on alternative data.",
       },
       {
         title: "White-label partners",
@@ -847,7 +1088,7 @@ export const PARTNER = pick({
   ar: {
     title: "أربع طرق للبناء مع eMa",
     subtitle:
-      "سواء كان لديك متجر أو محفظة إقراض أو تفويض وطني — هناك طريق للدخول.",
+      "سواء كان لديك متجر أو محفظة إقراض أو تفويض وطني — هناك طريق للدخول. أسواق المرحلة الأولى: إسواتيني وكينيا وزامبيا وزيمبابوي وأوغندا وموريشيوس ومالاوي.",
     tracks: [
       {
         title: "كن وكيل Paymate",
@@ -858,12 +1099,12 @@ export const PARTNER = pick({
       {
         title: "الحكومات وجهات التنمية",
         detail:
-          "رقمنة دعم المشاريع الصغيرة والمتوسطة وصرفه، والقضاء على المستفيدين الوهميين عبر هوية مُوثَّقة (KYC) في كل دفعة.",
+          "رقمنة دعم المشاريع الصغيرة والمتوسطة وصرفه، والقضاء على المستفيدين الوهميين عبر هوية مُوثَّقة (KYC) في كل دفعة. ومن خلال مذكرة التفاهم مع مجلس الأعمال للكوميسا، يصل eMa-CBC إلى المشاريع الصغيرة والتعاونيات والمصدّرين في عموم المنطقة.",
       },
       {
         title: "البنوك والمؤسسات المالية",
         detail:
-          "الوصول إلى غير المتعاملين مع البنوك دون بناء فروع. قدّم القروض والتأمين والتغطية عبر PATELE لسوق أصبح أخيرًا مرئيًا أمامك.",
+          "الوصول إلى غير المتعاملين مع البنوك دون بناء فروع. قدّم القروض والتأمين والتغطية عبر Patele لسوق أصبح أخيرًا مرئيًا أمامك — بدعم من تقييم ائتماني بالذكاء الاصطناعي يعتمد على بيانات بديلة.",
       },
       {
         title: "شركاء العلامة البيضاء",
@@ -875,7 +1116,7 @@ export const PARTNER = pick({
   fr: {
     title: "Quatre façons de bâtir avec eMa",
     subtitle:
-      "Que vous ayez un comptoir de boutique, un portefeuille de crédits ou un mandat national — il existe une porte d'entrée.",
+      "Que vous ayez un comptoir de boutique, un portefeuille de crédits ou un mandat national — il existe une porte d'entrée. Marchés de la phase un : Eswatini, Kenya, Zambie, Zimbabwe, Ouganda, Maurice et Malawi.",
     tracks: [
       {
         title: "Devenir Paymate",
@@ -886,12 +1127,12 @@ export const PARTNER = pick({
       {
         title: "États et agences de développement",
         detail:
-          "Numérisez le soutien aux PME et les versements, et éliminez les bénéficiaires fictifs grâce à une identité KYC vérifiée sur chaque paiement.",
+          "Numérisez le soutien aux PME et les versements, et éliminez les bénéficiaires fictifs grâce à une identité KYC vérifiée sur chaque paiement. Via le protocole d'accord avec le COMESA Business Council, eMa-CBC atteint PME, coopératives et exportateurs de toute la région.",
       },
       {
         title: "Banques et institutions financières",
         detail:
-          "Touchez les non-bancarisés sans ouvrir d'agences. Proposez prêts, assurances et couvertures via PATELE à un marché enfin visible.",
+          "Touchez les non-bancarisés sans ouvrir d'agences. Proposez prêts, assurances et couvertures via Patele à un marché enfin visible — appuyé par un scoring de crédit par IA sur données alternatives.",
       },
       {
         title: "Partenaires en marque blanche",
@@ -903,7 +1144,7 @@ export const PARTNER = pick({
   pt: {
     title: "Quatro formas de construir com o eMa",
     subtitle:
-      "Quer tenha um balcão de loja, uma carteira de crédito ou um mandato nacional — há uma porta de entrada.",
+      "Quer tenha um balcão de loja, uma carteira de crédito ou um mandato nacional — há uma porta de entrada. Mercados da fase um: Essuatíni, Quénia, Zâmbia, Zimbabué, Uganda, Maurícias e Maláui.",
     tracks: [
       {
         title: "Tornar-se Paymate",
@@ -914,17 +1155,45 @@ export const PARTNER = pick({
       {
         title: "Governos e agências de desenvolvimento",
         detail:
-          "Digitalize o apoio às PME e os pagamentos, e elimine beneficiários fantasma com identidade KYC verificada em cada pagamento.",
+          "Digitalize o apoio às PME e os pagamentos, e elimine beneficiários fantasma com identidade KYC verificada em cada pagamento. Através do memorando com o COMESA Business Council, o eMa-CBC chega a PME, cooperativas e exportadores de toda a região.",
       },
       {
         title: "Bancos e instituições financeiras",
         detail:
-          "Chegue aos não bancarizados sem construir balcões. Ofereça crédito, seguros e coberturas através do PATELE a um mercado finalmente visível.",
+          "Chegue aos não bancarizados sem construir balcões. Ofereça crédito, seguros e coberturas através do Patele a um mercado finalmente visível — apoiado por scoring de crédito com IA sobre dados alternativos.",
       },
       {
         title: "Parceiros de marca branca",
         detail: "Lance a plataforma completa sob a sua própria marca em semanas.",
         cta: "Ver marca branca",
+      },
+    ],
+  },
+  es: {
+    title: "Cuatro formas de construir con eMa",
+    subtitle:
+      "Tanto si tienes un mostrador, una cartera de crédito o un mandato nacional, hay una puerta de entrada. Mercados de la fase uno: Esuatini, Kenia, Zambia, Zimbabue, Uganda, Mauricio y Malaui.",
+    tracks: [
+      {
+        title: "Hazte Paymate",
+        detail:
+          "Convierte tu tienda en un punto de ingreso y retirada de efectivo. Gana con cada transacción que gestionas y atrae clientes a tu puerta.",
+        note: "Sin capital inicial.",
+      },
+      {
+        title: "Gobiernos y agencias de desarrollo",
+        detail:
+          "Digitaliza el apoyo a las pymes y los desembolsos, y elimina beneficiarios fantasma con identidad KYC verificada en cada pago. A través del memorando con el COMESA Business Council, eMa-CBC llega a pymes, cooperativas y exportadores de toda la región.",
+      },
+      {
+        title: "Bancos e instituciones financieras",
+        detail:
+          "Llega a la población no bancarizada sin abrir sucursales. Ofrece créditos, seguros y coberturas mediante Patele a un mercado por fin visible, con el apoyo de scoring crediticio por IA sobre datos alternativos.",
+      },
+      {
+        title: "Socios de marca blanca",
+        detail: "Lanza la plataforma completa bajo tu propia marca en semanas.",
+        cta: "Ver marca blanca",
       },
     ],
   },
@@ -1016,6 +1285,28 @@ export const QUICK_STEPS = pick({
         "Disponibilização a todos os utilizadores, com apoio e integração completos.",
     },
   ],
+  es: [
+    {
+      title: "Llamada de diagnóstico",
+      subtitle:
+        "Una breve reunión para entender tus necesidades y ver si encajamos.",
+    },
+    {
+      title: "Demostración a medida",
+      subtitle:
+        "Construimos y mostramos exactamente cómo funciona nuestra solución en tu caso.",
+    },
+    {
+      title: "Programa piloto",
+      subtitle:
+        "Una prueba a pequeña escala con usuarios reales, para demostrar que funciona antes del lanzamiento.",
+    },
+    {
+      title: "Despliegue completo",
+      subtitle:
+        "Puesta en marcha para todos los usuarios, con soporte e integración completos.",
+    },
+  ],
 });
 
 export const PARTNER_STEPS_TITLE = pick({
@@ -1023,6 +1314,7 @@ export const PARTNER_STEPS_TITLE = pick({
   ar: "4 خطوات سريعة لتصبح شريكنا",
   fr: "4 étapes rapides pour devenir notre partenaire",
   pt: "4 passos rápidos para se tornar nosso parceiro",
+  es: "4 pasos rápidos para convertirte en socio",
 });
 
 export const CTA_BANNER = pick({
@@ -1032,7 +1324,7 @@ export const CTA_BANNER = pick({
     cta: "Request a white-label demo",
     items: [
       "Launch in weeks, not years",
-      "Enterprise-grade foundation",
+      "Zero-downtime infrastructure",
       "Complete brand control",
     ],
   },
@@ -1042,7 +1334,7 @@ export const CTA_BANNER = pick({
     cta: "اطلب عرضًا توضيحيًا للعلامة البيضاء",
     items: [
       "أطلق في أسابيع، وليس سنوات",
-      "أساس على مستوى المؤسسات",
+      "بنية تحتية بلا توقّف",
       "التحكم الكامل في العلامة التجارية",
     ],
   },
@@ -1052,7 +1344,7 @@ export const CTA_BANNER = pick({
     cta: "Demander une démo en marque blanche",
     items: [
       "Lancez en semaines, pas en années",
-      "Socle de niveau entreprise",
+      "Infrastructure sans interruption",
       "Contrôle total de la marque",
     ],
   },
@@ -1062,8 +1354,18 @@ export const CTA_BANNER = pick({
     cta: "Pedir uma demonstração de marca branca",
     items: [
       "Lance em semanas, não em anos",
-      "Base de nível empresarial",
+      "Infraestrutura sem paragens",
       "Controlo total da marca",
+    ],
+  },
+  es: {
+    headline: ["Lanza tu plataforma", "con tu marca"],
+    subhead: "Construye tu plataforma digital",
+    cta: "Solicitar una demo de marca blanca",
+    items: [
+      "Lanza en semanas, no en años",
+      "Infraestructura sin caídas",
+      "Control total de la marca",
     ],
   },
 });
@@ -1088,6 +1390,11 @@ export const MODULES_PAGE = pick({
     title: "Catorze ferramentas. Uma só conta.",
     subtitle:
       "Cada módulo funciona sozinho e funciona melhor em conjunto. Escolha os que o seu negócio precisa hoje — os restantes esperam por si no mesmo início de sessão.",
+  },
+  es: {
+    title: "Catorce herramientas. Una sola cuenta.",
+    subtitle:
+      "Cada módulo funciona por sí solo y funciona mejor en conjunto. Elige los que tu negocio necesita hoy: el resto te espera en el mismo inicio de sesión.",
   },
 });
 
@@ -1184,6 +1491,29 @@ export const HELP_PAGE = pick({
     required: "Este campo é obrigatório",
     invalidEmail: "Introduza um endereço de e-mail válido",
   },
+  es: {
+    title: "¿Necesitas ayuda?",
+    subtitle:
+      "Dinos qué módulo, qué ocurrió y cómo contactarte. Adjunta lo que ayude. Nuestro equipo de soporte responde por correo electrónico.",
+    fields: {
+      fullName: "Nombre completo",
+      email: "Correo electrónico",
+      phone: "Número de teléfono",
+      module: "¿Qué módulo?",
+      modulePlaceholder: "Selecciona el módulo",
+      title: "Asunto",
+      desc: "¿Qué ocurrió?",
+      documents: "Archivos adjuntos (opcional)",
+    },
+    submit: "Enviar solicitud",
+    submitting: "Enviando…",
+    success:
+      "Gracias, hemos recibido tu solicitud. Nuestro equipo de soporte te responderá por correo electrónico.",
+    error:
+      "No hemos podido enviar tu solicitud. Vuelve a intentarlo o escribe directamente a support@emalyami.com.",
+    required: "Este campo es obligatorio",
+    invalidEmail: "Introduce una dirección de correo válida",
+  },
 });
 
 export const BEFORE_AFTER = pick({
@@ -1226,6 +1556,16 @@ export const BEFORE_AFTER = pick({
     afterBody:
       "A mesma tecnologia poderosa com o seu logótipo, as suas cores e um design à medida do seu setor.",
   },
+  es: {
+    beforeAlt: "antes de la marca blanca",
+    beforeTitle: "Plataforma genérica",
+    beforeBody:
+      "La interfaz eMa estándar, con nuestra marca y nuestro diseño corporativo.",
+    afterAlt: "después de la marca blanca",
+    afterTitle: "Tu solución de marca",
+    afterBody:
+      "La misma tecnología potente con tu logotipo, tus colores y un diseño adaptado a tu sector.",
+  },
 });
 
 export const PARTNER_CTA = pick({
@@ -1233,4 +1573,5 @@ export const PARTNER_CTA = pick({
   ar: { title: "ابدأ مناقشة الشراكة اليوم", cta: "جدولة مكالمة" },
   fr: { title: "Lancez la discussion dès aujourd'hui", cta: "Planifier un appel" },
   pt: { title: "Comece hoje a conversa de parceria", cta: "Agendar uma chamada" },
+  es: { title: "Empieza hoy la conversación de alianza", cta: "Agendar una llamada" },
 });

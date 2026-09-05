@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import {
   BadgeCheck,
+  DatabaseBackup,
   KeyRound,
   Lock,
   MapPin,
+  ServerCog,
+  ShieldAlert,
   Smartphone,
   Timer,
 } from "lucide-react";
@@ -17,6 +20,9 @@ const ICONS = {
   pin: MapPin,
   timer: Timer,
   lock: Lock,
+  shield: ShieldAlert,
+  server: ServerCog,
+  recovery: DatabaseBackup,
 };
 
 /**

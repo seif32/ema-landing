@@ -6,6 +6,8 @@ import {
   BUSINESS_MODULES,
   COMPANY,
   COMPANY_ADDRESS,
+  COMPLIANCE,
+  LICENCES,
   MONEY_MODULES,
   UI,
 } from "@/content";
@@ -69,22 +71,26 @@ function LinkColumn({ title, links }) {
 }
 
 function Footer() {
+  // Every label comes from the content layer: these were hardcoded English and
+  // so stayed English in the Arabic, French and Portuguese builds. The first
+  // item in each column also repeated the column heading — it now carries its
+  // own distinct label.
   const company = [
-    { label: UI.company, to: "/#about" },
-    { label: "News", to: "/news" },
-    { label: "Blog", to: COMPANY.blog, external: true },
-    { label: "eMalyami", to: COMPANY.website, external: true },
+    { label: UI.aboutUs, to: "/#about" },
+    { label: UI.news, to: "/news" },
+    { label: UI.blog, to: COMPANY.blog, external: true },
+    { label: UI.mainSite, to: COMPANY.website, external: true },
   ];
 
   const support = [
-    { label: UI.support, to: "/help" },
-    { label: "FAQ", to: "/faq" },
-    { label: "Fraud awareness", to: "/fraud-awareness" },
+    { label: UI.contactSupport, to: "/help" },
+    { label: UI.faq, to: "/faq" },
+    { label: UI.fraudAwareness, to: "/fraud-awareness" },
   ];
 
   const legal = [
-    { label: "Terms & conditions", to: "/terms-conditions" },
-    { label: "Privacy policy", to: "/privacy-policy" },
+    { label: UI.terms, to: "/terms-conditions" },
+    { label: UI.privacy, to: "/privacy-policy" },
   ];
 
   return (
@@ -94,9 +100,31 @@ function Footer() {
           {/* Brand + contact */}
           <div>
             <p className="mb-3 text-2xl font-bold">eMalyami</p>
-            <p className="mb-5 max-w-xs text-sm leading-relaxed text-white/70">
-              {COMPANY.legalEntity} · {UI.patentNo} {COMPANY.patentNumber}
+            <p className="mb-3 max-w-xs text-sm leading-relaxed text-white/70">
+              {COMPANY.legalEntity} · {UI.registrationNo}{" "}
+              {COMPANY.registrationNumber}
             </p>
+
+            {/*
+              Regulator registrations. A payments and wallet platform is judged
+              on these, and the site published none of them until now.
+            */}
+            <div className="mb-5 max-w-xs text-xs leading-relaxed text-white/55">
+              <p className="mb-1 font-medium text-white/75">
+                {COMPLIANCE.label}
+              </p>
+              <p>
+                <span className="text-white/70">
+                  {COMPLIANCE.southAfrica}:
+                </span>{" "}
+                {LICENCES.southAfrica.join(" · ")}
+              </p>
+              <p className="mt-1">
+                <span className="text-white/70">{COMPLIANCE.eswatini}:</span>{" "}
+                {LICENCES.eswatini.join(" · ")}
+              </p>
+              <p className="mt-1.5">{COMPLIANCE.sponsorNote}</p>
+            </div>
 
             <ul className="space-y-2.5 text-sm text-white/70">
               <li className="flex items-start gap-2.5">

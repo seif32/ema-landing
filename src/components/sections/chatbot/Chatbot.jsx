@@ -19,6 +19,8 @@ const Chatbot = () => {
     setPrompt,
     isMinimized,
     sendMessage,
+    sendChip,
+    chips,
     toggleChat,
     clearChat,
     messagesEndRef,
@@ -315,6 +317,34 @@ const Chatbot = () => {
 
               <div ref={messagesEndRef} />
             </motion.div>
+
+            {/* Guided chips — the front door, and the way out when the
+                assistant is not sure what was meant. */}
+            <AnimatePresence>
+              {chips.length > 0 && !loading && (
+                <motion.div
+                  key="chips"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex flex-wrap gap-2 px-4 pb-1"
+                >
+                  {chips.map((chip) => (
+                    <motion.button
+                      key={chip.label}
+                      type="button"
+                      whileHover={{ scale: 1.04 }}
+                      whileTap={{ scale: 0.96 }}
+                      onClick={() => sendChip(chip)}
+                      className="px-3 py-1.5 text-xs rounded-full border border-[#AF6553]/40 text-[#AF6553] bg-white hover:bg-[#AF6553] hover:text-white transition-colors"
+                    >
+                      {chip.label}
+                    </motion.button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             {/* Input with slide-up animation */}
             <motion.form

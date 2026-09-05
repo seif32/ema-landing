@@ -1,4 +1,4 @@
-import NewLogo from "../../assets/shared/new_logo.svg";
+import NewLogo from "../../assets/shared/new_logo_2.png";
 import OldLogo from "../../assets/shared/old_logo.png";
 import { motion } from "framer-motion";
 import { SLOGAN } from "@/content";

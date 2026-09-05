@@ -43,10 +43,15 @@ jobs:
         tags: ${{ secrets.DOCKER_USERNAME }}/ema-app:latest
         cache-from: type=gha
         cache-to: type=gha,mode=max
+        # Selects the chatbot brain in the built bundle. Drop back to "local"
+        # to turn Gemini off in production without touching any code.
+        build-args: |
+          VITE_CHATBOT_ENGINE=gemini
         secrets: |
           VITE_GEMINI_KEY_1=${{ secrets.VITE_GEMINI_KEY_1 }}
           VITE_GEMINI_KEY_2=${{ secrets.VITE_GEMINI_KEY_2 }}
           VITE_GEMINI_KEY_3=${{ secrets.VITE_GEMINI_KEY_3 }}
+          VITE_GEMINI_KEY_4=${{ secrets.VITE_GEMINI_KEY_4 }}
 
     - name: Deploy to server
       uses: appleboy/ssh-action@v1.0.0

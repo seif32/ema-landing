@@ -136,6 +136,15 @@ function OurPlans() {
             </tbody>
           </table>
         </div>
+
+        {/*
+          Published rates are country-specific. Saying so on the page keeps a
+          reader in Kenya or eSwatini from reading the South African schedule
+          as their own.
+        */}
+        <p className="border-t border-border/50 px-5 py-4 text-xs leading-relaxed text-muted-foreground">
+          {PRICING.feeNote}
+        </p>
       </motion.div>
     </section>
   );

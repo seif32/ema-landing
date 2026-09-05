@@ -12,7 +12,7 @@ import {
 /**
  * Language picker for the header.
  *
- * One build serves all four languages, so this is how a visitor gets to
+ * One build serves all five languages, so this is how a visitor gets to
  * theirs. It sits in the header bar at every screen size rather than inside
  * the mobile menu: someone who cannot read the current language cannot be
  * expected to find a button labelled "Navigation" first.

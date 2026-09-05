@@ -32,3 +32,4 @@ dist-ssr
 
 # Local branch backups (zip archives) — not part of the source tree.
 ema landing backup/
+docs/

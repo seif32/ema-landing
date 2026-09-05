@@ -2,20 +2,27 @@ import { pick } from "./locale";
 
 /**
  * Company identity, contact details and navigation.
- * Recovered from the legacy Angular footer — these are the real, verified
- * details. The React build previously showed "Lagos, Nigeria", which was wrong.
+ *
+ * Verified against "All about eMa" (the platform deck) rather than against the
+ * old Angular footer alone. Two things the QA review caught and this file now
+ * fixes: 2020/06393 is a COMPANY REGISTRATION number, not a patent number, and
+ * the regulator registrations were missing entirely — for a wallet and
+ * payments platform those are what banks, regulators and institutional
+ * partners look for first.
  */
 
 export const COMPANY = {
   name: "eMalyami",
   shortName: "eMa",
   legalEntity: "SobekIMF (Pty) Ltd",
-  patentNumber: "2020/06393",
+  /** CIPC company registration number. Previously mislabelled as a patent. */
+  registrationNumber: "2020/06393",
   address: {
     en: "Sobek House, 452 Ontdekkers Rd., Florida Park, Roodepoort, Gauteng, South Africa, 1709",
     ar: "بيت سوبك، 452 طريق أونتدِكرز، فلوريدا بارك، رودِبورت، خاوتينخ، جنوب أفريقيا، 1709",
     fr: "Sobek House, 452 Ontdekkers Rd., Florida Park, Roodepoort, Gauteng, Afrique du Sud, 1709",
     pt: "Sobek House, 452 Ontdekkers Rd., Florida Park, Roodepoort, Gauteng, África do Sul, 1709",
+    es: "Sobek House, 452 Ontdekkers Rd., Florida Park, Roodepoort, Gauteng, Sudáfrica, 1709",
   },
   phone: "+27 (0) 11 472 9294",
   email: {
@@ -35,6 +42,59 @@ export const COMPANY = {
   website: "https://ema.emalyami.com/",
   blog: "https://emalyami.wordpress.com/",
 };
+
+/**
+ * Regulator registrations, exactly as stated in the platform deck's
+ * "Licensed where it counts" page. Registration identifiers are proper nouns
+ * and stay in Latin script in every language; only the labels translate.
+ */
+export const LICENCES = {
+  southAfrica: [
+    "FSCA — FSP 52672",
+    "NCR — NCRP11969",
+    "PASA — TPPP & System Operator",
+    "FIC — 50161 (AML/CFT)",
+  ],
+  eswatini: ["Central Bank of eSwatini — Mobile Money Operator licence"],
+};
+
+export const COMPLIANCE = pick({
+  en: {
+    label: "Licensed where it counts",
+    southAfrica: "South Africa",
+    eswatini: "eSwatini",
+    sponsorNote:
+      "Payments operate via sponsor-bank arrangements. Entity-by-licence mapping provided in diligence.",
+  },
+  ar: {
+    label: "مرخَّص حيث يهمّ الأمر",
+    southAfrica: "جنوب أفريقيا",
+    eswatini: "إسواتيني",
+    sponsorNote:
+      "تُنفَّذ المدفوعات عبر ترتيبات بنك راعٍ. ويُقدَّم بيان تفصيلي بالكيانات والتراخيص عند الفحص النافي للجهالة.",
+  },
+  fr: {
+    label: "Agréé là où cela compte",
+    southAfrica: "Afrique du Sud",
+    eswatini: "Eswatini",
+    sponsorNote:
+      "Les paiements passent par des accords de banque partenaire. La correspondance entité-agrément est fournie lors de la due diligence.",
+  },
+  pt: {
+    label: "Licenciado onde importa",
+    southAfrica: "África do Sul",
+    eswatini: "Essuatíni",
+    sponsorNote:
+      "Os pagamentos operam através de acordos com bancos patrocinadores. O mapeamento entidade-licença é fornecido em due diligence.",
+  },
+  es: {
+    label: "Con licencia donde importa",
+    southAfrica: "Sudáfrica",
+    eswatini: "Esuatini",
+    sponsorNote:
+      "Los pagos se ejecutan mediante acuerdos con bancos patrocinadores. El detalle de entidad por licencia se facilita en la diligencia debida.",
+  },
+});
 
 export const NAV = pick({
   en: [
@@ -73,6 +133,15 @@ export const NAV = pick({
     { id: "/faq", label: "FAQ", type: "route", to: "/faq" },
     { id: "/news", label: "Notícias", type: "route", to: "/news" },
   ],
+  es: [
+    { id: "modules", label: "Módulos", type: "route", to: "/modules" },
+    { id: "industries", label: "Sectores", type: "scroll" },
+    { id: "pricing", label: "Precios", type: "scroll" },
+    { id: "white-label", label: "Marca blanca", type: "scroll" },
+    { id: "partner", label: "Alianzas", type: "scroll" },
+    { id: "/faq", label: "Preguntas frecuentes", type: "route", to: "/faq" },
+    { id: "/news", label: "Noticias", type: "route", to: "/news" },
+  ],
 });
 
 export const UI = pick({
@@ -107,7 +176,18 @@ export const UI = pick({
     followUs: "Follow us",
     rightsReserved: "All rights reserved.",
     poweredBy: "Powered by",
-    patentNo: "Patent No.",
+    registrationNo: "Reg. no.",
+    // Footer link labels. These were hardcoded English in Footer.jsx, so they
+    // stayed English in every other language build.
+    aboutUs: "About us",
+    contactSupport: "Contact support",
+    news: "News",
+    blog: "Blog",
+    mainSite: "eMalyami app (main site)",
+    faq: "FAQ",
+    fraudAwareness: "Fraud awareness",
+    terms: "Terms & conditions",
+    privacy: "Privacy policy",
   },
   ar: {
     getStarted: "ابدأ مجانًا",
@@ -140,7 +220,16 @@ export const UI = pick({
     followUs: "تابعنا",
     rightsReserved: "جميع الحقوق محفوظة.",
     poweredBy: "مُشغَّل بواسطة",
-    patentNo: "رقم البراءة",
+    registrationNo: "رقم التسجيل",
+    aboutUs: "من نحن",
+    contactSupport: "تواصل مع الدعم",
+    news: "الأخبار",
+    blog: "المدوّنة",
+    mainSite: "تطبيق eMalyami (الموقع الرئيسي)",
+    faq: "الأسئلة الشائعة",
+    fraudAwareness: "التوعية بالاحتيال",
+    terms: "الشروط والأحكام",
+    privacy: "سياسة الخصوصية",
   },
   fr: {
     getStarted: "Commencer gratuitement",
@@ -173,7 +262,16 @@ export const UI = pick({
     followUs: "Suivez-nous",
     rightsReserved: "Tous droits réservés.",
     poweredBy: "Propulsé par",
-    patentNo: "Brevet n°",
+    registrationNo: "N° d'enregistrement",
+    aboutUs: "À propos",
+    contactSupport: "Contacter l'assistance",
+    news: "Actualités",
+    blog: "Blog",
+    mainSite: "Application eMalyami (site principal)",
+    faq: "FAQ",
+    fraudAwareness: "Prévention de la fraude",
+    terms: "Conditions générales",
+    privacy: "Politique de confidentialité",
   },
   pt: {
     getStarted: "Começar gratuitamente",
@@ -206,16 +304,68 @@ export const UI = pick({
     followUs: "Siga-nos",
     rightsReserved: "Todos os direitos reservados.",
     poweredBy: "Desenvolvido por",
-    patentNo: "Patente n.º",
+    registrationNo: "N.º de registo",
+    aboutUs: "Sobre nós",
+    contactSupport: "Contactar o apoio",
+    news: "Notícias",
+    blog: "Blogue",
+    mainSite: "Aplicação eMalyami (site principal)",
+    faq: "FAQ",
+    fraudAwareness: "Prevenção de fraude",
+    terms: "Termos e condições",
+    privacy: "Política de privacidade",
+  },
+  es: {
+    getStarted: "Empieza gratis",
+    getStartedShort: "Empezar",
+    learnMore: "Saber más",
+    seeAllModules: "Ver los 14 módulos",
+    downloadApp: "Consíguelo en Google Play",
+    openWebApp: "Abrir la versión web",
+    contactUs: "Contáctanos",
+    menu: "Navegación",
+    close: "Cerrar el menú",
+    language: "Idioma",
+    backToModules: "Todos los módulos",
+    worksWellWith: "Funciona bien con",
+    whatItIs: "Qué es",
+    howItWorks: "Cómo funciona",
+    everythingItDoes: "Todo lo que hace",
+    whoItsFor: "Para quién es",
+    whatItCosts: "Cuánto cuesta",
+    whereItSettles: "Dónde se liquida",
+    seeItWork: "Verlo en acción",
+    moneyStack: "Bloque financiero",
+    businessStack: "Bloque comercial",
+    status: { live: "Disponible", beta: "Beta", planned: "Próximamente" },
+    filterAll: "Todos",
+    browse: "Explorar",
+    company: "Empresa",
+    support: "Soporte",
+    legal: "Legal",
+    followUs: "Síguenos",
+    rightsReserved: "Todos los derechos reservados.",
+    poweredBy: "Con la tecnología de",
+    registrationNo: "N.º de registro",
+    aboutUs: "Quiénes somos",
+    contactSupport: "Contactar con soporte",
+    news: "Noticias",
+    blog: "Blog",
+    mainSite: "Aplicación eMalyami (sitio principal)",
+    faq: "Preguntas frecuentes",
+    fraudAwareness: "Prevención del fraude",
+    terms: "Términos y condiciones",
+    privacy: "Política de privacidad",
   },
 });
 
 export const COMPANY_ADDRESS = pick(COMPANY.address);
 
-/** Slogan under the floating logo watermark. */
+/** Slogan under the floating logo watermark — the coin's own wording. */
 export const SLOGAN = pick({
-  en: "Same vision, evolved experience",
-  ar: "نفس الرؤية، تجربة متطورة",
-  fr: "Même vision, expérience réinventée",
-  pt: "A mesma visão, uma experiência renovada",
+  en: "Empower. Connect. Prosper.",
+  ar: "تمكين. تواصل. ازدهار.",
+  fr: "Autonomiser. Connecter. Prospérer.",
+  pt: "Capacitar. Conectar. Prosperar.",
+  es: "Empoderar. Conectar. Prosperar.",
 });

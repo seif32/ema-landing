@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { useLocation, useNavigationType } from "react-router";
-import { scrollToOffset } from "@/lib/scroll";
+import { scrollToOffset, scrollToSectionId } from "@/lib/scroll";
 
 /**
  * Scroll behaviour across route changes.
@@ -17,6 +17,8 @@ import { scrollToOffset } from "@/lib/scroll";
  *   - back / forward (POP)          → restore where the visitor had been
  *   - navigation carrying `state.scrollTo` → leave it alone, the header is
  *     scrolling to a section on the home page
+ *   - a URL hash (/#pricing) → scroll to that section, so the section links
+ *     in the header are shareable and survive a cold load
  */
 function ScrollManager() {
   const location = useLocation();
@@ -50,6 +52,11 @@ function ScrollManager() {
     // The header asked for a section on the home page — don't fight it.
     if (location.state?.scrollTo) return;
 
+    // A shared link like https://ema.emalyami.com/#pricing.
+    if (location.hash) {
+      return scrollToSectionId(location.hash.slice(1), { smooth: false });
+    }
+
     if (navigationType === "POP") {
       const saved = positions.current.get(location.key);
       if (saved !== undefined) {
@@ -62,7 +69,13 @@ function ScrollManager() {
 
     window.scrollTo(0, 0);
     currentY.current = 0;
-  }, [location.key, location.pathname, location.state, navigationType]);
+  }, [
+    location.key,
+    location.pathname,
+    location.hash,
+    location.state,
+    navigationType,
+  ]);
 
   return null;
 }

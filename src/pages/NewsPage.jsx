@@ -14,9 +14,11 @@ import {
   Import,
 } from "lucide-react";
 
-import Logo from "../assets/shared/new_logo.svg";
+import Logo from "../assets/shared/new_logo_2.png";
 import toast from "@/lib/toast";
-import { NEWS } from "@/content";
+import Seo from "@/components/shared/Seo";
+import { LANG_TAG, NEWS } from "@/content";
+import { SEO } from "@/content/seo";
 
 const NewsPage = () => {
   const [searchParams] = useSearchParams();
@@ -45,7 +47,8 @@ const NewsPage = () => {
   }, []);
 
   const formatTime = (timestamp) => {
-    return new Date(timestamp).toLocaleDateString("ar-EG", {
+    // Was hardcoded to "ar-EG", so every language showed Arabic dates.
+    return new Date(timestamp).toLocaleDateString(LANG_TAG, {
       year: "numeric",
       month: "short",
       day: "numeric",
@@ -145,7 +148,8 @@ const NewsPage = () => {
 
   return (
     <div className="pt-24 min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
-      {/* 🎨 Hero Section */}
+      <Seo title={SEO.news.title} description={SEO.news.description} />
+
       {/* 🎨 Hero Section */}
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 py-12">

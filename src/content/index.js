@@ -5,7 +5,7 @@
  * every locale side by side, and src/content/locale.js selects the active one
  * at runtime from the visitor's choice. One build serves every language, so
  * translating the site is an edit to this folder rather than an edit to
- * eighteen JSX files across four git branches.
+ * eighteen JSX files across five git branches.
  */
 
 export {
@@ -30,7 +30,15 @@ export {
   getModules,
 } from "./modules";
 
-export { COMPANY, COMPANY_ADDRESS, NAV, UI, SLOGAN } from "./site";
+export {
+  COMPANY,
+  COMPANY_ADDRESS,
+  COMPLIANCE,
+  LICENCES,
+  NAV,
+  UI,
+  SLOGAN,
+} from "./site";
 
 export {
   HERO,

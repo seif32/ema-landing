@@ -64,7 +64,7 @@ const modules = [
         "Payouts to your bank account",
         "Bill payments — DSTV, Netflix, utilities",
         "Airtime on every network",
-        "Daily transaction limits R3,000–R5,000",
+        "Daily transaction limits set per country and KYC tier",
         "Full statements for any period",
         "Settles every other eMa module",
       ],
@@ -101,7 +101,7 @@ const modules = [
         "التحويل إلى حسابك البنكي",
         "سداد الفواتير — DSTV ونتفليكس والمرافق",
         "رصيد اتصال لجميع الشبكات",
-        "حدود يومية للمعاملات 3,000–5,000 راند",
+        "حدود يومية للمعاملات تُحدَّد لكل دولة ولكل مستوى تحقّق من الهوية",
         "كشوف حساب كاملة لأي فترة",
         "تسوية جميع وحدات eMa الأخرى",
       ],
@@ -138,7 +138,7 @@ const modules = [
         "Virements vers votre compte bancaire",
         "Paiement de factures — DSTV, Netflix, services publics",
         "Crédit téléphonique sur tous les réseaux",
-        "Plafonds journaliers de 3 000 à 5 000 R",
+        "Plafonds de transaction fixés par pays et par niveau de KYC",
         "Relevés complets sur toute période",
         "Règlement de tous les autres modules eMa",
       ],
@@ -175,7 +175,7 @@ const modules = [
         "Transferências para a sua conta bancária",
         "Pagamento de faturas — DSTV, Netflix, serviços públicos",
         "Saldo de telemóvel em todas as redes",
-        "Limites diários de 3 000 a 5 000 R",
+        "Limites diários de transação definidos por país e por nível de KYC",
         "Extratos completos para qualquer período",
         "Liquidação de todos os outros módulos eMa",
       ],
@@ -189,11 +189,48 @@ const modules = [
       settles:
         "É a conta onde tudo liquida — cada módulo da plataforma paga a partir dela e para ela.",
     },
+    es: {
+      tagline: "Tu saldo digital",
+      summary:
+        "Carga fondos con tarjeta, transferencia o en un Paymate. Cobra por código QR o por número de teléfono, paga facturas y compra saldo en cualquier red, todo desde un único saldo multidivisa.",
+      description:
+        "La eWallet es la cuenta en la que liquida cualquier otro módulo de eMa. Guarda tu saldo en varias divisas, admite dinero de tarjetas, transferencias bancarias y efectivo entregado a un Paymate, y paga por código QR, número de teléfono o retirada de efectivo. Un saldo, un número de teléfono, una identidad verificada.",
+      howItWorks: [
+        "Regístrate con tu número de móvil y verifícalo con el código OTP que recibas.",
+        "Completa tu perfil KYC para que tu cuenta pueda operar.",
+        "Carga fondos con tarjeta, por transferencia o entregando efectivo a cualquier Paymate.",
+        "Cobra: muestra tu código QR o facilita tu número de teléfono.",
+        "Gasta, ahorra, envía a otro país o retira efectivo en un Paymate.",
+      ],
+      capabilities: [
+        "Saldo multidivisa",
+        "Carga con tarjeta, transferencia o efectivo en Paymate",
+        "Cobro mediante código QR propio",
+        "Cobro por número de teléfono",
+        "Envío a cualquier miembro de eMa",
+        "Retirada de efectivo en cualquier Paymate",
+        "Pagos a tu cuenta bancaria",
+        "Pago de facturas: DSTV, Netflix, suministros",
+        "Saldo telefónico en todas las redes",
+        "Límites diarios de transacción fijados por país y nivel de KYC",
+        "Extractos completos de cualquier periodo",
+        "Liquida todos los demás módulos de eMa",
+      ],
+      audience: [
+        "Particulares",
+        "Todos los usuarios de negocio de eMa",
+        "Población no bancarizada",
+        "Hogares",
+      ],
+      fee: "4 % en las transacciones personales del día a día.",
+      settles:
+        "Esta es la cuenta en la que todo liquida: cada módulo de la plataforma cobra y paga contra este único saldo.",
+    },
   },
 
   {
     id: "paymate",
-    name: "PAYMATE",
+    name: "Paymates",
     family: FAMILY.MONEY,
     status: STATUS.LIVE,
     ticketCode: "Emalyami",
@@ -343,6 +380,42 @@ const modules = [
       settles:
         "O numerário entra e sai do mesmo saldo eWallet que todos os outros módulos usam.",
     },
+    es: {
+      tagline: "El efectivo se vuelve digital",
+      summary:
+        "Una red de socios locales —tiendas de barrio, gasolineras, comerciantes— que ingresan efectivo en las carteras y pagan las retiradas. Cada Paymate es una sucursal, sin sucursal.",
+      description:
+        "Paymates es lo que conecta una economía de efectivo con un libro mayor digital. Comercios locales en los que ya confías actúan como puntos de ingreso y retirada: un cliente entrega billetes y se convierten en saldo en segundos, o retira saldo en forma de efectivo. Sin sucursal bancaria, sin cajero, sin tarjeta. Y como los Paymates ganan con cada transacción que gestionan, serlo es un negocio en sí mismo.",
+      howItWorks: [
+        "Busca tu Paymate más cercano: una tienda de barrio, una gasolinera o un comerciante local de confianza.",
+        "Entrega efectivo para cargar, o pide una retirada para sacar dinero.",
+        "Confirma la operación con el código OTP enviado a tu teléfono.",
+        "Tu saldo se actualiza al instante y funciona en los 14 módulos.",
+        "¿Quieres ser uno? Solicítalo en la aplicación: sin capital inicial.",
+      ],
+      capabilities: [
+        "Ingreso de efectivo en cualquier cartera eMa",
+        "Retiradas de efectivo",
+        "Recogida en efectivo de remesas eMaTuma",
+        "Operaciones confirmadas por OTP",
+        "Comisión de agente en cada transacción",
+        "Solicitud para ser Paymate desde la aplicación",
+        "Recarga de carteras en nombre de los clientes",
+        "Entrega de efectivo a los clientes",
+        "Atiende a comunidades que operan en efectivo",
+        "Sin necesidad de infraestructura bancaria",
+      ],
+      audience: [
+        "Tiendas de barrio",
+        "Gasolineras",
+        "Comerciantes locales",
+        "Panaderías y comercios de alimentación",
+        "Cualquiera con caja y afluencia de público",
+      ],
+      fee: "1,5–2 % por cada ingreso o retirada de efectivo, que gana el Paymate.",
+      settles:
+        "El efectivo entra y sale del mismo saldo de la eWallet que usan todos los demás módulos.",
+    },
   },
 
   {
@@ -489,6 +562,39 @@ const modules = [
       settles:
         "Sai da sua eWallet e chega à dele — ou em numerário num Paymate.",
     },
+    es: {
+      tagline: "Dinero más allá de las fronteras",
+      summary:
+        "Envía a otro país en tiempo real por una fracción del coste bancario. Tipos de cambio en vivo, calculadora de divisas integrada y recogida en efectivo en cualquier Paymate registrado.",
+      description:
+        "eMaTuma mueve dinero entre países desde tu teléfono. Elige el importe y la divisa, comprueba el tipo en vivo y envía: el destinatario lo recibe como saldo o lo recoge en efectivo en un Paymate registrado. Sin ir a una sucursal, sin esperar días y sin el 8–12 % que las remesas convencionales restan al dinero de una familia.",
+      howItWorks: [
+        "Elige el importe y la divisa que quieres enviar.",
+        "Consulta el tipo de cambio en vivo y usa la calculadora para convertir.",
+        "Confirma la transferencia: la comisión se cobra en ese momento.",
+        "El destinatario la recibe en tiempo real como saldo de su cartera.",
+        "O la recoge en efectivo en cualquier Paymate registrado.",
+      ],
+      capabilities: [
+        "Transferencias internacionales en tiempo real",
+        "Tipos de cambio en vivo, actualizados de forma continua",
+        "Calculadora de divisas integrada",
+        "Calculadora de importes Safaru",
+        "Recogida en efectivo en cualquier Paymate registrado",
+        "Historial completo de transacciones",
+        "Cuesta una fracción de la remesa convencional",
+        "Liquida en la eWallet del destinatario",
+      ],
+      audience: [
+        "Trabajadores migrantes",
+        "Familias que sostienen a parientes en el extranjero",
+        "Comerciantes transfronterizos",
+        "Importadores y exportadores",
+      ],
+      fee: "Se cobra al confirmar la transferencia.",
+      settles:
+        "Sale de tu eWallet y llega a la suya, o en efectivo en un Paymate.",
+    },
   },
 
   {
@@ -528,7 +634,7 @@ const modules = [
         "Community associations",
         "Anyone without access to credit",
       ],
-      fee: "15%.",
+      fee: "15% administration fee on the group's disbursement.",
       settles:
         "Contributions leave and payouts arrive in your eWallet, on the same phone number.",
     },
@@ -561,7 +667,7 @@ const modules = [
         "الروابط المجتمعية",
         "كل من لا يصل إلى التمويل",
       ],
-      fee: "15%.",
+      fee: "رسوم إدارية 15% على صرف المجموعة.",
       settles: "المساهمات تخرج والمستحقات تصل إلى محفظتك، على رقم الهاتف نفسه.",
     },
     fr: {
@@ -593,7 +699,7 @@ const modules = [
         "Associations communautaires",
         "Toute personne sans accès au crédit",
       ],
-      fee: "15 %.",
+      fee: "Frais d'administration de 15 % sur le versement du groupe.",
       settles:
         "Les cotisations partent et les versements arrivent sur votre eWallet, sur le même numéro de téléphone.",
     },
@@ -626,9 +732,42 @@ const modules = [
         "Associações comunitárias",
         "Quem não tem acesso a crédito",
       ],
-      fee: "15%.",
+      fee: "Taxa de administração de 15% sobre o desembolso do grupo.",
       settles:
         "As contribuições saem e os pagamentos chegam à sua eWallet, no mesmo número de telemóvel.",
+    },
+    es: {
+      tagline: "El círculo de ahorro rotativo",
+      summary:
+        "La tanda, digitalizada. Un grupo aporta una cantidad fija en un ciclo establecido y cada mes un miembro se lleva todo el fondo. Disciplina, comunidad y una suma completa cuando llega tu turno.",
+      description:
+        "SIBA es el sistema de ahorro rotativo que las comunidades llevan generaciones practicando, trasladado al teléfono. Amigos, familiares o compañeros aportan una cantidad fija con regularidad; en cada ciclo, un miembro recoge todo el fondo reunido, suficiente para una entrada, inventario, matrículas o una emergencia. El ciclo continúa hasta que todos han tenido su turno, así que nadie carga con el grupo y nadie se queda fuera.",
+      howItWorks: [
+        "Cualquier miembro puede crear un grupo y se convierte en su administrador.",
+        "Invita a amigos, familiares o compañeros. Con un mínimo de 3 miembros arranca el grupo.",
+        "Fija las reglas y la aportación según el objetivo de ahorro del grupo.",
+        "Todos aportan según el ciclo y cada miembro puede ver quién ha pagado.",
+        "En cada ciclo un miembro recoge todo el fondo, hasta que todos hayan tenido su turno.",
+      ],
+      capabilities: [
+        "Cualquier usuario puede crear un grupo",
+        "Mínimo de 3 miembros por grupo",
+        "Un mismo usuario puede llevar varios grupos a la vez",
+        "Reglas adaptadas al objetivo del grupo",
+        "Cada miembro ve todas las aportaciones",
+        "Chat de grupo integrado",
+        "Descuento automático según el ciclo",
+        "El reparto rota hasta que todos los miembros han cobrado",
+      ],
+      audience: [
+        "Familias y grupos de amigos",
+        "Círculos de ahorro en el trabajo",
+        "Asociaciones vecinales",
+        "Cualquiera sin acceso a crédito",
+      ],
+      fee: "Comisión de administración del 15 % sobre el desembolso del grupo.",
+      settles:
+        "Las aportaciones salen y los repartos llegan a tu eWallet, en el mismo número de teléfono.",
     },
   },
 
@@ -772,6 +911,38 @@ const modules = [
       fee: "Cobrada no arranque do cofre e novamente no levantamento.",
       settles:
         "As contribuições e os pagamentos passam pela eWallet de cada membro.",
+    },
+    es: {
+      tagline: "La hucha conjunta",
+      summary:
+        "Ahorra hacia un objetivo con gente de confianza. Ciclos diarios, semanales o mensuales; cada miembro ve todas las aportaciones; las retiradas requieren acuerdo unánime.",
+      description:
+        "eMaSave es una hucha compartida. Tú la creas, invitas a las personas con las que ahorras y eliges cada cuánto aporta cada una. Lo que la hace segura es la regla de salida: ningún miembro puede retirar por su cuenta; hace falta el acuerdo unánime de todos los participantes. Dinero colectivo, protegido por control colectivo.",
+      howItWorks: [
+        "Crea una hucha y conviértete en su administrador.",
+        "Elige el ciclo: diario, semanal o mensual.",
+        "Envía invitaciones a las personas con las que quieres ahorrar.",
+        "Cuando se hayan unido al menos 3 miembros, la hucha arranca.",
+        "Las retiradas solo se liberan con el acuerdo unánime de todos los participantes.",
+      ],
+      capabilities: [
+        "Crear y administrar una hucha",
+        "Ciclos diarios, semanales o mensuales",
+        "Invitar miembros directamente",
+        "Mínimo de 3 miembros para empezar",
+        "Objetivos de ahorro compartidos",
+        "Cada aportación es visible para todos los miembros",
+        "Las retiradas exigen aprobación unánime",
+        "Chat de miembros integrado",
+      ],
+      audience: [
+        "Familias que ahorran juntas",
+        "Socios de un negocio",
+        "Proyectos comunitarios",
+        "Grupos de amigos con un objetivo común",
+      ],
+      fee: "Se cobra al abrir la hucha y de nuevo en el reparto.",
+      settles: "Las aportaciones y los repartos pasan por la eWallet de cada miembro.",
     },
   },
 
@@ -921,11 +1092,44 @@ const modules = [
       settles:
         "Os fundos angariados são libertados para a sua eWallet.",
     },
+    es: {
+      tagline: "Consigue el capital",
+      summary:
+        "Publica una campaña con tus documentos y tu objetivo de financiación, recibe ofertas de patrocinadores, firma el acuerdo en la aplicación y dispón de los fondos. Financiación colectiva para negocios a los que los bancos no puntúan.",
+      description:
+        "eMaFunding permite a un negocio levantar capital de muchas personas en lugar de una sola institución. Expones el proyecto, la financiación necesaria y el calendario, y adjuntas los documentos que respaldan tu caso. Los patrocinadores exploran campañas y hacen ofertas; tú eliges las que te convienen; ambas partes firman en la aplicación y los fondos se liberan. Para una pyme con un historial comercial real pero sin garantías, esta es la vía al capital que la banca convencional cierra.",
+      howItWorks: [
+        "Elige tu sector y crea una campaña con todos los detalles y documentos.",
+        "Fija el objetivo de financiación y el calendario, y actualízalos cuando quieras.",
+        "Los patrocinadores exploran campañas y hacen ofertas sobre la tuya.",
+        "Elige las ofertas que encajan con tu campaña.",
+        "Ambas partes firman el acuerdo y los fondos se liberan en tu cartera.",
+      ],
+      capabilities: [
+        "Crear una campaña en tu sector",
+        "Adjuntar documentación de apoyo",
+        "Objetivos de financiación y calendarios",
+        "Recibir y comparar ofertas de patrocinadores",
+        "Aceptar o rechazar cualquier oferta",
+        "Acuerdos firmados en la aplicación por ambas partes",
+        "Chat entre todas las partes",
+        "Promoción de la campaña en la red eMa",
+      ],
+      audience: [
+        "Pymes sin garantías",
+        "Startups y nuevos proyectos",
+        "Proyectos comunitarios",
+        "Artesanos y profesionales",
+        "Negocios informales que entran en la economía formal",
+      ],
+      fee: "Se cobra al crear la campaña.",
+      settles: "Los fondos captados se liberan en tu eWallet.",
+    },
   },
 
   {
     id: "patele",
-    name: "PATELE",
+    name: "Patele",
     family: FAMILY.MONEY,
     status: STATUS.LIVE,
     ticketCode: "Emalyami",
@@ -936,7 +1140,7 @@ const modules = [
       summary:
         "A financial-services marketplace where institutions offer loans, insurance and funeral cover, with policy sharing, automated monthly repayments and secure communication built in.",
       description:
-        "PATELE is an automated collection system and a financial-services marketplace in one. Institutions list loans, insurance, medical schemes and funeral cover; members subscribe and repayments collect automatically each month. It replaces the cash-in-hand, door-to-door premium collection that makes cover expensive to administer and easy to lapse.",
+        "Patele is an automated collection system and a financial-services marketplace in one. Institutions list loans, insurance, medical schemes and funeral cover; members subscribe and repayments collect automatically each month. It replaces the cash-in-hand, door-to-door premium collection that makes cover expensive to administer and easy to lapse.",
       howItWorks: [
         "Browse cover and credit offered by participating institutions.",
         "Subscribe to the policy or facility that fits.",
@@ -970,7 +1174,7 @@ const modules = [
       summary:
         "سوق للخدمات المالية تقدّم فيه المؤسسات القروض والتأمين وتغطية الجنازات، مع مشاركة الوثائق والسداد الشهري الآلي والتواصل الآمن.",
       description:
-        "PATELE نظام تحصيل آلي وسوق للخدمات المالية في آنٍ واحد. تعرض المؤسسات القروض والتأمين والبرامج الطبية وتغطية الجنازات، فيشترك الأعضاء وتُحصَّل الأقساط تلقائيًا كل شهر. وهو يستبدل التحصيل النقدي من باب إلى باب الذي يجعل التغطية مكلفة الإدارة وسهلة السقوط.",
+        "Patele نظام تحصيل آلي وسوق للخدمات المالية في آنٍ واحد. تعرض المؤسسات القروض والتأمين والبرامج الطبية وتغطية الجنازات، فيشترك الأعضاء وتُحصَّل الأقساط تلقائيًا كل شهر. وهو يستبدل التحصيل النقدي من باب إلى باب الذي يجعل التغطية مكلفة الإدارة وسهلة السقوط.",
       howItWorks: [
         "تصفّح التغطيات والتمويلات التي تقدّمها المؤسسات المشاركة.",
         "اشترك في الوثيقة أو التسهيل المناسب لك.",
@@ -1004,7 +1208,7 @@ const modules = [
       summary:
         "Une place de marché de services financiers où les institutions proposent prêts, assurances et couvertures obsèques, avec partage des contrats, remboursements mensuels automatiques et communication sécurisée.",
       description:
-        "PATELE est à la fois un système de prélèvement automatique et une place de marché de services financiers. Les institutions y référencent prêts, assurances, mutuelles santé et couvertures obsèques ; les membres souscrivent et les échéances sont prélevées automatiquement chaque mois. Cela remplace la collecte de primes en liquide, de porte en porte, qui rend la couverture coûteuse à gérer et facile à laisser tomber.",
+        "Patele est à la fois un système de prélèvement automatique et une place de marché de services financiers. Les institutions y référencent prêts, assurances, mutuelles santé et couvertures obsèques ; les membres souscrivent et les échéances sont prélevées automatiquement chaque mois. Cela remplace la collecte de primes en liquide, de porte en porte, qui rend la couverture coûteuse à gérer et facile à laisser tomber.",
       howItWorks: [
         "Parcourez les couvertures et crédits proposés par les institutions partenaires.",
         "Souscrivez au contrat ou à la facilité qui vous convient.",
@@ -1039,7 +1243,7 @@ const modules = [
       summary:
         "Um mercado de serviços financeiros onde as instituições oferecem crédito, seguros e cobertura funerária, com partilha de apólices, pagamentos mensais automáticos e comunicação segura.",
       description:
-        "O PATELE é ao mesmo tempo um sistema de cobrança automática e um mercado de serviços financeiros. As instituições listam créditos, seguros, planos de saúde e cobertura funerária; os membros subscrevem e as prestações são cobradas automaticamente todos os meses. Substitui a cobrança de prémios em numerário, porta a porta, que torna a cobertura cara de gerir e fácil de perder.",
+        "O Patele é ao mesmo tempo um sistema de cobrança automática e um mercado de serviços financeiros. As instituições listam créditos, seguros, planos de saúde e cobertura funerária; os membros subscrevem e as prestações são cobradas automaticamente todos os meses. Substitui a cobrança de prémios em numerário, porta a porta, que torna a cobertura cara de gerir e fácil de perder.",
       howItWorks: [
         "Explore as coberturas e créditos das instituições aderentes.",
         "Subscreva a apólice ou o crédito que lhe serve.",
@@ -1068,6 +1272,40 @@ const modules = [
       fee: "Definida pela instituição aderente.",
       settles:
         "Prémios e prestações são cobrados automaticamente da sua eWallet.",
+    },
+    es: {
+      tagline: "Cobertura y cobro automático",
+      summary:
+        "Un mercado de servicios financieros donde las instituciones ofrecen préstamos, seguros y coberturas de decesos, con reparto de pólizas, cuotas mensuales automáticas y comunicación segura integrada.",
+      description:
+        "Patele es a la vez un sistema de cobro automático y un mercado de servicios financieros. Las instituciones publican préstamos, seguros, planes médicos y coberturas de decesos; los miembros se suscriben y las cuotas se cobran automáticamente cada mes. Sustituye el cobro de primas en efectivo, puerta a puerta, que encarece la administración y facilita que una póliza caduque.",
+      howItWorks: [
+        "Explora las coberturas y créditos que ofrecen las instituciones participantes.",
+        "Suscríbete a la póliza o al producto que encaje.",
+        "Los documentos de tu póliza se te entregan en digital.",
+        "Las primas o cuotas mensuales se cobran automáticamente de tu cartera.",
+        "Comunícate de forma segura con el proveedor desde el propio módulo.",
+      ],
+      capabilities: [
+        "Préstamos de instituciones participantes",
+        "Productos de seguro",
+        "Suscripciones a planes médicos",
+        "Cobertura de decesos",
+        "Cobro mensual automático",
+        "Cuotas automáticas",
+        "Reparto digital de pólizas",
+        "Comunicación segura con el proveedor",
+        "Pensado para la administración de mipymes",
+      ],
+      audience: [
+        "Aseguradoras e instituciones financieras",
+        "Planes médicos",
+        "Funerarias",
+        "Mipymes que gestionan la cobertura de su personal",
+        "Particulares y familias",
+      ],
+      fee: "La fija la institución participante.",
+      settles: "Las primas y las cuotas se cobran automáticamente de tu eWallet.",
     },
   },
 
@@ -1239,6 +1477,45 @@ const modules = [
       settles:
         "Cada venda no eMaPOS chega à mesma carteira eMa que as encomendas do eMaMall e os pagamentos do eMaServe — um saldo, um extrato, sem reconciliação.",
     },
+    es: {
+      tagline: "Tu tienda, en tu teléfono",
+      summary:
+        "Lleva una tienda o muchas. Haz inventario, escanea códigos QR, emite tickets, tramita devoluciones, registra mercancía dañada, crea cuentas de cajero y recibe avisos cuando baje el stock, con una trastienda web completa para el propietario.",
+      description:
+        "eMaPOS convierte cualquier teléfono Android en un sistema de punto de venta completo. Gestiona la venta, el inventario que hay detrás, el personal que la realiza y el proveedor que repone el estante, y cada moneda cobrada llega directamente a tu cartera eMa, lista para gastar, ahorrar o enviar.",
+      howItWorks: [
+        "Crea tu tienda: añade sus datos y sube tus documentos. Gestiona tantas tiendas como tengas.",
+        "Carga tu inventario: añade artículos con precios, actualízalos cuando quieras y aplica descuentos.",
+        "Vende: escanea el código QR, cobra y emite un ticket impreso o por correo.",
+        "Añade a tus cajeros: cada uno recibe su cuenta y entra desde la aplicación de TPV con un usuario y un código OTP enviado a su teléfono. Nunca acceden a tu cuenta eMa.",
+        "Vigila los números: ventas del día, totales acumulados, lista de proveedores y niveles de stock, en vivo en el panel o en la trastienda web.",
+      ],
+      capabilities: [
+        "Varias tiendas bajo una misma cuenta de propietario",
+        "Inventario completo y control de existencias",
+        "Escaneo de códigos QR en el cobro",
+        "Tickets impresos o enviados por correo al cliente",
+        "Gestión de devoluciones y reembolsos",
+        "Registro y parte de mercancía dañada",
+        "Descuentos por artículo",
+        "Cuentas de cajero independientes con acceso por OTP",
+        "Aviso automático de stock bajo a los proveedores",
+        "Vistas de ventas del día y de proveedores",
+        "Acceso web a toda la trastienda",
+        "Liquida directamente en tu cartera eMa",
+      ],
+      audience: [
+        "Grandes superficies",
+        "Panaderías",
+        "Tiendas de barrio",
+        "Restaurantes",
+        "Farmacias",
+        "Cualquier comercio con mostrador",
+      ],
+      fee: "Se cobra mensualmente, con cargo automático a tu cuenta eMa, según el total de tus pedidos del mes. Sin terminal que comprar, sin cuota mensual, sin contrato.",
+      settles:
+        "Cada venta de eMaPOS llega a la misma cartera eMa que tus pedidos de eMaMall y tus cobros de eMaServe: un saldo, un extracto, sin conciliación.",
+    },
   },
 
   {
@@ -1400,6 +1677,43 @@ const modules = [
       settles:
         "A garantia liberta para a sua eWallet — o mesmo saldo onde entram as receitas do eMaPOS.",
     },
+    es: {
+      tagline: "Tu escaparate, en línea",
+      summary:
+        "Abre una tienda virtual en minutos. Publica productos, recibe y negocia ofertas, conversa con los compradores, sigue cada pedido desde el empaquetado hasta la entrega y liquida con seguridad mediante depósito en garantía.",
+      description:
+        "eMaMall es un mercado virtual que reproduce un centro comercial físico en tu teléfono. Comercian tanto empresas como particulares: publica lo que vendes, recibe ofertas, negocia por chat y deja que el depósito en garantía retenga el dinero hasta que el comprador tenga lo que pagó. Las valoraciones y reseñas construyen la reputación que convierte una primera venta en una venta recurrente.",
+      howItWorks: [
+        "Elige tu categoría y añade tu producto con todos los detalles e imágenes.",
+        "Los compradores exploran, buscan y hacen ofertas por tu anuncio.",
+        "Negocia por chat: acepta o rechaza cualquier oferta.",
+        "El depósito en garantía retiene el pago mientras preparas y envías el pedido.",
+        "El comprador sigue el avance desde el empaquetado hasta la entrega y deja una reseña.",
+      ],
+      capabilities: [
+        "Crear una tienda virtual",
+        "Añadir y actualizar anuncios de productos",
+        "Búsqueda sencilla de productos",
+        "Ofertas que puedes aceptar o rechazar",
+        "Chat entre comprador y vendedor",
+        "Protección por depósito en garantía",
+        "Seguimiento del pedido desde la preparación hasta la entrega",
+        "Valoraciones y reseñas de clientes",
+        "Aviso de incidencias sobre cualquier producto",
+        "Acceso web además del móvil",
+        "Comercian tanto empresas como particulares",
+      ],
+      audience: [
+        "Comercios que dan el salto a internet",
+        "Artesanos y creadores",
+        "Particulares que venden de forma ocasional",
+        "Mayoristas",
+        "Exportadores",
+      ],
+      fee: "Se cobra cuando vendedor y comprador aceptan la oferta.",
+      settles:
+        "El depósito en garantía se libera en tu eWallet, el mismo saldo donde entran tus cobros de eMaPOS.",
+    },
   },
 
   {
@@ -1552,6 +1866,40 @@ const modules = [
       settles:
         "O pagamento é libertado da garantia para a eWallet do prestador.",
     },
+    es: {
+      tagline: "Contrata y haz el trabajo",
+      summary:
+        "Publica el encargo o encuentra trabajo. Puja por encargos cercanos, contrata al profesional adecuado, sigue el avance de principio a fin, mantén todo en un calendario compartido y valoraos al terminar.",
+      description:
+        "eMaServe conecta a los profesionales de servicios con quien los necesita. Una parte publica un encargo con el detalle y el presupuesto; la otra puja, con los trabajos filtrados por cercanía. El cliente contrata, ambas partes siguen el encargo de principio a fin en un calendario compartido y el pago se libera cuando el trabajo está hecho. Para un artesano o un profesional, convierte el boca a boca en una cartera de encargos.",
+      howItWorks: [
+        "Publica un encargo: elige el sector, añade los detalles y actualízalos cuando quieras.",
+        "Los profesionales encuentran trabajo en su sector, filtrado por cercanía, y pujan.",
+        "El cliente contrata la puja que le conviene y paga a la plataforma.",
+        "Ambas partes siguen el estado del encargo de inicio a fin, o lo cancelan.",
+        "Al completarse se libera el pago y ambas partes se valoran mutuamente.",
+      ],
+      capabilities: [
+        "Publicar un encargo en cualquier sector",
+        "Encontrar trabajo filtrado por proximidad",
+        "Pujar por encargos",
+        "Contratar la puja que encaja",
+        "Estado del encargo de principio a fin",
+        "Cancelar un encargo",
+        "Valoraciones y reseñas en ambos sentidos",
+        "Chat entre cliente y profesional",
+        "Calendario compartido de fechas de trabajo",
+        "Pago sencillo al completar",
+      ],
+      audience: [
+        "Artesanos y oficios",
+        "Profesionales y consultores",
+        "Hogares que necesitan un trabajo",
+        "Empresas que externalizan tareas",
+      ],
+      fee: "Se cobra cuando el encargo se marca como completado.",
+      settles: "El pago se libera del depósito en garantía a la eWallet del profesional.",
+    },
   },
 
   {
@@ -1680,6 +2028,35 @@ const modules = [
       settles:
         "O investimento em publicidade é debitado da sua eWallet.",
     },
+    es: {
+      tagline: "Hazte visible",
+      summary:
+        "Publicidad digital y espacio de exposición virtual que pone tus productos ante compradores que ya están dentro de la red eMa, de modo que el público al que anuncias está a un toque de pagarte.",
+      description:
+        "eMaExpo es donde los negocios se dan a ver. Es una plataforma de publicidad digital y exposición virtual construida dentro de la red eMa, así que quienes visitan tu estand ya tienen una cartera con fondos y una identidad verificada. Anunciarse en otro sitio envía a un desconocido a buscarte; anunciarse aquí pone tu producto ante alguien que puede comprarlo de inmediato.",
+      howItWorks: [
+        "Monta tu estand virtual con tus productos y tu marca.",
+        "Publícalo en la red eMa.",
+        "Los compradores que ya están dentro de la plataforma te descubren mientras exploran.",
+        "Pasan directamente de tu estand a la compra: sin cuenta nueva, sin método de pago nuevo.",
+      ],
+      capabilities: [
+        "Campañas de publicidad digital",
+        "Estands de exposición virtual",
+        "Promoción de productos dentro de la red eMa",
+        "Alcance a compradores con cartera con fondos",
+        "Enlace directo a los anuncios de eMaMall",
+      ],
+      audience: [
+        "Comercios y mayoristas",
+        "Fabricantes",
+        "Artesanos y creadores",
+        "Exportadores en busca de nuevos mercados",
+        "Cualquiera que lance un producto",
+      ],
+      fee: "Por campaña. Consúltanos las tarifas.",
+      settles: "La inversión publicitaria se carga a tu eWallet.",
+    },
   },
 
   {
@@ -1695,7 +2072,7 @@ const modules = [
       summary:
         "Post a shipment once and let carriers compete for it. Pick the best offer on price, date and rating for the international leg and both local legs, pay once, and track the whole chain in one place.",
       description:
-        "eMaCargo is a competitive freight marketplace. You post a shipment once; carriers bid for it. Instead of phoning around for quotes, you receive offers and pick the best one on price, delivery date, rating and feedback — for the international leg and the local collection and delivery at both ends. Freight is where most small exporters lose their margin, and it's the reason a good product never leaves the country. eMaCargo turns an opaque, phone-based quoting process into a competitive market, and syncs the legs so a shipment can't strand between carriers.",
+        "eMaCargo is a competitive freight marketplace. You post a shipment once; carriers bid for it. Instead of phoning around for quotes, you receive offers and pick the best one on price, delivery date, rating and feedback — for the international leg and the local collection and delivery at both ends. Freight is where most small exporters lose their margin, and it's the reason a good product never leaves the country. eMaCargo turns an opaque, phone-based quoting process into a competitive market, and syncs the legs so a shipment can't strand between carriers. Together with eMaTuma it brings African smallholder farmers into cross-border commodity markets, opening the way to carbon-credit monetisation and to the $100bn+ agricultural trade financing gap.",
       howItWorks: [
         "Post the shipment — origin, destination, sender, recipient, package details and any special requirements.",
         "Phase 1: international carriers see your shipment and bid. Compare on price, estimated delivery date, feedback and rating, and select the best.",
@@ -1732,7 +2109,7 @@ const modules = [
       summary:
         "انشر شحنتك مرة واحدة ودع شركات الشحن تتنافس عليها. اختر أفضل عرض بالسعر والتاريخ والتقييم للمرحلة الدولية وللمرحلتين المحليتين، وادفع مرة واحدة، وتتبّع السلسلة كاملة في مكان واحد.",
       description:
-        "eMaCargo سوق تنافسي للشحن. تنشر شحنتك مرة واحدة، فتتنافس شركات الشحن عليها. وبدلًا من الاتصال بعشرات الجهات لطلب عروض الأسعار، تصلك العروض وتختار أفضلها بحسب السعر وتاريخ التسليم والتقييم وآراء العملاء — للمرحلة الدولية وكذلك للتحصيل والتسليم المحلي في الطرفين. الشحن هو ما يلتهم هامش ربح صغار المصدّرين، وهو السبب في أن منتجًا جيدًا قد لا يغادر بلده أبدًا. تحوّل eMaCargo عملية تسعير غامضة تعتمد على المكالمات إلى سوق تنافسي، وتزامن مراحل الرحلة حتى لا تعلق الشحنة بين ناقلين.",
+        "eMaCargo سوق تنافسي للشحن. تنشر شحنتك مرة واحدة، فتتنافس شركات الشحن عليها. وبدلًا من الاتصال بعشرات الجهات لطلب عروض الأسعار، تصلك العروض وتختار أفضلها بحسب السعر وتاريخ التسليم والتقييم وآراء العملاء — للمرحلة الدولية وكذلك للتحصيل والتسليم المحلي في الطرفين. الشحن هو ما يلتهم هامش ربح صغار المصدّرين، وهو السبب في أن منتجًا جيدًا قد لا يغادر بلده أبدًا. تحوّل eMaCargo عملية تسعير غامضة تعتمد على المكالمات إلى سوق تنافسي، وتزامن مراحل الرحلة حتى لا تعلق الشحنة بين ناقلين. وهي مع eMaTuma تُدخل صغار المزارعين الأفارقة في أسواق السلع عبر الحدود، ما يفتح الطريق أمام تسييل أرصدة الكربون وأمام فجوة تمويل التجارة الزراعية التي تتجاوز 100 مليار دولار.",
       howItWorks: [
         "انشر الشحنة — بيانات المصدر والوجهة والمُرسِل والمُستلِم وتفاصيل الطرد وأي متطلبات خاصة.",
         "المرحلة 1: تطّلع شركات الشحن الدولية على شحنتك وتقدّم عروضها. قارنها بالسعر وتاريخ التسليم المتوقع والتقييم وآراء العملاء، واختر الأفضل.",
@@ -1769,7 +2146,7 @@ const modules = [
       summary:
         "Publiez un envoi une fois et laissez les transporteurs se disputer. Choisissez la meilleure offre sur le prix, la date et la note, pour le trajet international et les deux trajets locaux, payez une seule fois, et suivez toute la chaîne au même endroit.",
       description:
-        "eMaCargo est une place de marché du fret par mise en concurrence. Vous publiez un envoi une fois ; les transporteurs se positionnent. Au lieu de téléphoner partout pour des devis, vous recevez des offres et retenez la meilleure sur le prix, la date de livraison, la note et les avis — pour le trajet international comme pour l'enlèvement et la livraison locaux aux deux extrémités. Le fret est ce qui ronge la marge des petits exportateurs, et la raison pour laquelle un bon produit ne quitte jamais le pays. eMaCargo transforme un processus de devis opaque, mené au téléphone, en un marché concurrentiel, et synchronise les trajets pour qu'un envoi ne reste jamais bloqué entre deux transporteurs.",
+        "eMaCargo est une place de marché du fret par mise en concurrence. Vous publiez un envoi une fois ; les transporteurs se positionnent. Au lieu de téléphoner partout pour des devis, vous recevez des offres et retenez la meilleure sur le prix, la date de livraison, la note et les avis — pour le trajet international comme pour l'enlèvement et la livraison locaux aux deux extrémités. Le fret est ce qui ronge la marge des petits exportateurs, et la raison pour laquelle un bon produit ne quitte jamais le pays. eMaCargo transforme un processus de devis opaque, mené au téléphone, en un marché concurrentiel, et synchronise les trajets pour qu'un envoi ne reste jamais bloqué entre deux transporteurs. Avec eMaTuma, il intègre les petits exploitants africains aux marchés de matières premières transfrontaliers, ouvrant la voie à la monétisation des crédits carbone et au déficit de financement du commerce agricole de plus de 100 milliards de dollars.",
       howItWorks: [
         "Publiez l'envoi — origine, destination, expéditeur, destinataire, détails du colis et exigences particulières.",
         "Phase 1 : les transporteurs internationaux voient votre envoi et font une offre. Comparez sur le prix, la date estimée, les avis et la note, puis retenez la meilleure.",
@@ -1806,7 +2183,7 @@ const modules = [
       summary:
         "Publique um envio uma vez e deixe as transportadoras concorrer. Escolha a melhor proposta pelo preço, data e avaliação, para o trajeto internacional e para os dois trajetos locais, pague uma só vez e acompanhe toda a cadeia num só sítio.",
       description:
-        "O eMaCargo é um mercado de frete por concorrência. Publica um envio uma vez; as transportadoras concorrem por ele. Em vez de telefonar a toda a gente à procura de orçamentos, recebe propostas e escolhe a melhor pelo preço, data de entrega, avaliação e comentários — tanto para o trajeto internacional como para a recolha e entrega locais nas duas pontas. O frete é onde a maioria dos pequenos exportadores perde a margem, e a razão pela qual um bom produto nunca sai do país. O eMaCargo transforma um processo de orçamentação opaco, feito ao telefone, num mercado concorrencial, e sincroniza os trajetos para que um envio não fique preso entre transportadoras.",
+        "O eMaCargo é um mercado de frete por concorrência. Publica um envio uma vez; as transportadoras concorrem por ele. Em vez de telefonar a toda a gente à procura de orçamentos, recebe propostas e escolhe a melhor pelo preço, data de entrega, avaliação e comentários — tanto para o trajeto internacional como para a recolha e entrega locais nas duas pontas. O frete é onde a maioria dos pequenos exportadores perde a margem, e a razão pela qual um bom produto nunca sai do país. O eMaCargo transforma um processo de orçamentação opaco, feito ao telefone, num mercado concorrencial, e sincroniza os trajetos para que um envio não fique preso entre transportadoras. Em conjunto com o eMaTuma, integra os pequenos agricultores africanos nos mercados de mercadorias além-fronteiras, abrindo caminho à monetização de créditos de carbono e ao défice de financiamento do comércio agrícola superior a 100 mil milhões de dólares.",
       howItWorks: [
         "Publique o envio — origem, destino, remetente, destinatário, detalhes do volume e requisitos especiais.",
         "Fase 1: as transportadoras internacionais veem o seu envio e apresentam propostas. Compare pelo preço, data prevista, comentários e avaliação, e escolha a melhor.",
@@ -1838,6 +2215,43 @@ const modules = [
       settles:
         "Um pagamento da sua eWallet aceita todas as propostas escolhidas em todos os trajetos.",
     },
+    es: {
+      tagline: "Envíalo, subástalo, síguelo",
+      summary:
+        "Publica un envío una sola vez y deja que los transportistas compitan por él. Elige la mejor oferta por precio, fecha y valoración para el tramo internacional y los dos tramos locales, paga una vez y sigue toda la cadena en un mismo lugar.",
+      description:
+        "eMaCargo es un mercado competitivo de transporte de mercancías. Publicas un envío una vez y los transportistas pujan por él. En lugar de llamar de puerta en puerta pidiendo presupuestos, recibes ofertas y eliges la mejor por precio, fecha estimada de entrega, comentarios y valoración, tanto para el tramo internacional como para la recogida y la entrega locales en ambos extremos. El flete es donde la mayoría de los pequeños exportadores pierde su margen, y la razón por la que un buen producto nunca sale del país. eMaCargo convierte un proceso de presupuestos opaco y telefónico en un mercado competitivo, y sincroniza los tramos para que un envío no quede varado entre transportistas. Junto con eMaTuma, incorpora a los pequeños agricultores africanos a los mercados transfronterizos de materias primas, abriendo la puerta a la monetización de créditos de carbono y a la brecha de financiación del comercio agrícola superior a 100.000 millones de dólares.",
+      howItWorks: [
+        "Publica el envío: origen, destino, remitente, destinatario, detalles del bulto y requisitos especiales.",
+        "Fase 1: los transportistas internacionales ven tu envío y pujan. Compara por precio, fecha estimada de entrega, comentarios y valoración, y elige la mejor.",
+        "Fase 2: las empresas locales de ambos extremos pujan por la recogida inicial y la entrega final. Sus fechas se generan automáticamente para encajar con el calendario del transportista principal.",
+        "Paga una vez: un solo pago desde tu cartera eMa acepta de golpe todas las ofertas seleccionadas.",
+        "Sigue el envío de punta a punta: cada empresa de la cadena registra su seguimiento en el mismo envío.",
+        "Valóralas: una vez entregado, tus comentarios alimentan las valoraciones con las que pujarán para el siguiente remitente.",
+      ],
+      capabilities: [
+        "Creación estructurada del envío",
+        "Datos de origen, destino, remitente y destinatario",
+        "Detalles del bulto y requisitos especiales",
+        "Pujas competitivas de transportistas",
+        "Adjudicación en varias fases: internacional, local en origen y local en destino",
+        "Sincronización automática de calendarios entre tramos",
+        "Selección por precio, fecha, comentarios y valoración",
+        "Un único pago consolidado",
+        "Registro de seguimiento compartido entre transportistas",
+        "Comentarios y valoraciones tras la entrega",
+      ],
+      audience: [
+        "Exportadores e importadores",
+        "Vendedores de eMaMall que envían a otros países",
+        "Fabricantes",
+        "Empresas de carga y transporte",
+        "Empresas locales de mensajería y reparto",
+      ],
+      fee: "La fija la oferta del transportista adjudicatario. eMa cobra sobre el pago consolidado.",
+      settles:
+        "Un único pago desde tu eWallet acepta todas las ofertas seleccionadas en todos los tramos.",
+    },
   },
 
   {
@@ -1861,7 +2275,7 @@ const modules = [
         "Set up a tailored call centre for your company when you need one.",
       ],
       capabilities: [
-        "VoIP calling",
+        "VoIP calling (rolling out in selected countries)",
         "Video conferencing",
         "Pay-as-you-go billing",
         "Secure, encrypted messaging",
@@ -1893,7 +2307,7 @@ const modules = [
         "أنشئ مركز اتصال مخصّصًا لشركتك عند الحاجة.",
       ],
       capabilities: [
-        "مكالمات صوتية عبر الإنترنت",
+        "مكالمات صوتية عبر الإنترنت (قيد الطرح في دول مختارة)",
         "مؤتمرات فيديو",
         "فوترة بنظام الدفع حسب الاستخدام",
         "رسائل آمنة ومشفّرة",
@@ -1925,7 +2339,7 @@ const modules = [
         "Mettez en place un centre d'appels sur mesure pour votre société quand vous en avez besoin.",
       ],
       capabilities: [
-        "Appels VoIP",
+        "Appels VoIP (déploiement dans certains pays)",
         "Visioconférence",
         "Facturation à l'usage",
         "Messagerie sécurisée et chiffrée",
@@ -1958,7 +2372,7 @@ const modules = [
         "Monte um centro de atendimento à medida da sua empresa quando precisar.",
       ],
       capabilities: [
-        "Chamadas VoIP",
+        "Chamadas VoIP (em implementação em países selecionados)",
         "Videoconferência",
         "Faturação por utilização",
         "Mensagens seguras e cifradas",
@@ -1978,6 +2392,38 @@ const modules = [
       settles:
         "O consumo é debitado do mesmo saldo eMa que tudo o resto.",
     },
+    es: {
+      tagline: "Habla con tus clientes",
+      summary:
+        "VoIP de pago por uso, videoconferencia y mensajería cifrada, más un centro de llamadas alojado para tu negocio: sin centralita, sin contrato.",
+      description:
+        "eMaCom es la capa de comunicaciones de la plataforma. Conecta a compradores, vendedores y miembros con llamadas VoIP, videoconferencia y mensajería segura en modalidad de pago por uso, y da a un negocio un centro de llamadas a medida sin comprar una centralita. Reuniones, seminarios web y clases en línea funcionan en la misma cuenta que todo lo demás.",
+      howItWorks: [
+        "Llama, escribe o inicia una videoconferencia desde dentro de la plataforma.",
+        "Paga solo por lo que usas: sin cuota de línea, sin contrato.",
+        "Organiza seminarios web, clases en línea o reuniones de equipo con pantalla compartida.",
+        "Monta un centro de llamadas a medida para tu empresa cuando lo necesites.",
+      ],
+      capabilities: [
+        "Llamadas VoIP (en despliegue en países seleccionados)",
+        "Videoconferencia",
+        "Facturación de pago por uso",
+        "Mensajería segura y cifrada",
+        "Pantalla compartida",
+        "Grabación de sesiones",
+        "Seminarios web y clases en línea",
+        "Centros de llamadas a medida para empresas",
+        "Acceso desde cualquier dispositivo",
+      ],
+      audience: [
+        "Empresas con atención al cliente",
+        "Vendedores que hablan con compradores",
+        "Equipos que trabajan en remoto",
+        "Formadores y docentes",
+      ],
+      fee: "Pago por uso, facturado desde tu eWallet.",
+      settles: "El consumo se carga al mismo saldo eMa que todo lo demás.",
+    },
   },
 
   {
@@ -1991,7 +2437,7 @@ const modules = [
     en: {
       tagline: "Your doctor, one click away",
       summary:
-        "Search by specialty or availability, book a verified doctor, consult by video, and get your prescription by email — paid from the wallet your PATELE cover sits in.",
+        "Search by specialty or availability, book a verified doctor, consult by video, and get your prescription by email — paid from the wallet your Patele cover sits in.",
       description:
         "eMaClinic is a telemedicine platform that connects patients with verified doctors — booking, video consultation, prescriptions, medical records and payment, all in one place. It works both ways: patients find and book care; doctors manage appointments, consultations and their practice.",
       howItWorks: [
@@ -2025,12 +2471,12 @@ const modules = [
       ],
       fee: "Set per consultation by the doctor.",
       settles:
-        "Consultations are paid from the same eMa wallet as everything else — so cover bought through PATELE can actually be spent on care.",
+        "Consultations are paid from the same eMa wallet as everything else — so cover bought through Patele can actually be spent on care.",
     },
     ar: {
       tagline: "طبيبك على بُعد نقرة واحدة",
       summary:
-        "ابحث بالتخصص أو بالتوافر، واحجز مع طبيب موثّق، واستشره بالفيديو، واستلم وصفتك على بريدك — بالدفع من المحفظة نفسها التي تحمل تغطية PATELE الخاصة بك.",
+        "ابحث بالتخصص أو بالتوافر، واحجز مع طبيب موثّق، واستشره بالفيديو، واستلم وصفتك على بريدك — بالدفع من المحفظة نفسها التي تحمل تغطية Patele الخاصة بك.",
       description:
         "eMaClinic منصّة طب عن بُعد تربط المرضى بأطباء موثّقين — الحجز، والاستشارة بالفيديو، ووصفات الدواء، والسجلات الطبية، والدفع، كلها في مكان واحد. وهي تعمل في الاتجاهين: المريض يجد الرعاية ويحجزها، والطبيب يدير مواعيده واستشاراته وعيادته.",
       howItWorks: [
@@ -2064,12 +2510,12 @@ const modules = [
       ],
       fee: "يحدّدها الطبيب لكل استشارة.",
       settles:
-        "تُدفع الاستشارات من محفظة eMa نفسها — فتُصرَف التغطية المشتراة عبر PATELE فعليًا على الرعاية.",
+        "تُدفع الاستشارات من محفظة eMa نفسها — فتُصرَف التغطية المشتراة عبر Patele فعليًا على الرعاية.",
     },
     fr: {
       tagline: "Votre médecin, à un clic",
       summary:
-        "Cherchez par spécialité ou par disponibilité, réservez un médecin vérifié, consultez en visio et recevez votre ordonnance par e-mail — payé depuis le portefeuille où se trouve votre couverture PATELE.",
+        "Cherchez par spécialité ou par disponibilité, réservez un médecin vérifié, consultez en visio et recevez votre ordonnance par e-mail — payé depuis le portefeuille où se trouve votre couverture Patele.",
       description:
         "eMaClinic est une plateforme de télémédecine qui met en relation patients et médecins vérifiés — réservation, consultation vidéo, ordonnances, dossier médical et paiement, le tout au même endroit. Elle fonctionne dans les deux sens : les patients trouvent et réservent des soins ; les médecins gèrent rendez-vous, consultations et cabinet.",
       howItWorks: [
@@ -2103,12 +2549,12 @@ const modules = [
       ],
       fee: "Fixés par le médecin, par consultation.",
       settles:
-        "Les consultations sont payées depuis le même portefeuille eMa que tout le reste — la couverture souscrite via PATELE peut donc réellement servir à se soigner.",
+        "Les consultations sont payées depuis le même portefeuille eMa que tout le reste — la couverture souscrite via Patele peut donc réellement servir à se soigner.",
     },
     pt: {
       tagline: "O seu médico, a um clique",
       summary:
-        "Pesquise por especialidade ou disponibilidade, marque com um médico verificado, consulte por vídeo e receba a receita por e-mail — pago da carteira onde está a sua cobertura PATELE.",
+        "Pesquise por especialidade ou disponibilidade, marque com um médico verificado, consulte por vídeo e receba a receita por e-mail — pago da carteira onde está a sua cobertura Patele.",
       description:
         "O eMaClinic é uma plataforma de telemedicina que liga doentes a médicos verificados — marcação, consulta por vídeo, receitas, registos clínicos e pagamento, tudo num só sítio. Funciona nos dois sentidos: os doentes encontram e marcam cuidados; os médicos gerem consultas, atendimentos e o seu consultório.",
       howItWorks: [
@@ -2142,7 +2588,46 @@ const modules = [
       ],
       fee: "Definida pelo médico, por consulta.",
       settles:
-        "As consultas são pagas da mesma carteira eMa que tudo o resto — para que a cobertura comprada via PATELE possa realmente ser usada em cuidados de saúde.",
+        "As consultas são pagas da mesma carteira eMa que tudo o resto — para que a cobertura comprada via Patele possa realmente ser usada em cuidados de saúde.",
+    },
+    es: {
+      tagline: "Tu médico, a un clic",
+      summary:
+        "Busca por especialidad o disponibilidad, reserva con un médico verificado, consulta por vídeo y recibe tu receta por correo, pagado desde la cartera donde está tu cobertura de Patele.",
+      description:
+        "eMaClinic es una plataforma de telemedicina que conecta a pacientes con médicos verificados: reserva, consulta por vídeo, recetas, historial médico y pago, todo en un mismo sitio. Funciona en ambos sentidos: los pacientes encuentran y reservan atención; los médicos gestionan sus citas, sus consultas y su consulta profesional.",
+      howItWorks: [
+        "Pacientes: busca por especialidad o por la fecha en que estés libre, y explora profesionales verificados.",
+        "Elige la especialidad, la fecha y después el médico disponible ese día. Consulta su perfil y sus horas libres, y elige tu hueco.",
+        "Elige tu método de pago y confirma: se liquida desde tu cartera eMa.",
+        "Consulta por vídeo directamente desde la reserva, o conversa antes por chat. El enlace de la reunión también te llega por correo.",
+        "El médico sube tu informe con la receta: puedes verlo, descargarlo y te llega al correo.",
+        "Médicos: trabajad desde un panel de calendario, completad o cancelad una reserva, o derivad al paciente a otra especialidad; las recetas se trasladan para que el siguiente médico vea el historial completo.",
+      ],
+      capabilities: [
+        "Búsqueda por especialidad o por disponibilidad",
+        "Perfiles de profesionales verificados y con experiencia",
+        "Reserva de cita con disponibilidad en vivo",
+        "Pago desde la aplicación",
+        "Chat seguro médico-paciente con envío de archivos",
+        "Videoconsulta a un clic, con enlace enviado por correo",
+        "Informes de receta, descargables y enviados por correo",
+        "Historial personal, médico y de seguro del paciente",
+        "Directorio de especialidades",
+        "Panel de calendario para el médico",
+        "Derivación a otra especialidad con el historial incluido",
+        "Gestión de las licencias del médico",
+        "Historial de reservas con búsqueda",
+      ],
+      audience: [
+        "Pacientes en cualquier lugar",
+        "Médicos de familia y especialistas",
+        "Clínicas",
+        "Planes médicos y aseguradoras",
+      ],
+      fee: "La fija el médico por consulta.",
+      settles:
+        "Las consultas se pagan desde la misma cartera eMa que todo lo demás, de modo que la cobertura contratada con Patele puede gastarse realmente en atención sanitaria.",
     },
   },
 ];
@@ -2172,7 +2657,7 @@ export function getModules(ids = []) {
 
 /**
  * Modules that accept a support ticket, for the Help Request dropdown.
- * eWallet / SIBA / PATELE / PAYMATE all share the "Emalyami" code, so they are
+ * eWallet / SIBA / Patele / Paymates all share the "Emalyami" code, so they are
  * listed individually but post the same value.
  */
 export const TICKET_MODULES = ALL_MODULES.filter((m) => m.ticketCode);

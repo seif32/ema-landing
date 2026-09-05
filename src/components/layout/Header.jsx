@@ -96,11 +96,17 @@ function Header() {
       );
     }
 
+    // Section links carry a real href (/#pricing, /#partner, …) so they are
+    // shareable and open in a new tab like any other link. Without it these
+    // four items were script-only buttons with no URL at all.
+    const sectionHref = `/#${item.id}`;
+
     if (isHome) {
       return (
         <ScrollLink
           key={item.id}
           to={item.id}
+          href={sectionHref}
           smooth
           duration={500}
           offset={-80}
@@ -114,14 +120,22 @@ function Header() {
     }
 
     return (
-      <button
+      <a
         key={item.id}
+        href={sectionHref}
         className={base}
-        onClick={() => scrollToSection(item.id, isMobile)}
+        onClick={(event) => {
+          // Let a modifier-click or middle-click open the URL normally.
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) {
+            return;
+          }
+          event.preventDefault();
+          scrollToSection(item.id, isMobile);
+        }}
       >
         {item.label}
         {underline}
-      </button>
+      </a>
     );
   };
 

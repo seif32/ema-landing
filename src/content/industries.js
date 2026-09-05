@@ -38,6 +38,13 @@ export const INDUSTRIES_HEADER = pick({
     setupLabel: "A configuração eMa",
     outcomeLabel: "O resultado",
   },
+  es: {
+    title: "Hecho para tu negocio",
+    subtitle: "Elige tu sector y mira la configuración exacta.",
+    problemLabel: "El problema",
+    setupLabel: "La configuración eMa",
+    outcomeLabel: "El resultado",
+  },
 });
 
 const industries = [
@@ -72,6 +79,13 @@ const industries = [
       outcome:
         "Cada caixa reporta a um único painel, e as receitas tornam-se digitais no momento em que entram.",
     },
+    es: {
+      name: "Grandes superficies",
+      problem:
+        "Varias cajas, varios empleados, sin visión en tiempo real del inventario ni de la recaudación.",
+      outcome:
+        "Cada caja reporta a un único panel, y la recaudación es digital en el momento en que entra.",
+    },
   },
   {
     id: "lodging",
@@ -103,6 +117,13 @@ const industries = [
       outcome:
         "O hóspede reserva, paga o sinal e liquida por QR — tudo sobre um saldo único.",
     },
+    es: {
+      name: "Alojamiento y hostelería",
+      problem:
+        "Los huéspedes pagan con tarjeta, en efectivo o por transferencia; las señales y las cancelaciones son un caos.",
+      outcome:
+        "El huésped reserva, paga la señal y liquida por QR, todo contra un mismo saldo.",
+    },
   },
   {
     id: "bakery",
@@ -131,6 +152,13 @@ const industries = [
         "Numerário diário, perdas de stock diárias, fornecedores perseguidos por telefone.",
       outcome:
         "O numerário é depositado sem sair do balcão e os fornecedores são avisados automaticamente.",
+    },
+    es: {
+      name: "Panaderías y alimentación",
+      problem:
+        "Efectivo diario, mermas diarias de inventario, proveedores perseguidos por teléfono.",
+      outcome:
+        "El efectivo se ingresa sin salir del mostrador y los proveedores reciben aviso automáticamente.",
     },
   },
   {
@@ -161,6 +189,13 @@ const industries = [
       outcome:
         "Trabalhos por perto, etapas acompanhadas, e pagamento libertado na conclusão.",
     },
+    es: {
+      name: "Artesanos y profesionales",
+      problem:
+        "Trabajo que llega por el boca a boca, cobrado tarde o nunca.",
+      outcome:
+        "Encargos cercanos, hitos con seguimiento y pago liberado al completar el trabajo.",
+    },
   },
   {
     id: "insurance",
@@ -190,6 +225,13 @@ const industries = [
       outcome:
         "Os prémios são cobrados automaticamente todos os meses e as apólices partilhadas digitalmente.",
     },
+    es: {
+      name: "Seguros y servicios financieros",
+      problem:
+        "Primas mensuales cobradas puerta a puerta, en efectivo.",
+      outcome:
+        "Las primas se cobran automáticamente cada mes y las pólizas se comparten en digital.",
+    },
   },
   {
     id: "transport",
@@ -217,6 +259,13 @@ const industries = [
         "Viagens pagas em numerário, motoristas sem conta bancária, sem histórico para financiamento.",
       outcome:
         "As viagens tornam-se digitais, e o registo de viagens torna-se um registo de crédito.",
+    },
+    es: {
+      name: "Transporte y taxi",
+      problem:
+        "Carreras en efectivo, conductores sin banco, sin historial para financiarse.",
+      outcome:
+        "Las carreras se vuelven digitales y el registro de viajes se convierte en historial crediticio.",
     },
   },
   {
@@ -250,6 +299,13 @@ const industries = [
       outcome:
         "Marque por especialidade, consulte por vídeo, receba a receita por e-mail — pago da carteira onde está a cobertura.",
     },
+    es: {
+      name: "Salud y clínicas",
+      problem:
+        "Pacientes que viajan horas para una consulta de diez minutos; coberturas contratadas y nunca usadas.",
+      outcome:
+        "Reserva por especialidad, consulta por vídeo y receta por correo, pagado desde la cartera donde está la cobertura.",
+    },
   },
   {
     id: "export",
@@ -281,6 +337,13 @@ const industries = [
       outcome:
         "As transportadoras concorrem pelo seu envio, os três trajetos sincronizam, um pagamento e um só registo de rastreio.",
     },
+    es: {
+      name: "Exportadores y comerciantes",
+      problem:
+        "Presupuestos de flete por teléfono, precios opacos, envíos varados entre transportistas.",
+      outcome:
+        "Los transportistas pujan por tu envío, los tres tramos se sincronizan, un solo pago y un solo registro de seguimiento.",
+    },
   },
   {
     id: "individuals",
@@ -309,6 +372,13 @@ const industries = [
         "Sem banco, sem crédito, sem forma de poupar com disciplina.",
       outcome:
         "Poupe com o seu círculo, receba no seu número de telemóvel, compre saldo em qualquer rede.",
+    },
+    es: {
+      name: "Particulares y hogares",
+      problem:
+        "Sin banco, sin crédito, sin forma de ahorrar con disciplina.",
+      outcome:
+        "Ahorra con tu círculo, cobra en tu número de teléfono y compra saldo en cualquier red.",
     },
   },
 ];
